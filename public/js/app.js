@@ -25,3 +25,5 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
   vm.message = 'This is the Beer Speak Page';
 
 });
+
+

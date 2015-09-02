@@ -9,43 +9,116 @@
 
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+ <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/png" href="http://pngimg.com/upload/beer_PNG2353.png"/>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.route.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js"  ></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js"  ></script>
 
 <script src="js/app.js"></script>
 <script src="js/app.routes.js"></script>
+<script src="js/script.routes.js"></script>
   <!-- <link rel="stylesheet" href=""> -->
 </head>
 <body class="container" ng-app="routerApp" ng-controller="mainController as main">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=993388580723688";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <% include ../partials/nav %>
+<div class="fb-like" data-href="http://www.google.com" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+<div class="rw-ui-container"></div>
+<!-- <div id="fb-root"></div> -->
+
+
 
 <header>
 
-  <nav class="navbar navbar-default">
+<!--   <nav class="navbar navbar-default">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">Craft Beer-zilla</a>
     </div>
+    <input  type="search" name="" value="" placeholder="Search Breweries / Beer"><button type="button" class="btn btn-info">Search</button>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
       <li><a href="/breweries"><i class="fa fa-shield"></i> Breweries</a></li>
       <li><a href="/beerspeak"><i class="fa fa-comment"></i> Beer Speak</a></li>
     </ul>
   </nav>
-</header>
+</header> -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">Craft Beer-zilla</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+<!--     <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul> -->
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="/breweries"><i class="fa fa-shield"></i> Breweries</a></li>
+      <li><a href="/beerspeak"><i class="fa fa-comment"></i> Beer Speak</a></li>
+<!--       <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li> -->
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
 
 <main>
+
+<!--  <div>
+  <img id="homeBackground" src="http://ww2.kqed.org/bayareabites/wp-content/uploads/sites/24/2014/03/467650193_wide-192ce150796a985d989fd441d4d60bf811de89e9.jpg" alt="">
+ </div> -->
 
 <div id="content-views">
   <div ng-view></div>
 </div>
 
+
 </main>
+
+
+
 
 
 </body>
