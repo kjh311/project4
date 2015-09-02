@@ -19,10 +19,16 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
   vm.message = 'This is the breweries page';
 })
 
-.controller('beerspeakController', function(){
+.controller('beerspeakController', function(Beer){
 
   var vm = this;
-  vm.message = 'This is the Beer Speak Page';
+  // vm.message = 'This is the Beer Speak Page';
+  Beer.all()
+
+    .success(function(data) {
+
+      vm.beer = data;
+    });
 
 });
 

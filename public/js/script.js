@@ -4,6 +4,9 @@
 
 
 $( document ).ready(function() {
-    alert( "ready!" );
-    twttr.widgets.load()
+    setInterval(function() {
+      twttr.widgets.load();
+
+}, 2000);
+FB.XFBML.parse()
 });
