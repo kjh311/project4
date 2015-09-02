@@ -1,13 +1,25 @@
-angular.module('beerService', [])
+angular.module('breweryService', [])
 
-.factory('Beer', function($http) {
+.factory('Brewery', function($http) {
 
-  var myFactory = {};
+  var breweryFactory = {};
 
-  myFactory.all = function() {
-    return $http.get('http://api.brewerydb.com/v2/brewery/0ZIlVA/beers?key=89b802471ef2d78f3003d97f713ac4c0')
+  breweryFactory.get = function(id) {
+    return $http.get('http://api.brewerydb.com/v2/brewery/:breweryId');
   };
 
-  return myFactory;
+  breweryFactory.create = function(breweryData) {
+    return $http.post('http://api.brewerydb.com/v2/breweries');
+  };
+
+  breweryFactory.update = function(id, breweryData) {
+    return $http.put('http://api.brewerydb.com/v2/brewery/:breweryId');
+  };
+
+  breweryFactory.delete = function(id) {
+    return $http.delete('http://api.brewerydb.com/v2/brewery/:breweryId');
+  };
+
+  return breweryFactory;
 
 });

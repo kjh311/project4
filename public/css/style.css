@@ -11,6 +11,16 @@ body{
   color: white;
 }
 
+#breweryBanner{
+  bottom: 0px;
+  width: 30%;
+  /*float: left;*/
+  /*position: absolute;*/
+  background-color: rgba(0,0,0, 0.6);
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
 #content-views {
   position: relative;
 }
@@ -20,25 +30,36 @@ body{
 }
 
 .fb-comments{
+  /*display: inline;*/
+  float: left;
+  /*right: 0px;*/
+  /*position: fixed;*/
+  margin-top: 20px;
+  background-color: rgba(0,0,0, 0.6);
+  border: 2px solid white;
+  border-radius: 20px;
+}
 
+.fb-like{
+  margin: 20px;
 }
 
 #homeBackground{
   width: 100%;
   height: 100%;
-  /*background-size: cover;*/
+  background-size: cover;
   z-index: -1;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
-  opacity: 50%;
+  /*opacity: 50%;*/
 }
 
 .navbar{
   top: 0px;
   left: 0px;
   width: 100%;
-  background-color: rgba(255,255,255, 0.9);
+  background-color: rgba(255,255,255, 0.8);
   position: fixed;
   z-index: 3;
   border: 2px solid rgba(0,0,0,0.5);
@@ -66,6 +87,19 @@ p{
   color: white;
 }
 
-.twitter-timeline{
-  left: 0px;
+#search-bar{
+  width: 200px;
+}
+
+.table{
+  background-color: rgba(0,0,0,0.5);
+}
+
+#twitter{
+  position: relative;
+  /*display: inline;*/
+  float: right;
+  /*margin-top: 20px;*/
+  /*top: 70px;
+  right: 0;*/
 }

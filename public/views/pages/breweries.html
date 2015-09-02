@@ -1,7 +1,29 @@
 
 
 <div class="container text-center">
-    <h1>Breweries Page</h1>
-    <p>{{breweries.message}}</p>
+    <!-- <h1>Breweries Page</h1> -->
+    <!-- <p>{{breweries.message}}</p> -->
 </div>
 
+<!-- <div>
+  <img id="beerPng" src="http://www.rockthecatzva.com/beer/full%20beer.png" alt="">
+
+</div> -->
+
+<h2>Nearby Breweries:</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Average Rating</td>
+      <td>Distance</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="brewery in main.breweries">
+      <td>{{ brewery.name }}</td>
+      <td>{{ brewery.rating }}</td>
+      <td>{{ brewery.distance }}</td>
+    </tr>
+  </tbody>
+</table>

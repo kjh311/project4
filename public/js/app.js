@@ -13,6 +13,11 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
   vm.message = 'This is the home page!';
 })
 
+// vm.breweries = [
+//   { name: 'Golden Road Brewery', rating: 8, distance: '1.3 miles'}
+
+// ];
+
 .controller('breweriesController', function(){
 
   var vm = this;
