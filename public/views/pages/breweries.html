@@ -10,7 +10,7 @@
 
 </div> -->
 
-<h2>Nearby Breweries:</h2>
+<h2 id="nearbyBreweries">Nearby Breweries:</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -21,9 +21,68 @@
   </thead>
   <tbody>
     <tr ng-repeat="brewery in main.breweries">
-      <td>{{ brewery.name }}</td>
-      <td>{{ brewery.rating }}</td>
+      <td><button type="button" class="btn btn-primary">{{ brewery.name }}</button></td>
+      <td><div class="rw-ui-container"></div></td>
       <td>{{ brewery.distance }}</td>
     </tr>
   </tbody>
 </table>
+
+
+
+
+<!-- <iframe src="http://voting.first-jump.com/init.php?a=g&g=1441237141639&m=1&n=5&s=25&f=3.png&f_a=&f_b=&f_c=" allowtransparency="true" hspace="0" vspace="0" marginheight="0" marginwidth="0" frameborder="0" height="38" scrolling="no" width="128"></iframe>
+
+<div class="stars">
+          <form action="">
+            <input class="star star-5" id="star-5" type="radio" name="star"/>
+            <label class="star star-5" for="star-5"></label>
+            <input class="star star-4" id="star-4" type="radio" name="star"/>
+            <label class="star star-4" for="star-4"></label>
+            <input class="star star-3" id="star-3" type="radio" name="star"/>
+            <label class="star star-3" for="star-3"></label>
+            <input class="star star-2" id="star-2" type="radio" name="star"/>
+            <label class="star star-2" for="star-2"></label>
+            <input class="star star-1" id="star-1" type="radio" name="star"/>
+            <label class="star star-1" for="star-1"></label>
+          </form>
+        </div>
+
+      <td><div class="rw-ui-container"></div></td> -->
+
+
+
+
+
+<!--  -->
+<script type="text/javascript">(function(d, t, e, m){
+
+    // Async Rating-Widget initialization.
+    window.RW_Async_Init = function(){
+
+        RW.init({
+            huid: "253687",
+            uid: "a924860d7a6b9bef4be2ebaa771f0276",
+            source: "website",
+            options: {
+                "size": "medium",
+                "style": "oxygen",
+                "isDummy": false
+            }
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+        l = d.location, ck = "Y" + t.getFullYear() +
+        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+    if (d.getElementById(id)) return;
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = "text/javascript";
+    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
+
+

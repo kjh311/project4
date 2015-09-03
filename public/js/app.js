@@ -5,6 +5,13 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
   var vm = this;
 
   vm.bigMessage = 'A smooth sea never made a skilled sailor.';
+
+      vm.breweries = [
+  { name: 'Golden Road Brewery', rating: 8, distance: '1.3 miles'},
+  { name: 'Angel City Brewery', rating: 5, distance: '1.8 miles'}
+
+];
+
 })
 
 .controller('homeController', function(){
@@ -13,10 +20,7 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
   vm.message = 'This is the home page!';
 })
 
-// vm.breweries = [
-//   { name: 'Golden Road Brewery', rating: 8, distance: '1.3 miles'}
 
-// ];
 
 .controller('breweriesController', function(){
 
@@ -34,6 +38,8 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
 
       vm.beer = data;
     });
+
+
 
 });
 
