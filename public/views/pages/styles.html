@@ -1,0 +1,54 @@
+<!-- <h1>This is the styles page</h1> -->
+
+<div class="container  text-center">
+
+
+<h2 id="beerStyles">Craft Beer Styles:</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Style</td>
+      <td>Average Rating</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="">
+      <td><button type="button" class="btn btn-primary">styles</button></td>
+      <td><div class="rw-ui-container"></div></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<script type="text/javascript">(function(d, t, e, m){
+
+    // Async Rating-Widget initialization.
+    window.RW_Async_Init = function(){
+
+        RW.init({
+            huid: "253687",
+            uid: "a924860d7a6b9bef4be2ebaa771f0276",
+            source: "website",
+            options: {
+                "size": "medium",
+                "style": "oxygen",
+                "isDummy": false
+            }
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+        l = d.location, ck = "Y" + t.getFullYear() +
+        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+    if (d.getElementById(id)) return;
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = "text/javascript";
+    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
+
+

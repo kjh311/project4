@@ -3,8 +3,10 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     morgan = require('morgan'),
     mongoose = require('mongoose'),
+    // User = require('./app/models/user'),
     port = process.env.PORT,
-    path = require('path');
+    path = require('path'),
+    apiRouter = express.Router();
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -23,7 +25,10 @@ app.get('/', function(req, res) {
   res.send('Welcome to the home page!');
 });
 
-var apiRouter = express.Router();
+apiRouter.use(function(req, res, next) {
+  console.log('someone came to our app!');
+  next();
+})
 
 apiRouter.get('/', function(req, res) {
   res.json({ message: 'hooray! Welcome to our api!'});
@@ -39,3 +44,5 @@ app.listen(3000);
 console.log('The port is on 3000.');
 
 
+
+// mongoose.connect('mongoose://node:noder@novus.modulusmongo.net:27017/Iganic8o');

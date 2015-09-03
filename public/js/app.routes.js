@@ -9,6 +9,12 @@ angular.module('routerRoutes', ['ngRoute'])
       controllerAs : 'home'
   })
 
+      .when('/styles', {
+      templateUrl  : 'views/pages/styles.html',
+      controller   : 'stylesController',
+      controllerAs : 'styles'
+  })
+
     .when('/breweries', {
       templateUrl  : 'views/pages/breweries.html',
       controller   : 'breweriesController',
