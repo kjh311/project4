@@ -1,4 +1,12 @@
-<script>FB.XFBML.parse()</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>$( document ).ready(function() {
+  function reloadWidget(){
+  twttr.widgets.load();
+  FB.XFBML.parse()
+}
+setTimeout(reloadWidget, 200);
+
+});</script>
 
 
 <div class="container text-center">
