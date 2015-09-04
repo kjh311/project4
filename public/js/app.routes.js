@@ -12,21 +12,27 @@ angular.module('routerRoutes', ['ngRoute'])
       .when('/styles', {
       templateUrl  : 'views/pages/styles.html',
       controller   : 'stylesController',
-      controllerAs : 'styles'
+      controllerAs : 'vm'
   })
 
     .when('/breweries', {
       templateUrl  : 'views/pages/breweries.html',
       controller   : 'breweriesController',
-      controllerAs : 'breweries'
+      controllerAs : 'vm'
+  })
+
+     .when('/breweriesshow/:id', {
+      templateUrl  : 'views/pages/breweriesshow.html',
+      controller   : 'breweryController',
+      controllerAs : 'vm'
   })
 
     .when('/beerspeak', {
       templateUrl  : 'views/pages/beerspeak.html',
       controller   : 'beerspeakController',
-      controllerAs : 'beerspeak'
+      controllerAs : 'vm'
   });
 
-  $locationProvider.html5Mode(true);
+  // $locationProvider.html5Mode(true);
 
 })

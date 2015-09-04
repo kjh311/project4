@@ -4,6 +4,7 @@ var express = require('express'),
     morgan = require('morgan'),
     mongoose = require('mongoose'),
     // User = require('./app/models/user'),
+    request = require('request'),
     port = process.env.PORT,
     path = require('path'),
     apiRouter = express.Router();
@@ -25,10 +26,17 @@ app.get('/', function(req, res) {
   res.send('Welcome to the home page!');
 });
 
-apiRouter.use(function(req, res, next) {
-  console.log('someone came to our app!');
-  next();
-})
+apiRouter.use('/styles', function(req, res, next) {
+  request('http://api.brewerydb.com/v2/styles?key=89b802471ef2d78f3003d97f713ac4c0', function(error, response, body) {
+    res.json(JSON.parse(body).data);
+  });
+});
+
+apiRouter.use('/breweries/:id', function(req, res, next) {
+  request('http://api.brewerydb.com/v2/brewery/' + req.params.id + '?key=89b802471ef2d78f3003d97f713ac4c0&format=json', function(error, response, body) {
+    res.json(JSON.parse(body).data);
+  });
+});
 
 apiRouter.get('/', function(req, res) {
   res.json({ message: 'hooray! Welcome to our api!'});

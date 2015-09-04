@@ -12,8 +12,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="">
-      <td><button type="button" class="btn btn-primary">styles</button></td>
+    <tr ng-repeat="style in main.styles">
+      <td><button type="button" class="btn btn-primary">{{style.style}}</button></td>
       <td><div class="rw-ui-container"></div></td>
     </tr>
   </tbody>

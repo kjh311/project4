@@ -1,10 +1,18 @@
-angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
+angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService'])
+
+.config(['$httpProvider', function($httpProvider) {
+      $httpProvider.defaults.useXDomain = true;
+      $httpProvider.defaults.headers.common = 'Content-Type: application/json';
+      // $httpProvider.defaults.headers.common = ['Access-Control-Allow-Origin'];
+      delete $httpProvider.defaults.headers.common['X-Requested-With'];
+      delete $httpProvider.defaults.headers.common['Origin'];
+   }
+])
 
 .controller('mainController', function() {
 
   var vm = this;
 
-  vm.bigMessage = 'A smooth sea never made a skilled sailor.';
 
       vm.breweries = [
   { name: 'Golden Road Brewery', rating: '', city: 'Los Angeles'},
@@ -13,25 +21,13 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
   { name: 'Bonabenture Brewing Co', rating: '', city: 'Los Angeles'},
   { name: 'Mumford Brewing', rating: '', city: 'Los Angeles'},
   { name: 'Ohana Brewing Co', rating: '', city: 'Los Angeles'},
-  { name: 'The Dudes Brewing Co', rating: '', city: 'Torrance'},
-  { name: 'L.A. Aleworks', rating: '', city: 'Los Angeles'},
-  { name: 'San Pedro Brewing Company', rating: '', city: 'San Pedro'},
-  { name: 'Smog City Brewing Company', rating: '', city: 'Torrance'},
-  { name: 'Eagle Rock Brewery', rating: '', city: 'Los Angeles'},
-  { name: 'Craftsman Brewing Company', rating: '', city: 'Pasadena'},
-  // { name: 'Dale Bros', rating: '', city: 'Upland'},
-  // { name: 'Belmont Brewing Company', rating: '', city: 'Long Beach'},
-  // { name: 'Ladyface Ale Company', rating: '', city: 'Agoura Hills'},
-  // { name: 'El Segundo Brewing Company', rating: '', city: 'El Segundo'},
-  // { name: 'Monkish Brewing Company', rating: '', city: 'Torrance'},
-  // { name: 'Claremont Craft Ales', rating: '', city: 'Claremont'},
-  // { name: 'Beachwood Brewing', rating: '', city: 'Long Beach'},
-  // { name: 'Highland Park Brewery', rating: '', city: 'Los Angeles'},
-  // { name: 'Three Weavers Brewery', rating: '', city: 'Inglewood'},
-  // { name: 'Macleod Ale Brewing Co', rating: '', city: 'Van Nuys'},
-
+  { name: 'The Dudes Brewing Co', rating: '', city: 'Torrance'}
 
 ];
+
+ vm.styles = [
+    { style: 'American IPA', rating: ''}
+  ];
 
 })
 
@@ -44,6 +40,7 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
 .controller('stylesController', function(){
 
   var vm = this;
+
 })
 
 
@@ -53,6 +50,17 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
   var vm = this;
   vm.message = 'This is the breweries page';
 })
+
+.controller('breweryController', ['Brewery', '$routeParams', function(Brewery, $routeParams){
+  var vm = this;
+  // vm.message = 'Test message';
+
+  Brewery.get($routeParams.id).then(function(res) {
+    console.log(res)
+    vm.brewery = res.data;
+  });
+
+}])
 
 .controller('beerspeakController', function(Beer){
 
@@ -68,5 +76,8 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate'])
 
 
 });
+
+
+
 
 
