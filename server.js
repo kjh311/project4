@@ -32,6 +32,12 @@ apiRouter.use('/styles', function(req, res, next) {
   });
 });
 
+apiRouter.use('/style/:id', function(req, res, next) {
+  request('http://api.brewerydb.com/v2/style/' + req.params.id + '?key=89b802471ef2d78f3003d97f713ac4c0&format=json', function(error, response, body) {
+    res.json(JSON.parse(body).data);
+  });
+});
+
 apiRouter.use('/breweries/:id', function(req, res, next) {
   request('http://api.brewerydb.com/v2/brewery/' + req.params.id + '?key=89b802471ef2d78f3003d97f713ac4c0&format=json', function(error, response, body) {
     res.json(JSON.parse(body).data);

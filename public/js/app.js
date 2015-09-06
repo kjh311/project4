@@ -1,4 +1,4 @@
-angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'styleService'])
+angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'styleService', 'beershowService'])
 
 .config(['$httpProvider', function($httpProvider) {
       $httpProvider.defaults.useXDomain = true;
@@ -58,22 +58,41 @@ vm.message = "main controller";
 
 .controller('stylesController', ['Style', '$routeParams', function(Style, $routeParams){
   var vm = this;
-  vm.message = 'Style controller is connected!!';
+  vm.message = 'Styles controller is connected!!';
 
 
-  //something here is breaking
-  Style.get($routeParams).then(function(res) {
+
+  Style.get($routeParams.id).then(function(res) {
     console.log(res)
     vm.style = res.data;
   });
-
 }])
 
-.controller('beerController', function(){
+// .controller('styleController', function(){
 
+//   var vm = this;
+//   vm.message = 'style controller works';
+// })
+
+.controller('styleController', ['Style', '$routeParams', function(Style, $routeParams){
   var vm = this;
-  vm.message = 'Beer controller works';
-})
+  vm.message = 'Style controller works';
+
+  Style.get($routeParams.id).then(function(res) {
+    console.log(res)
+    vm.style = res.data;
+  });
+}])
+
+.controller('beershowController', ['Beershow', '$routeParams', function(Beershow, $routeParams){
+  var vm = this;
+  vm.message = 'Brewerybeershow controller works';
+
+  Beershow.get($routeParams.id).then(function(res) {
+    console.log(res)
+    vm.beershow = res.data;
+  });
+}])
 
 
 
@@ -92,7 +111,6 @@ vm.message = "main controller";
     console.log(res)
     vm.brewery = res.data;
   });
-
 }])
 
 
@@ -106,9 +124,6 @@ vm.message = "main controller";
 
       vm.beer = data;
     });
-
-
-
 });
 
 

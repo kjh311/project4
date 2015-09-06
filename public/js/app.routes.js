@@ -15,6 +15,12 @@ angular.module('routerRoutes', ['ngRoute'])
       controllerAs : 'vm'
   })
 
+      .when('/style/:id', {
+      templateUrl  : 'views/pages/style.html',
+      controller   : 'styleController',
+      controllerAs : 'vm'
+  })
+
     .when('/breweries', {
       templateUrl  : 'views/pages/breweries.html',
       controller   : 'breweriesController',
@@ -29,7 +35,7 @@ angular.module('routerRoutes', ['ngRoute'])
 
       .when('/brewerybeershow', {
       templateUrl  : 'views/pages/brewerybeershow.html',
-      controller   : 'breweryController',
+      controller   : 'beershowController',
       controllerAs : 'vm'
   })
 
