@@ -12,13 +12,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="style in main.styles">
-      <td><button type="button" class="btn btn-primary">{{style.style}}</button></td>
+    <tr ng-repeat={{style.styles}}>
+      <td><button type="button" class="btn btn-primary">{{styles.style}}</button></td>
       <td><div class="rw-ui-container"></div></td>
     </tr>
   </tbody>
 </table>
 </div>
+
+{{style.styles}}
 
 
 <script type="text/javascript">(function(d, t, e, m){

@@ -27,6 +27,18 @@ angular.module('routerRoutes', ['ngRoute'])
       controllerAs : 'vm'
   })
 
+      .when('/brewerybeershow', {
+      templateUrl  : 'views/pages/brewerybeershow.html',
+      controller   : 'breweryController',
+      controllerAs : 'vm'
+  })
+
+      .when('/beershow', {
+      templateUrl  : 'views/pages/beershow.html',
+      controller   : 'beerController',
+      controllerAs : 'vm'
+  })
+
     .when('/beerspeak', {
       templateUrl  : 'views/pages/beerspeak.html',
       controller   : 'beerspeakController',

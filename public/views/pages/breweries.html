@@ -3,7 +3,7 @@
   function reloadWidgets(){
   RW.render(null, true);
 }
-setTimeout(reloadWidgets, 300);
+setTimeout(reloadWidgets, 600);
 
 
 });</script>
@@ -32,7 +32,7 @@ setTimeout(reloadWidgets, 300);
   </thead>
   <tbody>
     <tr ng-repeat="brewery in main.breweries">
-      <td><button type="button" class="btn btn-primary">{{ brewery.name }}</button></td>
+      <td><a href="/#/breweriesshow/{{ brewery.link }}" ><button type="button" class="btn btn-info">{{ brewery.name }}</button></a></td>
       <td><div class="rw-ui-container"></div></td>
       <td>{{ brewery.city }}</td>
     </tr>
@@ -41,10 +41,10 @@ setTimeout(reloadWidgets, 300);
 
 </div>
 
+<!--
+<iframe src="http://voting.first-jump.com/init.php?a=g&g=1441237141639&m=1&n=5&s=25&f=3.png&f_a=&f_b=&f_c=" allowtransparency="true" hspace="0" vspace="0" marginheight="0" marginwidth="0" frameborder="0" height="38" scrolling="no" width="128"></iframe> -->
 
-<!-- <iframe src="http://voting.first-jump.com/init.php?a=g&g=1441237141639&m=1&n=5&s=25&f=3.png&f_a=&f_b=&f_c=" allowtransparency="true" hspace="0" vspace="0" marginheight="0" marginwidth="0" frameborder="0" height="38" scrolling="no" width="128"></iframe>
-
-<div class="stars">
+     <!--  <div class="stars">
           <form action="">
             <input class="star star-5" id="star-5" type="radio" name="star"/>
             <label class="star star-5" for="star-5"></label>
@@ -57,9 +57,9 @@ setTimeout(reloadWidgets, 300);
             <input class="star star-1" id="star-1" type="radio" name="star"/>
             <label class="star star-1" for="star-1"></label>
           </form>
-        </div>
+       </div> -->
 
-      <td><div class="rw-ui-container"></div></td> -->
+      <!-- <td><div class="rw-ui-container"></div></td> -->
 
 
 
