@@ -1,4 +1,4 @@
-angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService'])
+angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'styleService'])
 
 .config(['$httpProvider', function($httpProvider) {
       $httpProvider.defaults.useXDomain = true;
@@ -14,7 +14,7 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService'])
   var vm = this;
 
 
-
+vm.message = "main controller";
 
       vm.breweries = [
   { name: 'Golden Road Brewery', rating: '', city: 'Los Angeles', link: '6RZC0v', twitter: '639862176551845889'},
@@ -41,9 +41,10 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService'])
 
 
 
- vm.styles = [
-    { style: 'American IPA', rating: ''}
-  ];
+
+ // vm.styles = [
+ //    { style: 'American IPA', rating: ''}
+ //  ];
 
 })
 
@@ -53,43 +54,39 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService'])
   vm.message = 'This is the home page!';
 })
 
-.controller('stylesController', function(){
 
+
+.controller('stylesController', ['Style', '$routeParams', function(Style, $routeParams){
   var vm = this;
+  vm.message = 'Style controller is connected!!';
 
-   Styles.get($routeParams).then(function(res) {
+
+  //something here is breaking
+  Style.get($routeParams).then(function(res) {
     console.log(res)
     vm.style = res.data;
   });
-})
+
+}])
 
 .controller('beerController', function(){
 
   var vm = this;
-  vm.message = 'This is the beer page';
+  vm.message = 'Beer controller works';
 })
 
 
 
 .controller('breweriesController', function(){
 
-
-
   var vm = this;
-  vm.message = 'This is the breweries page';
+  vm.message = 'Breweries controller works';
 })
 
-.controller('beerController', function(){
-
-  var vm = this;
-  vm.message = 'This is the beershow page, mo fo!';
-})
 
 .controller('breweryController', ['Brewery', '$routeParams', function(Brewery, $routeParams){
   var vm = this;
-  // vm.message = 'Test message';
-
-
+  vm.message = 'Brewery controller works';
 
   Brewery.get($routeParams.id).then(function(res) {
     console.log(res)
@@ -97,6 +94,7 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService'])
   });
 
 }])
+
 
 .controller('beerspeakController', function(Beer){
 

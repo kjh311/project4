@@ -12,7 +12,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat={{style.styles}}>
+    <tr ng-repeat={{vm.styles.name}}>
+    <tr ng-repeat={{vm.style.name}}>
       <td><button type="button" class="btn btn-primary">{{styles.style}}</button></td>
       <td><div class="rw-ui-container"></div></td>
     </tr>
@@ -20,7 +21,15 @@
 </table>
 </div>
 
-{{style.styles}}
+{{ vm.brewery.city }}
+{{vm.message}}
+{{vm.brewery.styles}}
+{{vm.style.style}}
+{{vm.styles.style}}
+{{vm.style.name}}
+{{vm.styles.name}}
+{{vm.styles.name}}
+{{vm.style.names}}
 
 
 <script type="text/javascript">(function(d, t, e, m){
