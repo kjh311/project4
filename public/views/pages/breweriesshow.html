@@ -7,14 +7,20 @@
 setTimeout(reloadWidget, 400);
 setTimeout(reloadWidget, 800);
 
+
+
 });</script>
+
+
 
 
 <div class="container welcome">
     <img class="breweryIcon" ng-src="{{vm.brewery.images.icon}}">
     <h1 class="breweryName">{{vm.brewery.name}}</h1>
     <a href="/#/brewerybeershow/{{ vm.brewery.id }} "><button type="button" class="btn beersButton btn-primary">View our Beers!</button></a>
+    <!-- <a href="/#/brewerytweets/{{ vm.brewery.id }} "><button type="button" class="btn beersButton btn-primary">News</button></a> -->
     <a href="{{vm.brewery.website}}" target="_blank"><button type="button" class="btn webButton btn-info">Website</button></a>
+
 
     <br />
     <br />
@@ -35,13 +41,25 @@ setTimeout(reloadWidget, 800);
 </div>
 
 
+<!-- <div ng-include src="/views/partials/{{brewery.link}}.html"></div> -->
+
+
 <div class="fb-comments" data-href="http://localhost:3000/#/breweriesshow/{{vm.brewery.id}}" data-colorscheme="dark" width="350px" height="500px" data-numposts="5"></div>
 
 
-<div class="twitter">
 
-  <a class="twitter-timeline" href="https://twitter.com/search?q=%23craftbeer%20OR%20%23craftbeerzilla" width="400" height="600" data-chrome="transparent" data-widget-id="">Tweets about {{vm.brewery.name}}</a>
+<!-- <p ng-repeat="brewery in main.breweries" ng-show="$index == 0">{{brewery.twitter}}</p> -->
+
+<div class="twitter">
+  <a ng-repeat="brewery in main.breweries" ng-show="index === 1" class="twitter-timeline" href="https://twitter.com/search?q= width="200" height="600" data-chrome="transparent" data-widget-id="{{brewery.twitter}}"></a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
+
+<div class="twitter_append">
+
+
+
 
 <script type="text/javascript">(function(d, t, e, m){
 

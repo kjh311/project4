@@ -12,13 +12,17 @@
     </tr>
   </thead>
   <tbody>
-<!--     <tr ng-repeat={{vm.styles.name}}>
-    <tr ng-repeat={{vm.styles}}> -->
-      <td><button type="button" class="btn btn-primary">{{vm.styles.name}}</button></td>
+    <tr ng-repeat="style in styles.styles | orderBy:'name'">
+    <tr ng-repeat={{style.name}}>
+      <td><button type="button" class="btn btn-primary">{{vm.style.name}}</button></td>
       <td><div class="rw-ui-container"></div></td>
     </tr>
   </tbody>
 </table>
+</div>
+
+<div ng-repeat="style in style.styles | orderBy:'name'">>
+   <p>{{vm.styles.name}}</p>
 </div>
 
 {{ vm.brewery.city }}
@@ -34,6 +38,10 @@
 {{vm.styles.names}}
 {{styles}}
 {{vm.style.name}}
+
+<ul>
+  <li ng-repeat={{vm.style.name}}>{{vm.style.name}}</li>
+</ul>
 
 
 <script type="text/javascript">(function(d, t, e, m){

@@ -14,11 +14,13 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'sty
   var vm = this;
 
 
+
+
 vm.message = "main controller";
 
       vm.breweries = [
-  { name: 'Golden Road Brewery', rating: '', city: 'Los Angeles', link: '6RZC0v', twitter: '639862176551845889'},
-  { name: 'Angel City Brewery', rating: '', city: 'Los Angeles', link: '0ZIlVA', twitter: '639862176551845889'},
+  { name: 'Golden Road Brewery', rating: '', city: 'Los Angeles', link: '6RZC0v', twitter: '639862176551845889', hash: '#goldenroadbrew'},
+  { name: 'Angel City Brewery', rating: '', city: 'Los Angeles', link: '0ZIlVA', twitter: '640951744621490177'},
   { name: 'Mumford Brewing', rating: '', city: 'Los Angeles', link: 'pUVZvr', twitter: '639862176551845889'},
   { name: 'Ohana Brewing Co', rating: '', city: 'Los Angeles', link: 'nE0YCy', twitter: '639862176551845889'},
   { name: 'The Dudes Brewing Co', rating: '', city: 'Torrance', link: 'xXJuyA', twitter: '639862176551845889'},
@@ -64,7 +66,7 @@ vm.message = "main controller";
 
   Style.get($routeParams.id).then(function(res) {
     console.log(res)
-    vm.style = res.data;
+    vm.styles = res.data;
   });
 }])
 
@@ -73,6 +75,7 @@ vm.message = "main controller";
 //   var vm = this;
 //   vm.message = 'style controller works';
 // })
+
 
 .controller('styleController', ['Style', '$routeParams', function(Style, $routeParams){
   var vm = this;

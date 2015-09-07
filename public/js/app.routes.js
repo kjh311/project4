@@ -33,6 +33,12 @@ angular.module('routerRoutes', ['ngRoute'])
       controllerAs : 'vm'
   })
 
+     .when('/brewerytweets/:id', {
+      templateUrl  : 'views/pages/brewerytweets.html',
+      controller   : 'breweryController',
+      controllerAs : 'vm'
+  })
+
       .when('/brewerybeershow', {
       templateUrl  : 'views/pages/brewerybeershow.html',
       controller   : 'beershowController',
