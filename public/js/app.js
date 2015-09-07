@@ -44,6 +44,8 @@ vm.message = "main controller";
 
 
 
+
+
  // vm.styles = [
  //    { style: 'American IPA', rating: ''}
  //  ];
@@ -66,7 +68,7 @@ vm.message = "main controller";
 
   Style.get($routeParams.id).then(function(res) {
     console.log(res)
-    vm.styles = res.data;
+    vm.styles = res;
   });
 }])
 
@@ -82,7 +84,7 @@ vm.message = "main controller";
   vm.message = 'Style controller works';
 
   Style.get($routeParams.id).then(function(res) {
-    console.log(res)
+    console.log(res);
     vm.style = res.data;
   });
 }])

@@ -1,29 +1,33 @@
 <!-- <h1>This is the styles page</h1> -->
 
 <div class="container  text-center">
-
+<!-- <li ng-repeat="style in vm.styles">
+  <p>{{style.name}}</p>
+</li> -->
 
 <h2 id="beerStyles">Craft Beer Styles:</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
       <td>Style</td>
-      <td>Average Rating</td>
+
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="style in styles.styles | orderBy:'name'">
-    <tr ng-repeat={{style.name}}>
-      <td><button type="button" class="btn btn-primary">{{vm.style.name}}</button></td>
-      <td><div class="rw-ui-container"></div></td>
+    <tr ng-repeat="style in vm.styles | orderBy:'name'">
+ <!--    <tr>{{style.name}}</tr> -->
+      <td><button type="button" class="btn btn-primary">{{style.name}}</button></td>
+
     </tr>
   </tbody>
 </table>
 </div>
 
-<div ng-repeat="style in style.styles | orderBy:'name'">>
+<!-- <div ng-repeat="style in style.styles | orderBy:'name'">>
    <p>{{vm.styles.name}}</p>
-</div>
+</div> -->
+
+
 
 {{ vm.brewery.city }}
 {{vm.message}}
@@ -39,9 +43,9 @@
 {{styles}}
 {{vm.style.name}}
 
-<ul>
+<!-- <ul>
   <li ng-repeat={{vm.style.name}}>{{vm.style.name}}</li>
-</ul>
+</ul> -->
 
 
 <script type="text/javascript">(function(d, t, e, m){

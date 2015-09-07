@@ -5,8 +5,8 @@ angular.module('routerRoutes', ['ngRoute'])
 
     .when('/', {
       templateUrl  : 'views/pages/home.html',
-      controller   : 'homeController',
-      controllerAs : 'home'
+      controller   : 'mainController',
+      controllerAs : 'main'
   })
 
       .when('/styles', {
