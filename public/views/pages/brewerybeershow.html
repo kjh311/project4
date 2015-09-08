@@ -1,27 +1,42 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>$( document ).ready(function() {
+  function reloadWidget(){
+  RW.render(null, true);
+  FB.XFBML.parse()
+}
+setTimeout(reloadWidget, 400);
+setTimeout(reloadWidget, 800);
+
+
+
+});</script>
+
 <!-- <h1>This is the brewery beer show page</h1> -->
 
 
 <!-- {{vm.message}} -->
 
-<div class="container text-center">
-<h1 id="beers">Beers</h1>
+<div class="container">
+<h1 id="beers">Beers  <a href="/#/breweries/newbeer" title=""><button type="button" class="btn btn-danger">Add new beer</button></a></h1>
 <table class="table table-bordered">
   <thead>
     <tr>
       <!-- <td><h2 id="beers">Beers</h2></td> -->
+      <!-- <td><h2>Average Rating</h2></td> -->
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="beershow in vm.beershow | orderBy:'name'">
       <td>
         <h2 class="beername">{{beershow.name}}</h2>
-        <h4>{{beershow.description}}</h4>
-
-        <img class="beerIcon" ng-src="{{beershow.labels.icon}}">
-        <!-- <h4>ng-src="{{beershow.labes.icon}}"</h4></td> -->
-        <h4>{{beershow.style.category.name}}</h4>
+        <div class="rw-ui-container rating"></div>
+        <img class="beerIcon" ng-src="{{beershow.labels.medium}}">
+        <h4 class="description">{{beershow.description}}</h4>
+        <!-- <h4>{{beershow.style.category.name}}</h4> -->
+        <h4>{{beershow.style.name}}</h4>
         <h4>{{beershow.available.description}}</h4>
-        <div class="rw-ui-container"></div>
+        <h4>ABV: {{beershow.abv}}</h4>
+        <!-- <h4>{{beershow.glass.name}}</h4> -->
         </td>
     </tr>
   </tbody>
@@ -30,7 +45,7 @@
 
 
 
-
+<!--  -->
 <script type="text/javascript">(function(d, t, e, m){
 
     // Async Rating-Widget initialization.
@@ -60,6 +75,7 @@
     rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
     s.parentNode.insertBefore(rw, s);
     }(document, new Date(), "script", "rating-widget.com/"));</script>
+
 
 
 

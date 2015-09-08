@@ -27,14 +27,20 @@ angular.module('routerRoutes', ['ngRoute'])
       controllerAs : 'vm'
   })
 
-     .when('/breweriesshow/:id', {
-      templateUrl  : 'views/pages/breweriesshow.html',
-      controller   : 'breweryController',
+    .when('/breweries/newbrewery', {
+      templateUrl  : 'views/pages/newbrewery.html',
+      controller   : 'breweriesController',
       controllerAs : 'vm'
   })
 
-     .when('/brewerytweets/:id', {
-      templateUrl  : 'views/pages/brewerytweets.html',
+    .when('/breweries/newbeer', {
+      templateUrl  : 'views/pages/newbeer.html',
+      controller   : 'breweriesController',
+      controllerAs : 'vm'
+  })
+
+     .when('/breweriesshow/:id', {
+      templateUrl  : 'views/pages/breweriesshow.html',
       controller   : 'breweryController',
       controllerAs : 'vm'
   })
