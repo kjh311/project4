@@ -10,6 +10,10 @@ angular.module('breweryService', [])
     return $http.get('/api/breweries/' + id);
   };
 
+  // breweryFactory.get = function(id) {
+  //   return $http.get('/api/locations/' + id);
+  // };
+
   breweryFactory.create = function(breweryData) {
     return $http.post('http://api.brewerydb.com/v2/breweries' + '?key=' + key);
   };

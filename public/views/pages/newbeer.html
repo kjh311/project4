@@ -5,9 +5,9 @@
       <h2>New Beer</h2>
     </div>
 
-    <h4 class="required">Beer Name:  <input class="input" placeholder="Beer name"></h4>
+    <h4>Beer Name: (required) <input class="input" placeholder="Beer name"></h4>
     <br>
-    <h4><ul class="dropdown-menu" ng-repeat="style in vm.styles | orderBy:'name'">
+    <h4>DropDown Style (required)<ul class="dropdown-menu" ng-repeat="style in vm.styles | orderBy:'name'">
           <li>{{style.name}}</li>
         </ul></h4>
 
@@ -29,3 +29,6 @@
     </div>
 </form>
 </div>
+
+<br>
+<br>

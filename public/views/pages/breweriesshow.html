@@ -1,15 +1,5 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>$( document ).ready(function() {
-  function reloadWidget(){
-  RW.render(null, true);
-  FB.XFBML.parse()
-}
-setTimeout(reloadWidget, 400);
-setTimeout(reloadWidget, 800);
+<ng-include src="'/views/partials/breweryshowtwitter.html'"></ng-include>
 
-
-
-});</script>
 
 
 
@@ -27,9 +17,11 @@ setTimeout(reloadWidget, 800);
     <br />
     <br />
 
-    <h5 class="breweryInfo">address</h5>
-    <h5 class="breweryInfo">phonenumber</h5>
-    <div class="rw-ui-container"></div>
+    <!-- <div ng-controller="locationController as location"> -->
+        <!-- <h5 class="breweryInfo">address</h5>
+        <h5 class="breweryInfo">phonenumber</h5> -->
+        <div class="rw-ui-container"></div>
+    <!-- </div> -->
 
 </div>
 
@@ -41,9 +33,6 @@ setTimeout(reloadWidget, 800);
 <div class="container welcome text-center">
   <h3 class="description">{{vm.brewery.description}}</h3>
 </div>
-
-
-<!-- <div ng-include src="/views/partials/{{brewery.link}}.html"></div> -->
 
 
 <div class="fb-comments" data-href="http://localhost:3000/#/breweriesshow/{{vm.brewery.id}}" data-colorscheme="dark" width="350px" height="500px" data-numposts="5"></div>
@@ -62,37 +51,4 @@ setTimeout(reloadWidget, 800);
 
 
 
-
-
-<script type="text/javascript">(function(d, t, e, m){
-
-    // Async Rating-Widget initialization.
-    window.RW_Async_Init = function(){
-
-        RW.init({
-            huid: "253687",
-            uid: "a924860d7a6b9bef4be2ebaa771f0276",
-            source: "website",
-            options: {
-                "size": "medium",
-                "style": "oxygen",
-                "isDummy": false
-            }
-        });
-        RW.render();
-    };
-        // Append Rating-Widget JavaScript library.
-    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
-        l = d.location, ck = "Y" + t.getFullYear() +
-        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
-        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
-        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
-    if (d.getElementById(id)) return;
-    rw = d.createElement(e);
-    rw.id = id; rw.async = true; rw.type = "text/javascript";
-    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
-    s.parentNode.insertBefore(rw, s);
-    }(document, new Date(), "script", "rating-widget.com/"));</script>
-
-
-
+<ng-include src="'/views/partials/ratingwidget.html'"></ng-include>
