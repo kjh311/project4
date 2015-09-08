@@ -4,6 +4,7 @@ angular.module('breweryService', [])
 
   var breweryFactory = {};
   var key = "89b802471ef2d78f3003d97f713ac4c0";
+  // var key = process.env.key;
 
   breweryFactory.get = function(id) {
     return $http.get('/api/breweries/' + id);

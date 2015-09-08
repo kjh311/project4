@@ -1,81 +1,19 @@
-<!-- <h1>This is the styles page</h1> -->
 
 <div class="container  text-center">
-<!-- <li ng-repeat="style in vm.styles">
-  <p>{{style.name}}</p>
-</li> -->
 
-<h2 id="beerStyles">Craft Beer Styles:</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
-      <td>Style</td>
-
+      <td><h2 id="beerStyles">Craft Beer Styles:</h2></td>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="style in vm.styles | orderBy:'name'">
- <!--    <tr>{{style.name}}</tr> -->
-      <td><button type="button" class="btn btn-primary">{{style.name}}</button></td>
-
+      <td>
+        <h2>{{style.name}}</h2>
+        <h4>{{style.description}}</h4></td>
     </tr>
   </tbody>
 </table>
 </div>
-
-<!-- <div ng-repeat="style in style.styles | orderBy:'name'">>
-   <p>{{vm.styles.name}}</p>
-</div> -->
-
-
-
-{{ vm.brewery.city }}
-{{vm.message}}
-{{vm.brewery.styles}}
-{{vm.style.style}}
-{{vm.styles.style}}
-{{vm.style.name}}
-{{vm.styles.name}}
-{{vm.styles.name}}
-{{vm.style.names}}
-{{vm.style.id}}
-{{vm.styles.names}}
-{{styles}}
-{{vm.style.name}}
-
-<!-- <ul>
-  <li ng-repeat={{vm.style.name}}>{{vm.style.name}}</li>
-</ul> -->
-
-
-<script type="text/javascript">(function(d, t, e, m){
-
-    // Async Rating-Widget initialization.
-    window.RW_Async_Init = function(){
-
-        RW.init({
-            huid: "253687",
-            uid: "a924860d7a6b9bef4be2ebaa771f0276",
-            source: "website",
-            options: {
-                "size": "medium",
-                "style": "oxygen",
-                "isDummy": false
-            }
-        });
-        RW.render();
-    };
-        // Append Rating-Widget JavaScript library.
-    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
-        l = d.location, ck = "Y" + t.getFullYear() +
-        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
-        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
-        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
-    if (d.getElementById(id)) return;
-    rw = d.createElement(e);
-    rw.id = id; rw.async = true; rw.type = "text/javascript";
-    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
-    s.parentNode.insertBefore(rw, s);
-    }(document, new Date(), "script", "rating-widget.com/"));</script>
-
 

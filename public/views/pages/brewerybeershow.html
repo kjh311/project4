@@ -1,4 +1,65 @@
-<h1>This is the brewery beer show page</h1>
-<p ng-repeat="{{vm.beershow.name}}"></p>
+<!-- <h1>This is the brewery beer show page</h1> -->
 
-{{vm.message}}
+
+<!-- {{vm.message}} -->
+
+<div class="container text-center">
+<h1 id="beers">Beers</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <!-- <td><h2 id="beers">Beers</h2></td> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="beershow in vm.beershow | orderBy:'name'">
+      <td>
+        <h2 class="beername">{{beershow.name}}</h2>
+        <h4>{{beershow.description}}</h4>
+
+        <img class="beerIcon" ng-src="{{beershow.labels.icon}}">
+        <!-- <h4>ng-src="{{beershow.labes.icon}}"</h4></td> -->
+        <h4>{{beershow.style.category.name}}</h4>
+        <h4>{{beershow.available.description}}</h4>
+        <div class="rw-ui-container"></div>
+        </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<script type="text/javascript">(function(d, t, e, m){
+
+    // Async Rating-Widget initialization.
+    window.RW_Async_Init = function(){
+
+        RW.init({
+            huid: "253687",
+            uid: "a924860d7a6b9bef4be2ebaa771f0276",
+            source: "website",
+            options: {
+                "size": "medium",
+                "style": "oxygen",
+                "isDummy": false
+            }
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+        l = d.location, ck = "Y" + t.getFullYear() +
+        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+    if (d.getElementById(id)) return;
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = "text/javascript";
+    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
+
+
+

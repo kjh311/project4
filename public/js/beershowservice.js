@@ -6,7 +6,7 @@ angular.module('beershowService', [])
   var key = "89b802471ef2d78f3003d97f713ac4c0";
 
   beershowFactory.get = function(id) {
-    return $http.get('/api/brewery/' + id + 'beers');
+    return $http.get('/api/brewery/' + id + '/beers');
   };
 
   beershowFactory.create = function(breweryData) {

@@ -17,7 +17,7 @@ setTimeout(reloadWidget, 800);
 <div class="container welcome">
     <img class="breweryIcon" ng-src="{{vm.brewery.images.icon}}">
     <h1 class="breweryName">{{vm.brewery.name}}</h1>
-    <a href="/#/brewerybeershow/{{ vm.brewery.id }} "><button type="button" class="btn beersButton btn-primary">View our Beers!</button></a>
+    <a href="/#/brewery/{{ vm.brewery.id }}/beers "><button type="button" class="btn beersButton btn-primary">View our Beers!</button></a>
     <!-- <a href="/#/brewerytweets/{{ vm.brewery.id }} "><button type="button" class="btn beersButton btn-primary">News</button></a> -->
     <a href="{{vm.brewery.website}}" target="_blank"><button type="button" class="btn webButton btn-info">Website</button></a>
 

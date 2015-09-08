@@ -2,6 +2,9 @@
 
 
 $( document ).ready(function() {
+  // require('dotenv').load();
+  // alert('asdf');
+
   // alert('yadf');
   // if (window.location.pathname === '/breweriesshow/0ZIlVA'){
   //   alert('yay');

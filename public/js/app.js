@@ -42,14 +42,6 @@ vm.message = "main controller";
 ];
 
 
-
-
-
-
- // vm.styles = [
- //    { style: 'American IPA', rating: ''}
- //  ];
-
 })
 
 .controller('homeController', function(){
@@ -91,7 +83,7 @@ vm.message = "main controller";
 
 .controller('beershowController', ['Beershow', '$routeParams', function(Beershow, $routeParams){
   var vm = this;
-  vm.message = 'Brewerybeershow controller works';
+  vm.message = 'Brewery-beer-show controller works';
 
   Beershow.get($routeParams.id).then(function(res) {
     console.log(res)

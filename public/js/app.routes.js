@@ -39,7 +39,7 @@ angular.module('routerRoutes', ['ngRoute'])
       controllerAs : 'vm'
   })
 
-      .when('/brewerybeershow', {
+      .when('/brewery/:id/beers', {
       templateUrl  : 'views/pages/brewerybeershow.html',
       controller   : 'beershowController',
       controllerAs : 'vm'
