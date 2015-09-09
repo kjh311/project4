@@ -15,7 +15,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="brewery in main.breweries | orderBy:'name'">
+        <tr ng-repeat="brewery in main.breweries track by $index | orderBy:'name'">
           <td class="td1"><a href="/#/breweriesshow/{{ brewery.link }}" ><button type="button" class="btn btn-info">{{ brewery.name }}</button></a></td>
           <td class="td2">type</td>
           <td class="td3"><div class="rw-ui-container"></div></td>

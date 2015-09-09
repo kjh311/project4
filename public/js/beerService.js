@@ -9,7 +9,7 @@ angular.module('breweryService', [])
   };
 
   breweryFactory.create = function(breweryData) {
-    return $http.post('http://api.brewerydb.com/v2/breweries' + '?key=' + beerKey);
+    return $http.post('/api/breweries', breweryData);
   };
 
   breweryFactory.update = function(id, breweryData) {

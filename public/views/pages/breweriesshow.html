@@ -38,7 +38,7 @@
 
 
 <div class="twitter">
-  <a class="twitter-timeline" ng-repeat="brewery in main.breweries | limitTo:1" class="twitter-timeline" href="https://twitter.com/search?q= width="200" height="600" data-chrome="transparent" data-widget-id="639862176551845889"></a>
+  <a class="twitter-timeline" ng-repeat="brewery in main.breweries track by $index | limitTo:1" class="twitter-timeline" href="https://twitter.com/search?q= width="200" height="600" data-chrome="transparent" data-widget-id="639862176551845889"></a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 </div>

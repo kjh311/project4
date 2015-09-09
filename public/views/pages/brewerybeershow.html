@@ -11,22 +11,17 @@ setTimeout(reloadWidget, 800);
 
 });</script>
 
-<!-- <h1>This is the brewery beer show page</h1> -->
 
-
-<!-- {{vm.message}} -->
 
 <div class="container">
 <h1 id="beers">Beers  <a href="/#/breweries/newbeer" title=""><button type="button" class="btn btn-danger">Add new beer</button></a></h1>
 <table class="table table-bordered">
   <thead>
     <tr>
-      <!-- <td><h2 id="beers">Beers</h2></td> -->
-      <!-- <td><h2>Average Rating</h2></td> -->
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="beershow in vm.beershow | orderBy:'name'">
+    <tr ng-repeat="beershow in vm.beershow track by $index | orderBy:'name'">
       <td>
         <h2 class="beername">{{beershow.name}}</h2>
         <div class="rw-ui-container rating"></div>

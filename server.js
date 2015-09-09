@@ -30,19 +30,19 @@ app.use(morgan('dev'));
 //   res.send('Welcome to the home page!');
 // });
 
-apiRouter.use('/styles', function(req, res, next) {
+apiRouter.get('/styles', function(req, res, next) {
   request('http://api.brewerydb.com/v2/styles?key=' + process.env.KEY , function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
 
-apiRouter.use('/style/:id', function(req, res, next) {
+apiRouter.get('/styles/:id', function(req, res, next) {
   request('http://api.brewerydb.com/v2/style/' + req.params.id + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
 
-apiRouter.use('/search', function(req, res, next) {
+apiRouter.get('/search', function(req, res, next) {
   var q = req.url.substr(req.url.indexOf('?'));
 
   request('http://api.brewerydb.com/v2/search' + q, function(error, response, body) {
@@ -51,13 +51,27 @@ apiRouter.use('/search', function(req, res, next) {
 });
 
 
-apiRouter.use('/breweries/:id', function(req, res, next) {
+apiRouter.get('/breweries/:id', function(req, res, next) {
   request('http://api.brewerydb.com/v2/brewery/' + req.params.id + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
 
-apiRouter.use('/brewery/:id/beers', function(req, res, next) {
+apiRouter.post('/breweries/', function(req, res, next) {
+  request.post({
+    url:  'http://api.brewerydb.com/v2/brewery?key=' + process.env.KEY,
+    form: req.body
+  }, function(error, response, body){
+    if (error)
+      res.json({status: 'Error', error: error});
+
+    body = JSON.parse(body);
+
+    res.json({status: 'OK', message: body.message, data: body.data});
+  });
+});
+
+apiRouter.get('/breweries/:id/beers', function(req, res, next) {
   request('http://api.brewerydb.com/v2/brewery/' + req.params.id + '/beers' + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
     res.json(JSON.parse(body).data);
   });

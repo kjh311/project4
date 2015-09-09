@@ -117,6 +117,34 @@ vm.doSearch = function(){
   });
 }])
 
+.controller('NewBreweryController', ['Brewery', function(Brewery) {
+  var vm = this;
+
+  vm.name        = "";
+  vm.description = "";
+  vm.website     = "";
+  vm.established = "";
+
+  vm.createBrewery = createBrewery;
+
+  function createBrewery() {
+    Brewery.create({
+             name:        vm.name,
+             description: vm.description,
+             website:     vm.website,
+             established: vm.established
+           })
+           .then(
+             function(res) {
+               console.log(res);
+             },
+             function(err) {
+               console.log(err);
+           });
+  }
+
+}])
+
 
 .controller('beerspeakController', function(Beer){
 
