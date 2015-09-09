@@ -9,7 +9,7 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'sty
    }
 ])
 
-.controller('mainController', function() {
+.controller('mainController', ['$http', function($http) {
 
   var vm = this;
 
@@ -19,7 +19,7 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'sty
 vm.message = "main controller";
 
       vm.breweries = [
-  { name: 'Golden Road Brewery', rating: '', city: 'Los Angeles', link: '6RZC0v', twitter: '639862176551845889', hash: '#goldenroadbrew'},
+  { name: 'Golden Road Brewery', rating: '', city: 'Los Angeles', link: '6RZC0v', twitter: '639862176551845889'},
   { name: 'Angel City Brewery', rating: '', city: 'Los Angeles', link: '0ZIlVA', twitter: '640951744621490177'},
   { name: 'Mumford Brewing', rating: '', city: 'Los Angeles', link: 'pUVZvr', twitter: '639862176551845889'},
   { name: 'Ohana Brewing Co', rating: '', city: 'Los Angeles', link: 'nE0YCy', twitter: '639862176551845889'},
@@ -41,8 +41,16 @@ vm.message = "main controller";
 
 ];
 
+vm.doSearch = function(){
+  $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
+    console.log(res.data);
+  });
 
-})
+
+}
+
+
+}])
 
 .controller('homeController', function(){
 

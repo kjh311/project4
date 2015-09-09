@@ -1,6 +1,7 @@
 var express = require('express'),
-    app = express(),
-    bodyParser = require('body-parser'),
+    app = express();
+    require('dotenv').load();
+var bodyParser = require('body-parser'),
     morgan = require('morgan'),
     mongoose = require('mongoose'),
     // User = require('./app/models/user'),
@@ -8,6 +9,9 @@ var express = require('express'),
     port = process.env.PORT,
     path = require('path'),
     apiRouter = express.Router();
+
+app.set('views', './views');
+app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -22,30 +26,39 @@ app.use(function(req, res, next) {
 
 app.use(morgan('dev'));
 
-app.get('/', function(req, res) {
-  res.send('Welcome to the home page!');
-});
+// app.get('/', function(req, res) {
+//   res.send('Welcome to the home page!');
+// });
 
 apiRouter.use('/styles', function(req, res, next) {
-  request('http://api.brewerydb.com/v2/styles?key=89b802471ef2d78f3003d97f713ac4c0', function(error, response, body) {
+  request('http://api.brewerydb.com/v2/styles?key=' + process.env.KEY , function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
 
 apiRouter.use('/style/:id', function(req, res, next) {
-  request('http://api.brewerydb.com/v2/style/' + req.params.id + '?key=89b802471ef2d78f3003d97f713ac4c0&format=json', function(error, response, body) {
+  request('http://api.brewerydb.com/v2/style/' + req.params.id + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
 
+apiRouter.use('/search', function(req, res, next) {
+  var q = req.url.substr(req.url.indexOf('?'));
+
+  request('http://api.brewerydb.com/v2/search' + q, function(error, response, body) {
+    res.json(JSON.parse(body).data);
+  });
+});
+
+
 apiRouter.use('/breweries/:id', function(req, res, next) {
-  request('http://api.brewerydb.com/v2/brewery/' + req.params.id + '?key=89b802471ef2d78f3003d97f713ac4c0&format=json', function(error, response, body) {
+  request('http://api.brewerydb.com/v2/brewery/' + req.params.id + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
 
 apiRouter.use('/brewery/:id/beers', function(req, res, next) {
-  request('http://api.brewerydb.com/v2/brewery/' + req.params.id + '/beers' + '?key=89b802471ef2d78f3003d97f713ac4c0&format=json', function(error, response, body) {
+  request('http://api.brewerydb.com/v2/brewery/' + req.params.id + '/beers' + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
@@ -57,7 +70,7 @@ apiRouter.get('/', function(req, res) {
 app.use('/api', apiRouter);
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/views/index.html'));
+  res.render('index');
 });
 
 app.listen(3000);

@@ -38,7 +38,6 @@
 <script src="js/beerService.js"></script>
 <script src="js/styleService.js"></script>
 <script src="js/beershowService.js"></script>
-<!-- <script>  require('dotenv').load();-->
 </script>
 </head>
 
@@ -74,11 +73,11 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
 
-    <form class="navbar-form navbar-left" role="search">
+    <form class="navbar-form navbar-left" role="search" ng-submit="main.doSearch()">
       <div class="form-group">
-        <input id="search-bar" type="text" class="form-control" placeholder="Search Breweries/Beer"><button type="submit" class="btn searchSubmit  btn-info">Submit</button>
+        <input id="search-bar" ng-model="main.query" type="text" class="form-control" placeholder="Search Breweries/Beer">
         </div>
-
+        <button type="submit" class="btn searchSubmit  btn-info">Submit</button>
 
 
     </form>
@@ -87,17 +86,11 @@
       <li><a id="breweryPageLink" href="/#/breweries"><i class="fa fa-shield"></i> Breweries</a></li>
       <li><a href="/#/styles"><i class="fa fa-beer"></i> Styles</a></li>
       <li><a href="/#/beerspeak"><i class="fa fa-commenting"></i> Beer Speak</a></li>
-<!--       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li> -->
+
     </ul>
-  </div><!-- /.navbar-collapse -->
+<div>
+
+  </div>
 </nav>
 
 
@@ -124,6 +117,8 @@
 
 
 
-
+<script>
+  var beerKey = '<%= process.env.KEY %>';
+</script>
 </body>
 </html>

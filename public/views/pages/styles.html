@@ -1,4 +1,4 @@
-
+<br>
 <div class="container  text-center">
 
 <table class="table table-bordered">
@@ -8,10 +8,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="style in vm.styles | orderBy:'name'">
+    <tr ng-repeat="style in vm.styles track by $index | orderBy:'name'">
       <td>
         <h2>{{style.name}}</h2>
-        <h4>{{style.description}}</h4></td>
+        <h4>{{style.description}}</h4>
+      </td>
     </tr>
   </tbody>
 </table>

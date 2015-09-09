@@ -3,7 +3,6 @@
 
 
 
-
 <div class="container welcome">
     <img class="breweryIcon" ng-src="{{vm.brewery.images.icon}}">
     <h1 class="breweryName">{{vm.brewery.name}}</h1>
@@ -17,11 +16,9 @@
     <br />
     <br />
 
-    <!-- <div ng-controller="locationController as location"> -->
-        <!-- <h5 class="breweryInfo">address</h5>
-        <h5 class="breweryInfo">phonenumber</h5> -->
-        <div class="rw-ui-container"></div>
-    <!-- </div> -->
+    <!-- <h5 class="breweryInfo">address</h5>
+    <h5 class="breweryInfo">phonenumber</h5> -->
+    <div class="rw-ui-container"></div>
 
 </div>
 
@@ -39,15 +36,14 @@
 
 
 
-<!-- <p ng-repeat="brewery in main.breweries" ng-show="$index == 0">{{brewery.twitter}}</p> -->
 
 <div class="twitter">
-  <a ng-repeat="brewery in main.breweries | limitTo:1" class="twitter-timeline" href="https://twitter.com/search?q= width="200" height="600" data-chrome="transparent" data-widget-id="{{brewery.twitter}}"></a>
+  <a class="twitter-timeline" ng-repeat="brewery in main.breweries | limitTo:1" class="twitter-timeline" href="https://twitter.com/search?q= width="200" height="600" data-chrome="transparent" data-widget-id="639862176551845889"></a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 </div>
 
-<div class="twitter_append">
+
 
 
 

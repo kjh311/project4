@@ -3,11 +3,11 @@
   function reloadWidget(){
   RW.render(null, true);
   FB.XFBML.parse()
-  // twttr.widgets.load()
+  twttr.widgets.load()
 
 }
 setTimeout(reloadWidget, 400);
-setTimeout(reloadWidget, 800);
+// setTimeout(reloadWidget, 800);
 
 
 function loadTwitter(){
@@ -16,8 +16,11 @@ function loadTwitter(){
     // alert(data-widget-id);
     var twitter = $('.twitter-timeline');
 
+
+
+    // $('.twitter-timeline').attr(data-widget-id,640951744621490177);
     if(brewery === "Angel City Brewing"){
-      alert('yeah!');
+      // alert('yeah!');
       // $( "input[name*='data-widget-id']" ).val( "640951744621490177" );
       // $('input[type="text"]').attr('data-widget-id', '');
       // $("input[data-widget-id=640951744621490177]"  ).attr('639862176551845889');

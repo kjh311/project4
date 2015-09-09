@@ -3,7 +3,6 @@ angular.module('styleService', [])
 .factory('Style', function($http) {
 
   var styleFactory = {};
-  var key = "89b802471ef2d78f3003d97f713ac4c0";
 
   //  styleService.get = function() {
   //   return $http.get('/api/styles/').then(function(res) {

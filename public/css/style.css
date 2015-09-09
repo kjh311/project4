@@ -113,6 +113,12 @@ body{
   color: black;
 }
 
+.dropdown{
+  width: 200px;
+  box-shadow: 10px 10px 5px rgba(0,0,0, 0.5);
+  color: gray;
+}
+
 .fb-comments{
   /*display: inline;*/
   float: left;
@@ -179,6 +185,10 @@ body{
   animation:zoomOutDown 0.5s both ease-in;
 }
 
+#off_canvas_drop{
+  visibility: hidden;
+}
+
 p{
   color: white;
 }
@@ -200,8 +210,9 @@ p{
 .searchSubmit{
   display: inline;
   float: right;
-
-  position: relative;
+  top: 8px;
+  position: absolute;
+  margin-left: 180px;
 }
 
 .table{
@@ -266,6 +277,46 @@ label.star:hover { transform: rotate(-15deg) scale(1.3); }
 label.star:before {
   content: '\f006';
   font-family: FontAwesome;
+}
+
+@media  (max-width: 700px) {
+  #breweryBanner{
+    width: 150px;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+  h2{
+    font-size: 17px;
+  }
+  h3{
+    font-size: 15px;
+  }
+  h4{
+    font-size: 13px;
+  }
+  /*td{
+    max-width: 100px;
+  }*/
+  .btn{
+    font-size: 10px;
+  }
+  body{
+    font-size: 10px;
+  }
+  a{
+    font-size: 5px;
+  }
+  .rw-ui-container, .td2{
+    max-width: 50px;
+  }
+  .td3{
+    max-width: 40px;
+  }
+  .td1{
+    max-width: 150px;
+  }
 }
 
 
