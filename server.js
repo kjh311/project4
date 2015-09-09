@@ -30,7 +30,7 @@ app.use(morgan('dev'));
 //   res.send('Welcome to the home page!');
 // });
 
-apiRouter.get('/styles', function(req, res, next) {
+apiRouter.use('/styles', function(req, res, next) {
   request('http://api.brewerydb.com/v2/styles?key=' + process.env.KEY , function(error, response, body) {
     res.json(JSON.parse(body).data);
   });

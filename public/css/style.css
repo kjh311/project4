@@ -16,7 +16,7 @@ a:hover{
   float: right;
   width: 100px;
   height: 100px;
-  background-image: url("http://www.whatthesupp.com/images/noImageAvailable300.gif");
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdobU1CCJ9DUp2ITNsYS8yWOjJfPZUxJgnKaeK-dweYJXI7Qy");
   background-size: cover;
   margin: 10px;
   /*border: 4px solid rgba(255,255,255,0.2);*/
@@ -64,7 +64,7 @@ body{
   border-radius: 5px;
   width: 75px;
   height: 75px;
-  background-image: url("http://www.whatthesupp.com/images/noImageAvailable300.gif");
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdobU1CCJ9DUp2ITNsYS8yWOjJfPZUxJgnKaeK-dweYJXI7Qy");
   background-size: cover;
 }
 
