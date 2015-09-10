@@ -9,7 +9,7 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'sty
    }
 ])
 
-.controller('mainController', ['$http', function($http) {
+.controller('mainController', ['$http', '$location', function($http, $location) {
 
   var vm = this;
 
@@ -43,9 +43,9 @@ vm.message = "main controller";
 vm.doSearch = function(){
   $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
     console.log(res.data);
+    vm.breweries = res;
+    $location.path('/searchresults');
   });
-
-
 }
 
 
@@ -144,6 +144,23 @@ vm.doSearch = function(){
   }
 
 }])
+
+.controller('searchController', function($http){
+
+  var vm = this;
+
+  vm.test = function(){
+    console.log('working');
+  }
+
+  vm.doSearch = function(){
+    $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
+      console.log(res.data);
+      vm.results = res.data;
+    });
+  }
+  // vm.message = 'Breweries controller works';
+})
 
 
 .controller('beerspeakController', function(Beer){

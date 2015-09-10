@@ -27,6 +27,13 @@ a:hover{
   margin-left: 30px;
 }
 
+#beerimage{
+  width: 30px;
+  height: 40px;
+  margin: 5px;
+  position: fixed;
+}
+
 .beername{
 
 
@@ -83,6 +90,10 @@ body{
   padding: 5px;
   margin-left: 15px;
   display: block;
+}
+
+.btn{
+  box-shadow: 10px 5px 5px rgba(0,0,0, 0.5);
 }
 
 .btn:hover{
@@ -146,8 +157,6 @@ body{
   position: fixed;
   top: 0px;
   left: 0px;
-  /*opacity: 50%;*/
-  /*background-position: center bottom;*/
 }
 
 .input{
@@ -168,7 +177,7 @@ body{
 }
 
 #nearbyBreweries{
-  background-color: rgba(0,0,0,0.5);
+  /*background-color: rgba(0,0,0,0.5);*/
   /*border: 1px solid rgba(255,255,255, 0.8);*/
 }
 
@@ -208,15 +217,19 @@ p{
 #search-bar{
   width: 180px;
   display: inline;
+  box-shadow: 10px 10px 5px rgba(0,0,0, 0.5);
+}
 
+#searchBtn{
+  margin-bottom: 10px;
 }
 
 .searchSubmit{
   display: inline;
-  float: right;
-  top: 8px;
-  position: absolute;
-  margin-left: 180px;
+  /*float: right;*/
+  /*top: 8px;*/
+  /*position: absolute;*/
+  /*margin-left: 180px;*/
 }
 
 .table{
