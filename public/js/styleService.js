@@ -20,8 +20,6 @@ angular.module('styleService', [])
     });
   }
 
-
-
   return styleFactory;
 
 });

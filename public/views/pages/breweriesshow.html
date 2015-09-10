@@ -1,9 +1,11 @@
 <ng-include src="'/views/partials/breweryshowtwitter.html'"></ng-include>
 
+
 <style>
 .twitter {display:none;}
 </style>
 
+<!-- reload correct twitter widget -->
 <script>function show() {
     var brewery = $('.breweryName').html();
     console.log(brewery);
@@ -12,7 +14,8 @@
     if(brewery === "Angel City Brewing"){
     // var input = $('.twitter-timeline').attr('data-widget-id')
     // $('.twitter-timeline').attr('data-widget-id','639862176551845889');
-    // var input = $('.twitter-timeline').attr('data-widget-id')[0][input] = "639862176551845889";
+    // var input = $('.twitter-timeline').attr('data-widget-id')[0][input] =
+     // "639862176551845889";
     // alert(input);
     $('twitter-timeline').data("data-widget-id", "639862176551845889");
    $('.twitter').css('display', 'inline');
@@ -25,7 +28,8 @@
 
       // $( "input[name*='data-widget-id']" ).val( "640951744621490177" );
       // $('input[type="text"]').attr('data-widget-id', '');
-      // $("input[data-widget-id=640951744621490177]"  ).attr('639862176551845889');
+      // $("input[data-widget-id=640951744621490177]"  ).attr
+      // ('639862176551845889');
       // var input = $('.twitter-timeline').attr('data-widget-id');
       // alert(input);
 
@@ -40,48 +44,45 @@ setTimeout("show()", 2000);</script>
 <div class="container welcome">
     <img class="breweryIcon" ng-src="{{vm.brewery.images.icon}}">
     <h1 class="breweryName">{{vm.brewery.name}}</h1>
-    <a href="/#/brewery/{{ vm.brewery.id }}/beers "><button type="button" class="btn beersButton btn-primary">View our Beers!</button></a>
-    <!-- <a href="/#/brewerytweets/{{ vm.brewery.id }} "><button type="button" class="btn beersButton btn-primary">News</button></a> -->
-    <a href="{{vm.brewery.website}}" target="_blank"><button type="button" class="btn webButton btn-info">Website</button></a>
+    <a ui-sref="brewery/:id{{ vm.brewery.id }}/beers "><button type="button"
+      class="btn beersButton btn-primary">View our Beers!</button></a>
+    <a ui-sref="{{vm.brewery.website}}" target="_blank"><button type="button"
+      class="btn webButton btn-info">Website</button></a>
 
-
     <br />
     <br />
     <br />
     <br />
 
-    <!-- <h5 class="breweryInfo">address</h5>
-    <h5 class="breweryInfo">phonenumber</h5> -->
     <div class="rw-ui-container"></div>
 
 </div>
 
 <div class="message">
-    <!-- {{vm.message}} -->
 </div>
-
 
 <div class="container welcome text-center">
   <h3 class="description">{{vm.brewery.description}}</h3>
 </div>
 
 
-<div class="fb-comments" data-href="http://localhost:3000/#/breweriesshow/{{vm.brewery.id}}" data-colorscheme="dark" width="350px" height="500px" data-numposts="5"></div>
+<div class="fb-comments" data-href="http://localhost:3000/#/breweriesshow/
+{{vm.brewery.id}}" data-colorscheme="dark" width="350px" height="500px"
+data-numposts="5"></div>
 
 
-
+<!-- twitter feed -->
 <!--
 <div class="twitter">
 
-
-  <a class="twitter-timeline" href="https://twitter.com/search?q=" width="350" height="600" data-chrome="transparent" >Tweets about angelcitybrew</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
+  <a class="twitter-timeline" href="https://twitter.com/search?q=" width="350"
+  height="600" data-chrome="transparent" >Tweets about angelcitybrew</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.
+test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);
+js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.
+insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 </div> -->
-
-
-
 
 
 <ng-include src="'/views/partials/ratingwidget.html'"></ng-include>

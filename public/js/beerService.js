@@ -13,11 +13,13 @@ angular.module('breweryService', [])
   };
 
   breweryFactory.update = function(id, breweryData) {
-    return $http.put('http://api.brewerydb.com/v2/brewery/:breweryId' + '?key=' + beerKey);
+    return $http.put('http://api.brewerydb.com/v2/brewery/:breweryId' +
+      '?key=' + beerKey);
   };
 
   breweryFactory.delete = function(id) {
-    return $http.delete('http://api.brewerydb.com/v2/brewery/:breweryId' + '?key=' + beerKey);
+    return $http.delete('http://api.brewerydb.com/v2/brewery/:breweryId' +
+      '?key=' + beerKey);
   };
 
   return breweryFactory;

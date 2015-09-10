@@ -1,29 +1,32 @@
-<ng-include src="'/views/partials/widgetreload.html'"></ng-include>
 
+
+<h1>Search result page</h1>
 
 <div class="container">
-
 
   <h2>Search Results</h2>
 
     <table class="table table-bordered">
       <thead>
         <tr>
-          <td class="td1">Name</td>
-          <td class="td1">Type</td>
-          <td  class="td2">Average Rating</td>
+          <!-- <td class="td1">Name</td>
+          <td class="td2">Type</td> -->
+          <!-- <td class="td3">Average Rating</td> -->
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="brewery in main.breweries track by $index | orderBy:'name'">
-          <td class="td1"><a href="/#/breweriesshow/{{ brewery.link }}" ><button type="button" class="btn btn-info">{{ brewery.name }}</button></a></td>
-          <td class="td2">type</td>
-          <td class="td3"><div class="rw-ui-container"></div></td>
+        <tr ng-repeat="result in vm.searchresults track by $index">
+          <td class="td1"><a href="/#/breweriesshow/{{ result.link }}" >
+            <button type="button" class="btn btn-info">{{ result.name }}
+            </button></a>
+            <h3>{{result.description}}</h3>
+            <h3>type: {{result.type}}</h3>
+            </td>
+          <!-- <td class="td3"><div class="rw-ui-container"></div></td> -->
         </tr>
       </tbody>
     </table>
 
 </div>
-{{vm.message}}
 
-<ng-include src="'/views/partials/ratingwidget.html'"></ng-include>
+

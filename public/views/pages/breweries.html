@@ -1,13 +1,12 @@
 <ng-include src="'/views/partials/widgetreload.html'"></ng-include>
 
 
-
-
-
 <div class="container">
 
 
-<h2 id="nearbyBreweries">Los Angeles Breweries:  <a href="/#/breweries/newbrewery" title=""><button type="button" class="btn btn-danger">Add new brewery</button></a></h2>
+<h2 id="nearbyBreweries">Los Angeles Breweries: <a ui-sref="newbrewery">
+  <button type="button" class="btn btn-danger">Add new brewery</button></a>
+</h2>
 
 <table class="table table-bordered">
   <thead>
@@ -19,38 +18,17 @@
   </thead>
   <tbody>
     <tr ng-repeat="brewery in main.breweries | orderBy:'name'">
-      <td class="td1"><a href="/#/breweriesshow/{{ brewery.link }}" ><button type="button" class="btn btn-info">{{ brewery.name }}</button></a></td>
-      <td class="td2"><div class="rw-ui-container"></div></td>
-      <td class="td3">{{ brewery.city }}</td>
+      <td class="td1"><a ui-sref="breweriesshow/:id{{ brewery.id }}" ><button
+        type="button" class="btn btn-info">{{ brewery.name }}</button></a>
+      </td>
+      <td class="td2"><div class="rw-ui-container"></div>
+      </td>
+      <td class="td3">{{ brewery.city }}
+      </td>
     </tr>
   </tbody>
 </table>
 
 </div>
-
-<!-- {{vm.message}} -->
-
-<!--
-<iframe src="http://voting.first-jump.com/init.php?a=g&g=1441237141639&m=1&n=5&s=25&f=3.png&f_a=&f_b=&f_c=" allowtransparency="true" hspace="0" vspace="0" marginheight="0" marginwidth="0" frameborder="0" height="38" scrolling="no" width="128"></iframe> -->
-
-     <!--  <div class="stars">
-          <form action="">
-            <input class="star star-5" id="star-5" type="radio" name="star"/>
-            <label class="star star-5" for="star-5"></label>
-            <input class="star star-4" id="star-4" type="radio" name="star"/>
-            <label class="star star-4" for="star-4"></label>
-            <input class="star star-3" id="star-3" type="radio" name="star"/>
-            <label class="star star-3" for="star-3"></label>
-            <input class="star star-2" id="star-2" type="radio" name="star"/>
-            <label class="star star-2" for="star-2"></label>
-            <input class="star star-1" id="star-1" type="radio" name="star"/>
-            <label class="star star-1" for="star-1"></label>
-          </form>
-       </div> -->
-
-      <!-- <td><div class="rw-ui-container"></div></td> -->
-
-
-
 
 <ng-include src="'/views/partials/ratingwidget.html'"></ng-include>

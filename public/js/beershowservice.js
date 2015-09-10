@@ -10,7 +10,8 @@ angular.module('beershowService', [])
   };
 
   // beershowFactory.create = function(breweryData) {
-  //   return $http.post('http://api.brewerydb.com/v2/brewery' + '?key=' + beerKey);
+  //   return $http.post('http://api.brewerydb.com/v2/brewery' + '?key=' +
+    // beerKey);
   // };
 
   beershowFactory.create = function(breweryData) {
@@ -18,11 +19,13 @@ angular.module('beershowService', [])
   };
 
   beershowFactory.update = function(id, breweryData) {
-    return $http.put('http://api.brewerydb.com/v2/brewery/:breweryId' + '?key=' + beerKey);
+    return $http.put('http://api.brewerydb.com/v2/brewery/:breweryId' +
+      '?key=' + beerKey);
   };
 
   beershowFactory.delete = function(id) {
-    return $http.delete('http://api.brewerydb.com/v2/brewery/:breweryId' + '?key=' + beerKey);
+    return $http.delete('http://api.brewerydb.com/v2/brewery/:breweryId' +
+      '?key=' + beerKey);
   };
 
   return beershowFactory;

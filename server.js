@@ -10,6 +10,7 @@ var bodyParser = require('body-parser'),
     path = require('path'),
     apiRouter = express.Router();
 
+
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
@@ -86,6 +87,7 @@ app.use('/api', apiRouter);
 app.get('*', function(req, res) {
   res.render('index');
 });
+
 
 app.listen(3000);
 console.log('The port is on 3000.');

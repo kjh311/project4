@@ -1,74 +1,88 @@
-angular.module('routerRoutes', ['ngRoute'])
+angular.module('routerRoutes', ['ui.router'])
 
-  .config(function($routeProvider, $locationProvider) {
-    $routeProvider
+  .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    .when('/', {
+    $stateProvider
+
+    .state('home', {
+      url          : '/',
       templateUrl  : 'views/pages/home.html',
       controller   : 'mainController',
       controllerAs : 'main'
-  })
+    })
 
-    .when('/searchresults', {
-      templateUrl  : 'views/pages/searchresults.html',
-      controller   : 'searchController',
-      controllerAs : 'vm'
-  })
-
-      .when('/styles', {
-      templateUrl  : 'views/pages/styles.html',
-      controller   : 'stylesController',
-      controllerAs : 'vm'
-  })
-
-      .when('/style/:id', {
-      templateUrl  : 'views/pages/style.html',
-      controller   : 'styleController',
-      controllerAs : 'vm'
-  })
-
-    .when('/breweries', {
+    .state( 'breweries', {
+      url          : '/breweries',
       templateUrl  : 'views/pages/breweries.html',
       controller   : 'breweriesController',
       controllerAs : 'vm'
   })
 
-    .when('/breweries/newbrewery', {
-      templateUrl  : 'views/pages/newbrewery.html',
-      controller   : 'breweriesController',
-      controllerAs : 'vm'
-  })
-
-    .when('/breweries/newbeer', {
-      templateUrl  : 'views/pages/newbeer.html',
-      controller   : 'breweriesController',
-      controllerAs : 'vm'
-  })
-
-     .when('/breweriesshow/:id', {
-      templateUrl  : 'views/pages/breweriesshow.html',
+    .state('breweriesshow', {
+      url          : '/breweriesshow/:id',
+      templateUrl  : 'pages/breweriesshow.html',
       controller   : 'breweryController',
       controllerAs : 'vm'
   })
 
-      .when('/brewery/:id/beers', {
-      templateUrl  : 'views/pages/brewerybeershow.html',
+    .state('brewerybeershow', {
+      url          : '/brewery/:id/beers',
+      templateUrl  : 'pages/brewerybeershow.html',
       controller   : 'beershowController',
       controllerAs : 'vm'
   })
 
-      .when('/beershow', {
-      templateUrl  : 'views/pages/beershow.html',
+    .state('beershow', {
+      url          : '/beershow',
+      templateUrl  : 'pages/beershow.html',
       controller   : 'beerController',
       controllerAs : 'vm'
   })
 
-    .when('/beerspeak', {
-      templateUrl  : 'views/pages/beerspeak.html',
+    .state('beerspeak', {
+      url          : '/beerspeak',
+      templateUrl  : 'pages/beerspeak.html',
       controller   : 'beerspeakController',
       controllerAs : 'vm'
-  });
+  })
+
+    .state('newbeer', {
+      url          : '/breweries/newbeer',
+      templateUrl  : 'pages/newbeer.html',
+      controller   : 'breweriesController',
+      controllerAs : 'vm'
+  })
+
+    .state('newbrewery', {
+      url          : '/breweries/newbrewery',
+      templateUrl  : 'pages/newbrewery.html',
+      controller   : 'breweriesController',
+      controllerAs : 'vm'
+  })
+
+      .state('searchresults', {
+      url          : '/searchresults',
+      templateUrl  : 'views/pages/searchresults.html',
+      controller   : 'searchController',
+      controllerAs : 'vm'
+  })
+
+    .state('styles', {
+      url          : '/styles',
+      templateUrl  : 'views/pages/styles.html',
+      controller   : 'stylesController',
+      controllerAs : 'vm'
+  })
+
+  //   .state( 'styleid', {
+  //     url          : '/style/:id',
+  //     templateUrl  : 'views/pages/style.html',
+  //     controller   : 'styleController',
+  //     controllerAs : 'vm'
+  // })
+
+  $urlRouterProvider.otherwise('/');
 
   // $locationProvider.html5Mode(true);
 
-})
+});

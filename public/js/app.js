@@ -1,4 +1,5 @@
-angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'styleService', 'beershowService'])
+angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService',
+  'styleService', 'beershowService'])
 
 .config(['$httpProvider', function($httpProvider) {
       $httpProvider.defaults.useXDomain = true;
@@ -9,44 +10,64 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'sty
    }
 ])
 
-.controller('mainController', ['$http', function($http) {
+.controller('mainController', ['$http', '$rootScope', '$state', function($http,
+  $rootScope, $state) {
 
   var vm = this;
 
 
 
-vm.message = "main controller";
+  vm.message = "main controller";
 
       vm.breweries = [
-  { name: 'Golden Road Brewery', rating: '', city: 'Los Angeles', link: '6RZC0v', twitter: '639862176551845889'},
-  { name: 'Angel City Brewery', rating: '', city: 'Los Angeles', link: '0ZIlVA', twitter: '640951744621490177'},
-  { name: 'Mumford Brewing', rating: '', city: 'Los Angeles', link: 'pUVZvr', twitter: '641701877881548800'},
-  { name: 'Ohana Brewing Co', rating: '', city: 'Los Angeles', link: 'nE0YCy', twitter: '641702346393649152'},
-  { name: 'The Dudes Brewing Co', rating: '', city: 'Torrance', link: 'xXJuyA', twitter: '641702654582743040'},
-  { name: 'Eagle Rock Brewery', rating: '', city: 'Los Angeles', link: 'aCW7DF', twitter: '641702897973989376'},
-  { name: 'Bonaventure Brewing Co.', rating: '', city: 'Los Angeles', link: 'hiPKpK', twitter: '641703179537657856'},
-  { name: 'Strand Brewing Co', rating: '', city: 'Los Angeles', link: 'BbSlls', twitter: '641703422312366080'},
-  { name: 'El Segundo Brewing Company', rating: '', city: 'El Segundo', link: 'TiJjtj', twitter: '641703793466339328'},
-  { name: 'Karl Strauss Brewing Company', rating: '', city: 'Los Angeles', link: 'mtUjck', twitter: '641704168525201409'},
-  { name: 'BJs Restaurant and Brewery', rating: '', city: 'Los Angeles', link: 'CJ7aEv', twitter: '641704789055660032'},
-  { name: 'Beachwood BBQ & Brewing', rating: '', city: 'Long Beach', link: 'RCXyVC', twitter: '641705045222817792'},
-  { name: 'Monkish Brewing Co.', rating: '', city: 'Torrance', link: 'PIwPRT', twitter: '641705270880563200'},
-  { name: 'San Pedro Brewing Company', rating: '', city: 'San Pedro', link: 'YBW4h3', twitter: '641705730815324160'},
-  { name: 'Three Weavers Brewing Company', rating: '', city: 'Inglewood', link: 'mpfjHg', twitter: '641705929390460928'},
-  { name: 'Belmont Brewing Co', rating: '', city: 'Long Beach', link: 'MQVQup', twitter: '641706211885187072'},
-  { name: 'Gordon Biersch Brewing', rating: '', city: 'Los Angeles', link: 'P2xdU4', twitter: '641706442991382528'},
-  { name: 'Pacific Plate Brewing Co', rating: '', city: 'Pasadena', link: 'g4IkyI', twitter: '641706684482609152'},
-  { name: 'Highland Park Brewery', rating: '', city: 'Pasadena', link: 'q8pAoY', twitter: '641706851730460672'},
+  { name: 'Golden Road Brewery', rating: '', city: 'Los Angeles', link: '6RZC0v',
+    twitter: '639862176551845889'},
+  { name: 'Angel City Brewery', rating: '', city: 'Los Angeles', link: '0ZIlVA',
+    twitter: '640951744621490177'},
+  { name: 'Mumford Brewing', rating: '', city: 'Los Angeles', link: 'pUVZvr',
+    twitter: '641701877881548800'},
+  { name: 'Ohana Brewing Co', rating: '', city: 'Los Angeles', link: 'nE0YCy',
+    twitter: '641702346393649152'},
+  { name: 'The Dudes Brewing Co', rating: '', city: 'Torrance', link: 'xXJuyA',
+    twitter: '641702654582743040'},
+  { name: 'Eagle Rock Brewery', rating: '', city: 'Los Angeles', link: 'aCW7DF',
+    twitter: '641702897973989376'},
+  { name: 'Bonaventure Brewing Co.', rating: '', city: 'Los Angeles',
+    link: 'hiPKpK', twitter: '641703179537657856'},
+  { name: 'Strand Brewing Co', rating: '', city: 'Los Angeles', link: 'BbSlls',
+    twitter: '641703422312366080'},
+  { name: 'El Segundo Brewing Company', rating: '', city: 'El Segundo',
+    link: 'TiJjtj', twitter: '641703793466339328'},
+  { name: 'Karl Strauss Brewing Company', rating: '', city: 'Los Angeles',
+    link: 'mtUjck', twitter: '641704168525201409'},
+  { name: 'BJs Restaurant and Brewery', rating: '', city: 'Los Angeles',
+    link: 'CJ7aEv', twitter: '641704789055660032'},
+  { name: 'Beachwood BBQ & Brewing', rating: '', city: 'Long Beach',
+    link: 'RCXyVC', twitter: '641705045222817792'},
+  { name: 'Monkish Brewing Co.', rating: '', city: 'Torrance',
+    link: 'PIwPRT', twitter: '641705270880563200'},
+  { name: 'San Pedro Brewing Company', rating: '', city: 'San Pedro',
+    link: 'YBW4h3', twitter: '641705730815324160'},
+  { name: 'Three Weavers Brewing Company', rating: '', city: 'Inglewood',
+    link: 'mpfjHg', twitter: '641705929390460928'},
+  { name: 'Belmont Brewing Co', rating: '', city: 'Long Beach',
+    link: 'MQVQup', twitter: '641706211885187072'},
+  { name: 'Gordon Biersch Brewing', rating: '', city: 'Los Angeles',
+    link: 'P2xdU4', twitter: '641706442991382528'},
+  { name: 'Pacific Plate Brewing Co', rating: '', city: 'Pasadena',
+    link: 'g4IkyI', twitter: '641706684482609152'},
+  { name: 'Highland Park Brewery', rating: '', city: 'Pasadena',
+    link: 'q8pAoY', twitter: '641706851730460672'},
 
 ];
 
-vm.doSearch = function(){
-  $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
-    console.log(res.data);
-  });
-
-
-}
+  vm.doSearch = function(){
+    $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function
+        (res){
+      $rootScope.searchResults = res.data;
+      $state.go('searchresults');
+    });
+  }
 
 
 }])
@@ -59,7 +80,8 @@ vm.doSearch = function(){
 
 
 
-.controller('stylesController', ['Style', '$routeParams', function(Style, $routeParams){
+.controller('stylesController', ['Style', '$routeParams', function(Style,
+    $routeParams){
   var vm = this;
   vm.message = 'Styles controller is connected!!';
 
@@ -78,7 +100,8 @@ vm.doSearch = function(){
 // })
 
 
-.controller('styleController', ['Style', '$routeParams', function(Style, $routeParams){
+.controller('styleController', ['Style', '$routeParams', function(Style,
+    $routeParams){
   var vm = this;
   vm.message = 'Style controller works';
 
@@ -88,7 +111,8 @@ vm.doSearch = function(){
   });
 }])
 
-.controller('beershowController', ['Beershow', '$routeParams', function(Beershow, $routeParams){
+.controller('beershowController', ['Beershow', '$routeParams', function
+    (Beershow, $routeParams){
   var vm = this;
   vm.message = 'Brewery-beer-show controller works';
 
@@ -107,7 +131,8 @@ vm.doSearch = function(){
 })
 
 
-.controller('breweryController', ['Brewery', '$routeParams', function(Brewery, $routeParams){
+.controller('breweryController', ['Brewery', '$routeParams', function(Brewery,
+    $routeParams){
   var vm = this;
   vm.message = 'Brewery controller works';
 
@@ -129,19 +154,19 @@ vm.doSearch = function(){
 
   function createBrewery() {
     Brewery.create({
-             name:        vm.name,
-             description: vm.description,
-             website:     vm.website,
-             established: vm.established
-           })
-           .then(
-             function(res) {
-               alert(res.data.message);
-             },
-             function(err) {
-               alert(err);
-           });
-  }
+         name:        vm.name,
+         description: vm.description,
+         website:     vm.website,
+         established: vm.established
+       })
+       .then(
+         function(res) {
+           alert(res.data.message);
+         },
+         function(err) {
+           alert(err);
+       });
+    }
 
 }])
 
@@ -156,6 +181,14 @@ vm.doSearch = function(){
 
       vm.beer = data;
     });
+})
+
+
+.controller('searchController', function($rootScope){
+  var vm = this;
+
+  vm.searchresults = $rootScope.searchResults;
+  console.log(vm.searchresults);
 });
 
 
