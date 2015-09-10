@@ -1,5 +1,39 @@
 <ng-include src="'/views/partials/breweryshowtwitter.html'"></ng-include>
 
+<style>
+.twitter {display:none;}
+</style>
+
+<script>function show() {
+    var brewery = $('.breweryName').html();
+    console.log(brewery);
+
+  if($('.twitter').css('display') == 'none'){
+    if(brewery === "Angel City Brewing"){
+    // var input = $('.twitter-timeline').attr('data-widget-id')
+    // $('.twitter-timeline').attr('data-widget-id','639862176551845889');
+    // var input = $('.twitter-timeline').attr('data-widget-id')[0][input] = "639862176551845889";
+    // alert(input);
+    $('twitter-timeline').data("data-widget-id", "639862176551845889");
+   $('.twitter').css('display', 'inline');
+
+    // var input = $('.twitter-timeline').attr('data-widget-id');
+    // alert(input);
+
+    // alert(jQuery('#div')[0][input]);
+
+
+      // $( "input[name*='data-widget-id']" ).val( "640951744621490177" );
+      // $('input[type="text"]').attr('data-widget-id', '');
+      // $("input[data-widget-id=640951744621490177]"  ).attr('639862176551845889');
+      // var input = $('.twitter-timeline').attr('data-widget-id');
+      // alert(input);
+
+    }
+    twttr.widgets.load()
+  }
+}
+setTimeout("show()", 2000);</script>
 
 
 
@@ -36,12 +70,15 @@
 
 
 
-
+<!--
 <div class="twitter">
-  <a class="twitter-timeline" ng-repeat="brewery in main.breweries track by $index | limitTo:1" class="twitter-timeline" href="https://twitter.com/search?q= width="200" height="600" data-chrome="transparent" data-widget-id="639862176551845889"></a>
+
+
+  <a class="twitter-timeline" href="https://twitter.com/search?q=" width="350" height="600" data-chrome="transparent" >Tweets about angelcitybrew</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-</div>
+
+</div> -->
 
 
 

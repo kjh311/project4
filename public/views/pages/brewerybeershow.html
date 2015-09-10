@@ -10,11 +10,11 @@ setTimeout(reloadWidget, 800);
 
 
 });</script>
-
+<br>
 
 
 <div class="container">
-<h1 id="beers">Beers  <a href="/#/breweries/newbeer" title=""><button type="button" class="btn btn-danger">Add new beer</button></a></h1>
+<!-- <h1 id="beers">Beers  <a href="/#/breweries/newbeer" title=""><button type="button" class="btn btn-danger">Add new beer</button></a></h1> -->
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -28,9 +28,9 @@ setTimeout(reloadWidget, 800);
         <img class="beerIcon" ng-src="{{beershow.labels.medium}}">
         <h4 class="description">{{beershow.description}}</h4>
         <!-- <h4>{{beershow.style.category.name}}</h4> -->
-        <h4>{{beershow.style.name}}</h4>
-        <h4>{{beershow.available.description}}</h4>
-        <h4>ABV: {{beershow.abv}}</h4>
+        <h4 class="beerInfo">{{beershow.style.name}}</h4>
+        <h4 class="beerInfo">{{beershow.available.description}}</h4>
+        <h4 class="beerInfo">ABV: {{beershow.abv}}</h4>
         <!-- <h4>{{beershow.glass.name}}</h4> -->
         </td>
     </tr>

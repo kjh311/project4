@@ -9,8 +9,12 @@ angular.module('beershowService', [])
     return $http.get('/api/breweries/' + id + '/beers');
   };
 
+  // beershowFactory.create = function(breweryData) {
+  //   return $http.post('http://api.brewerydb.com/v2/brewery' + '?key=' + beerKey);
+  // };
+
   beershowFactory.create = function(breweryData) {
-    return $http.post('http://api.brewerydb.com/v2/brewery' + '?key=' + beerKey);
+    return $http.post('http://api.brewerydb.com/v2/beer' + '?key=' + beerKey);
   };
 
   beershowFactory.update = function(id, breweryData) {

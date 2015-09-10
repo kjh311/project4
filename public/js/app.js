@@ -136,10 +136,10 @@ vm.doSearch = function(){
            })
            .then(
              function(res) {
-               console.log(res);
+               alert(res.data.message);
              },
              function(err) {
-               console.log(err);
+               alert(err);
            });
   }
 
