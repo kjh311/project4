@@ -6,7 +6,7 @@ var bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     // User = require('./app/models/user'),
     request = require('request'),
-    port = process.env.PORT,
+    port = process.env.PORT || 3000,
     path = require('path'),
     apiRouter = express.Router();
 
@@ -87,8 +87,8 @@ app.get('*', function(req, res) {
   res.render('index');
 });
 
-app.listen(3000);
-console.log('The port is on 3000.');
+app.listen(port);
+console.log('The port is on ' + port + '.');
 
 
 
