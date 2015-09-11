@@ -38,7 +38,7 @@ setTimeout("show()", 2000);</script>
 
 
 <div class="container welcome">
-    <img class="breweryIcon" ng-src="{{vm.brewery.images.icon}}">
+    <img class="breweryIcon" ng-src="{{vm.brewery.images.medium}}">
     <h1 class="breweryName">{{vm.brewery.name}}</h1>
     <a href="/#/brewery/{{ vm.brewery.id }}/beers "><button type="button" class="btn beersButton btn-primary">View our Beers!</button></a>
     <!-- <a href="/#/brewerytweets/{{ vm.brewery.id }} "><button type="button" class="btn beersButton btn-primary">News</button></a> -->
@@ -66,7 +66,7 @@ setTimeout("show()", 2000);</script>
 </div>
 
 
-<div class="fb-comments" data-href="http://localhost:3000/#/breweriesshow/{{vm.brewery.id}}" data-colorscheme="dark" width="350px" height="500px" data-numposts="5"></div>
+<div class="fb-comments" data-href="https://craft-beerzilla.herokuapp.com/#/breweriesshow/{{vm.brewery.id}}" data-colorscheme="dark" width="240px" height="500px" data-numposts="5"></div>
 
 
 
