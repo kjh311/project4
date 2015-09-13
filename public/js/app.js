@@ -14,7 +14,6 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'sty
   var vm = this;
 
 
-
 vm.message = "main controller";
 
       vm.breweries = [

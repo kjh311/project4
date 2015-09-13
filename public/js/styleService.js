@@ -14,7 +14,7 @@ angular.module('styleService', [])
   styleFactory.get = function(id) {
     return $http.get('/api/styles/' + id).then(function(res) {
       console.log('request completed!');
-      console.log(res.data[0].name);
+      // console.log(res.data[0].name);
       // var one = res.data[0].name;
       return res.data;
     });
