@@ -21,4 +21,4 @@ After forking the repo, run 'NPM INSTALL' to install dependencies.
 'Nodemon server.js' in terminal, then 'localhost:3000'
 
 USER STORIES, ERD, and WIREFRAMES:
-https://trello.com/b/nR2GU9Ed/project-4 target="_blank"
+https://trello.com/b/nR2GU9Ed/project-4
