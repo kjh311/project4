@@ -1,6 +1,6 @@
 CRAFT BEER-ZILLA is an app that uses the BreweryDB API to list
-raft breweries, along with the beers they sell, with descriptions
-and info.  It will also show any related images.
+craft breweries, along with the beers they sell, with descriptions,
+user comments, and ratings.  It will also show any related images.
 
 ![ScreenShot](http://i.imgur.com/mjYhmXd.png)
 
@@ -21,4 +21,4 @@ After forking the repo, run 'NPM INSTALL' to install dependencies.
 'Nodemon server.js' in terminal, then 'localhost:3000'
 
 USER STORIES, ERD, and WIREFRAMES:
-https://trello.com/b/nR2GU9Ed/project-4
+https://trello.com/b/nR2GU9Ed/project-4 target="_blank"
