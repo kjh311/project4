@@ -5,9 +5,9 @@ and info.  It will also show any related images.
 <!-- Screenshot:
 ![screenshot] https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566 -->
 
-![ScreenShot](http://vignette3.wikia.nocookie.net/thundercats/images/b/b2/Snarf.jpg/revision/latest?cb=20111021212401)
+![ScreenShot](http://imgur.com/mjYhmXd)
 
-<img src="https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566"/>
+<!-- <img src="https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566"/> -->
 
 Technologies Used:
 - Angular
