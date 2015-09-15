@@ -5,9 +5,9 @@ and info.  It will also show any related images.
 <!-- Screenshot:
 ![screenshot] https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566 -->
 
-![ScreenShot](https://imgur.com/mjYhmXd)
+![ScreenShot](http://i.imgur.com/mjYhmXd.png)
 
-<!-- <img src="https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566"/> -->
+<img src="https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566"/>
 
 Technologies Used:
 - Angular
