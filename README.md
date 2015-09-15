@@ -1,8 +1,9 @@
 CRAFT BEER-ZILLA is an app that uses the BreweryDB API to list craft breweries, along with the beers they sell, with descriptions and info.  It will also show any related images.
 
 <!-- Screenshot:
+![screenshot] https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566 -->
 
-![Bilby Stampede](https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566)
+![Bilby Stampede](https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566?raw=true)
 
 Technologies Used:
 - Angular
