@@ -5,7 +5,7 @@ and info.  It will also show any related images.
 <!-- Screenshot:
 ![screenshot] https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566 -->
 
-![ScreenShot](http://imgur.com/mjYhmXd)
+![ScreenShot](https://imgur.com/mjYhmXd)
 
 <!-- <img src="https://drive.google.com/thumbnail?id=0B6z5p82sidMKTGRsMFVKVnV5eWc&authuser=0&v=1441574161938&sz=w830-h566"/> -->
 
