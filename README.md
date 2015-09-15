@@ -10,6 +10,9 @@ Technologies Used:
 - BreweryDB API
 - Express
 - Node
+- Rating-Widget.com
+- Facebook Comments
+- Twitter Timeline
 
 Approach:
 I wanted to see if I could create a Single Page App while consuming an API.
