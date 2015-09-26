@@ -160,6 +160,7 @@ body{
 
 .fb-like{
   margin: 20px;
+  width: 30%;
 }
 
 h1{
@@ -298,6 +299,18 @@ td{
 
 .twitter-timeline{
   font-size: 3em;
+}
+
+.styleInfo{
+  font-size: 30px;
+}
+
+.styleInfoName{
+  font-size: 40px;
+}
+
+tr{
+  padding: 20px;
 }
 
 .welcome{
@@ -466,7 +479,7 @@ label.star:before {
     font-size: 8em;
   }
   .rw-ui-container, .td2{
-    max-width: 50px;
+    max-width: 150px;
   }
   .td3{
     max-width: 40px;
@@ -478,12 +491,42 @@ label.star:before {
     width: 150px;
     height: 150px;
   }
+
+  .beerInfo{
+    font-size: 30px;
+  }
+
+  .breweryIcon{
+    width: 250px;
+  }
+
+  .beername{
+    font-size: 60px;
+  }
+
+  #beerimage{
+    margin-left: 300px;
+  }
+
   #homeBackground{
     width: 130%;
     height: 120%;
     left: -110px;
     top: -40px;
     display: initial;
+  }
+
+  .fb-comments{
+    padding: 20px;
+  }
+
+  .newBreweryButton{
+    font-size: 30px;
+    margin-top: 250px;
+  }
+
+  #nearbyBreweries{
+    margin-top: -200px;
   }
 
   li{
@@ -493,6 +536,10 @@ label.star:before {
 
   #breweryPageLink, #stylesPageLink, #beerspeakPageLink, #searchPageLink{
     font-size: 0.3em;
+  }
+
+  .searchInfo{
+    font-size: 30px;
   }
 }
 
@@ -518,6 +565,18 @@ label.star:before {
   }
   h4{
     font-size: 2.7em;
+  }
+
+  #beerimage{
+    margin-left: 150px;
+  }
+
+  .breweryNameBtn{
+    font-size: 8px;
+  }
+
+  .rw-ui-container{
+    float: right;
   }
   }
 

@@ -10,8 +10,8 @@
   <tbody>
     <tr ng-repeat="style in vm.styles  | orderBy:'name'">
       <td>
-        <h2>{{style.name}}</h2>
-        <h4>{{style.description}}</h4>
+        <h2 class="styleInfoName">{{style.name}}</h2>
+        <h4 class="styleInfo">{{style.description}}</h4>
       </td>
     </tr>
   </tbody>

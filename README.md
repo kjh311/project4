@@ -30,3 +30,10 @@ After forking the repo, run 'NPM INSTALL' to install dependencies.
 
 USER STORIES, ERD, and WIREFRAMES:
 https://trello.com/b/nR2GU9Ed/project-4
+
+ICEBOX FEATURES:
+- I would like to add the ability to locate breweries close to my location,
+but I need to get the premium API key.
+- Would like to add a loading screen while the data is being returned from the API.
+-
+
