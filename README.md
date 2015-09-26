@@ -39,5 +39,12 @@ but I need to get the premium API key.
 - Add pages for individual beers / Guilds./
 - If no beers exist in the API for a specific brewery, info telling the user
 instead of a blank screen.
--
+- I would like individual twitter feeds for each brewery.
+- I would like to replace "LA Breweries" with "My Breweries" that users could
+FAV their favorite Beers / Breweries.
+- Replace Facebook Comment Widget with hard coded comments.
+- Replace Star Rating Widget with hard coded version.
+
+PROBLEMS
+- Using widgets with Angular.
 
