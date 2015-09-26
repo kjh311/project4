@@ -11,11 +11,11 @@ Technologies Used:
 - Express
 - Node
 - Rating-Widget.com
-<<<<<<< HEAD
+
 - Facebooks comments
-=======
+
 - Facebook Comments
->>>>>>> bcaf2096171b7f6e7313df33607ad90c4c0cc0dd
+
 - Twitter Timeline
 
 Approach:
@@ -35,5 +35,9 @@ ICEBOX FEATURES:
 - I would like to add the ability to locate breweries close to my location,
 but I need to get the premium API key.
 - Would like to add a loading screen while the data is being returned from the API.
+- Would like to add individual beers to breweries.
+- Add pages for individual beers / Guilds./
+- If no beers exist in the API for a specific brewery, info telling the user
+instead of a blank screen.
 -
 
