@@ -46,5 +46,5 @@ FAV their favorite Beers / Breweries.
 - Replace Star Rating Widget with hard coded version.
 
 PROBLEMS
-- Using widgets with Angular.
+- Using widgets with Angular.  Half the time they don't load.
 

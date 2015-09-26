@@ -26,6 +26,7 @@ a:hover{
 
 .beerInfo{
   margin-left: 30px;
+  font-size: 35px;
 }
 
 #beerimage{
@@ -70,7 +71,7 @@ body{
 }
 
 .breweryDescription{
-  font-size: 4em;
+  font-size: 40px;
 }
 
 .breweryIcon{
@@ -130,7 +131,7 @@ body{
 .description{
   margin: 10px;
   line-height: 1em;
-  font-size: 2em;
+  font-size: 40px;
 }
 
 .description_inputBox{
@@ -160,7 +161,7 @@ body{
 
 .fb-like{
   margin: 20px;
-  width: 30%;
+  font-size: 40px;
 }
 
 h1{
@@ -261,6 +262,10 @@ p{
 #searchBtn{
   margin-bottom: 10px;
   font-size: 1.0em;
+}
+
+.searchInfo{
+  font-size: 35px;
 }
 
 .searchSubmit{
