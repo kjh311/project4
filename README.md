@@ -6,15 +6,20 @@ user comments, and ratings.  It will also show any related images.
 
 
 Technologies Used:
-- Angular
+- AngularJS
 - BreweryDB API
 - Express
 - Node
 - Rating-Widget.com
+<<<<<<< HEAD
+- Facebooks comments
+=======
 - Facebook Comments
+>>>>>>> bcaf2096171b7f6e7313df33607ad90c4c0cc0dd
 - Twitter Timeline
 
 Approach:
+
 I wanted to see if I could create a Single Page App while consuming an API.
 I chose Angular for the SPA, NgRoute to help with API. I used widgets from
 Facebook, Twitter, and rating-widget.com to help with the reviews.
