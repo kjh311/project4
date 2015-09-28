@@ -72,6 +72,7 @@ body{
 
 .breweryDescription{
   font-size: 40px;
+  padding: 20px;
 }
 
 .breweryIcon{
@@ -314,7 +315,7 @@ td{
   font-size: 40px;
 }
 
-tr{
+tbody{
   padding: 20px;
 }
 
