@@ -1,11 +1,22 @@
-<br>
+  <script>$(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");;
+  });
+  </script>
+
+<div class="se-pre-con"></div>
+
+
 <div class="container  text-center">
 
 <table class="table table-bordered">
   <thead>
     <tr>
       <td><h2 id="beerStyles">Craft Beer Styles:</h2></td>
-    </tr>
+ </tr>
+
+
+
   </thead>
   <tbody>
     <tr ng-repeat="style in vm.styles  | orderBy:'name'">
@@ -17,4 +28,9 @@
   </tbody>
 </table>
 </div>
+
+ <div id="spinner">
+        <h2>Loading beer goodness...</h2>
+        <img src="http://rsmg.pbsrc.com/albums/v738/LadyFire/Smileys/Beer_poured.gif~c200" alt="Loading..."/>
+ </div>
 
