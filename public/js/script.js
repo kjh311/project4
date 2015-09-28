@@ -4,11 +4,7 @@
 $( document ).ready(function() {
 
 
-   // $('.spinner').ajaxStart(function () {
-   //      $(this).fadeIn('fast');
-   //  }).ajaxStop(function () {
-   //      $(this).stop().fadeOut('fast');
-   //  });
+
 
 
 
