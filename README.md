@@ -34,7 +34,7 @@ https://trello.com/b/nR2GU9Ed/project-4
 ICEBOX FEATURES:
 - I would like to add the ability to locate breweries close to my location,
 but I need to get the premium API key.
-- Would like to add a loading screen while the data is being returned from the API.
+- Would like to add a loading animation while the data is being returned from the API.
 - Would like to add individual beers to breweries.
 - Add pages for individual beers / Guilds./
 - If no beers exist in the API for a specific brewery, info telling the user
@@ -46,5 +46,5 @@ FAV their favorite Beers / Breweries.
 - Replace Star Rating Widget with hard coded version.
 
 PROBLEMS
-- Using widgets with Angular.
+- Using widgets with Angular.  Half the time they don't load.
 
