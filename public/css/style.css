@@ -46,6 +46,11 @@ a:hover{
   height: 100px;
 }
 
+.beerTable{
+  margin-bottom: 10px;
+  /*position: fixed;*/
+}
+
 body{
   /*padding-top: 50px;*/
   font-family: 'Indie Flower', cursive;
@@ -122,6 +127,10 @@ body{
   background-color: red;
 }
 
+button.navbar-toggle{
+  visibility: hidden;
+}
+
 #content-views {
   position: relative;
 }
@@ -148,6 +157,20 @@ body{
   box-shadow: 10px 10px 5px rgba(0,0,0, 0.5);
   color: gray;
 }
+
+#dropMenu{
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 3;
+  visibility: hidden;
+}
+
+.dropText{
+  font-size: 50px;
+  color: red;
+}
+
 
 .fb-comments{
   /*display: inline;*/
@@ -208,6 +231,10 @@ h4{
   /*visibility: hidden;*/
 }
 
+.loading{
+  bottom: 0px;
+}
+
 .navbar{
   top: 0px;
   left: 0px;
@@ -263,6 +290,7 @@ p{
 }
 
 .rw-ui-container{
+  margin: 20px;
 }
 
 #search-bar{
@@ -479,12 +507,21 @@ label.star:before {
     height: 80px;
   }
 
+  #dropMenu{
+    visibility: visible;
+    color: red;
+  }
+
   #searchBtn{
     font-size: 1em;
   }
 
   .navbar-brand{
     font-size: 2em;
+  }
+
+  .navLinks{
+    visibility: hidden;
   }
 
   #search-bar{
@@ -592,6 +629,11 @@ label.star:before {
     top: 0px;
     display: initial;
   }
+
+  .menu-wrap {
+    visibility: visible;
+  }
+
   .navbar-brand{
     font-size: 1em;
   }

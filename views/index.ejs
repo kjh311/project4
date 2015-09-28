@@ -70,12 +70,11 @@
     <a href="/#/" title=""><img class=" nav navbar-nav navbar-left" id="beerimage" src="https://cdn1.iconfinder.com/data/icons/rcons-drink/16/beer-512.png" ></a>
   </div>
 
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
+  <div class="collapse navbar-collapse navbar-ex1-collapse navLinks">
 
 
     </form>
     <ul class="nav navbar-nav navbar-right">
-      <!-- <li><a href="/"><i class="fa fa-home"></i> Home</a></li> -->
       <li><a id="searchPageLink" href="/#/searchresults" ><i class="fa fa-search"></i> Search </a>
       </li>
       <li><a id="breweryPageLink" href="/#/breweries"><i class="fa fa-shield"></i> L.A. Breweries</a></li>
@@ -85,10 +84,21 @@
     </ul>
 <div>
 
+
+
   </div>
+
+
 </nav>
 
 
+  <select id="dropMenu" name="Menu" onChange="window.location.href=this.value">
+    <option class="dropText" selected disabled>Menu</option>
+    <option class="dropText" value="/#/searchresults">Search</option>
+    <option class="dropText" value="/#/breweries">L.A. Breweries</option>
+    <option class="dropText" value="/#/styles">Beer Styles</option>
+    <option class="dropText" value="/#/beerspeak">Beer Speak</option>
+  </select>
 
 
 
