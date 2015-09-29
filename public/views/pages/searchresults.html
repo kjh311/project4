@@ -24,7 +24,7 @@
         <tr ng-repeat="brews in vm.results">
           <td>
             <a href="/#/breweriesshow/{{ brews.id }}" ><button type="button" class="btn btn-info"><h4 class="searchInfo">{{ brews.name }}</h4></button></a>
-            <h4 class="searchInfo">{{brews.type}}</h4>
+            <h4 id="brewType" class="searchInfo">{{brews.type}}</h4>
             <h3 class="searchInfo">{{brews.description}}</h3>
 
         </tr>

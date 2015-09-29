@@ -673,7 +673,7 @@ label.star:before {
   }
   }
 
-  @media  (max-width: 650px) {
+  @media  (max-width: 700px) {
      #homeBackground{
     width: 110%;
     height: 100%;
@@ -681,8 +681,118 @@ label.star:before {
     top: 0px;
     display: initial;
   }
+
+  .breweryDescription{
+    font-size: 30px;
+  }
+
+  .breweryName{
+    font-size: 40px;
+  }
+
+  #beerStyles{
+    font-size: 45px;
+  }
+
+  .beername{
+    font-size: 40px;
+  }
+
+  .breweryIcon:hover{
+    width: 400px;
+    height: 150px;
+    z-index: 2;
+    margin: 0 auto;
+    float: left;
+    /*position: absolute;*/
+    left: 0px;
+    bottom: -40px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    box-shadow: 30px 30px 20px rgba(0,0,0,0.5);
+  }
+
+  .beerIcon:hover{
+    width: 300px;
+    height: 300px;
+   /* z-index: 2;*/
+    /*margin: 0 auto;
+    float: left;*/
+    /*position: absolute;*/
+    left: 50px;
+    bottom: 80px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    box-shadow: 30px 30px 20px rgba(0,0,0,0.5);
+
+  }
+
+  .fb-comments, .twitter{
+    float: left;
+    width: 500px;
+  }
+
+  .loading{
+    padding: 0px;
+  }
+
+  .loadingBeerGif{
+    width: 100px;
+  }
+
+  .loadingBeer, #possible{
+    font-size: 20px;
+
+    /*margin-bottom: 0px;*/
+    /*position: absolute;*/
+  }
+
+  .loadingBeer{
+    margin-top: -50px;
+  }
+
+  .rw-ui-container{
+    /*float: left;*/
+  }
+
+  .description{
+    font-size: 30px;
+  }
+
+  .btn{
+    font-size: 20px;
+  }
+
+  #brewType{
+    margin-top: -50px;
+  }
+
+  .newBreweryButton{
+    margin-top: 250px;
+  }
+
   .navbar-brand{
     font-size: 1em;
+  }
+
+  #search-bar{
+    width: 500px;
+  }
+
+  .styleInfo{
+    font-size: 25px;
+  }
+
+  #welcomeText{
+    font-size: 40px;
+  }
+
+  td{
+    max-width: 300px;
   }
   }
 
