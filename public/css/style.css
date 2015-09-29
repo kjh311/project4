@@ -797,6 +797,9 @@ label.star:before {
   }
 
 @media  (max-width: 400px) {
+  .breweryTable{
+    margin-left: 30px;
+  }
   h1{
     font-size: 5em;
   }
@@ -810,9 +813,9 @@ label.star:before {
     font-size: 2em;
   }
   #homeBackground{
-    width: 40%;
+    width: 230%;
     height: 100%;
-    left: -90px;
+    left: -110px;
   }
   .beerIcon{
     width: 100px;
@@ -822,14 +825,138 @@ label.star:before {
     width: 100px;
     height: 50px;
   }
+  .breweryIcon:hover{
+    width: 300px;
+    height: 125px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .beerIcon:hover{
+    width: 300px;
+    height: 300px;
+   /* z-index: 2;*/
+    /*margin: 0 auto;
+    float: left;*/
+    /*position: absolute;*/
+    left: -20px;
+    bottom: 80px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .breweryNameBtn{
+    margin-top: 30px;
+  }
+  .breweryDescription{
+    padding: 5px;
+  }
+
+  .breweryName{
+    font-size: 30px;
+  }
+
+  #breweryBanner{
+    width: 200px;
+  }
+  .breweryIcon{
+    width: 200px;
+    height: 75px;
+    border-radius: 15px;
+  }
+  .beerIcon{
+    width: 150px;
+    height: 150px;
+    float: left;
+  }
+  .btn{
+    font-size: 15px;
+  }
+  .description{
+    font-size: 25px;
+  }
   .fb-comments{
     width: 240px;
   }
   .breweryTable{
-    width: 30%;
+
     left: -30px;
     top: 75px;
     position: absolute;
+  }
+  .fb-comments{
+    width: 300px;
+  }
+
+  #dropMenu{
+    width: 150px;
+  }
+  input{
+    font-size: 20px;
+  }
+  .loadingBeerGif{
+    width: 180px;
+    height: 200px;
+    margin-left: -30px;
+  }
+  #nearbyBreweries{
+    font-size: 20px;
+    margin-top: -70px;
+  }
+  .newBreweryButton{
+    margin-top: 100px;
+    position: absolute;
+    font-size: 15px;
+  }
+  .rw-ui-container{
+    margin-right: 0px;
+    position: fixed;
+  }
+
+  #search-bar{
+    width: 300px;
+    font-size: 18px;
+    /*margin-left: -10px;*/
+  }
+
+  #searchName{
+    font-size: 20px;
+    max-width: 250px;
+  }
+
+  .searchTable, .searchDiv{
+    max-width: 250px;
+  }
+  .searchDiv{
+    margin-left: -10px;
+  }
+
+  .searchInfo, .styleInfo{
+    font-size: 25px;
+  }
+  .rating{
+    float: left;
+  }
+
+  .td3, .td2{
+    /*font-size: 50px;*/
+    /*padding: 30px;*/
+    /*margin-left: 80px;*/
+  }
+  .td3{
+    visibility: hidden;
+  }
+  .td2{
+    max-width: 200px;
+  }
+  .td1{
+    max-width: 230px;
+  }
+   .fb-comments, .twitter{
+    float: left;
+    width: 300px;
   }
 }
 

@@ -4,7 +4,7 @@
   <br>
   <br>
 
-<div class="container text-center">
+<div class="container text-center searchDiv">
 
     <form  role="search" ng-submit="vm.doSearch()">
       <div class="form-group">
@@ -15,7 +15,7 @@
 
   <!-- <h2>Search Results</h2> -->
 
-    <table class="table ">
+    <table class="table searchTable">
       <thead>
         <tr>
         </tr>
@@ -23,7 +23,7 @@
       <tbody>
         <tr ng-repeat="brews in vm.results">
           <td>
-            <a href="/#/breweriesshow/{{ brews.id }}" ><button type="button" class="btn btn-info"><h4 class="searchInfo">{{ brews.name }}</h4></button></a>
+            <a href="/#/breweriesshow/{{ brews.id }}" ><button type="button" class="btn btn-info"><h4 id="searchName" class="searchInfo">{{ brews.name }}</h4></button></a>
             <h4 id="brewType" class="searchInfo">{{brews.type}}</h4>
             <h3 class="searchInfo">{{brews.description}}</h3>
 
