@@ -2,6 +2,7 @@
 <script>$( document ).ready(function() {
   function reloadWidget(){
   RW.render(null, true);
+  RW_Async_Init();
   FB.XFBML.parse()
 }
 setTimeout(reloadWidget, 400);
