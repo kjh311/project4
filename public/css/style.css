@@ -507,9 +507,19 @@ label.star:before {
     height: 80px;
   }
 
+  input{
+    font-size: 28px;
+  }
+
   #dropMenu{
     visibility: visible;
-    color: red;
+    color: grey;
+    background-color: rgba(255,255,255, 0.7);
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    padding: 30px;
+    margin: 0 auto;
   }
 
   #searchBtn{
