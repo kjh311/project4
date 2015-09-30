@@ -1,12 +1,4 @@
-
-
-
 $( document ).ready(function() {
-
-
-
-
-
 
 
   // require('dotenv').load();

@@ -14,19 +14,34 @@ a:hover{
 
 .beerIcon{
   float: right;
-  width: 200px;
-  height: 200px;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdobU1CCJ9DUp2ITNsYS8yWOjJfPZUxJgnKaeK-dweYJXI7Qy");
   background-size: cover;
   margin: 10px;
-  border: 4px solid rgba(255,255,255,0.2);
+  border: 4px solid white;
   border-radius: 5px;
-  /*border: 1px solid white;*/
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.5);
 }
 
-.beerInfo{
-  margin-left: 30px;
-  font-size: 35px;
+.beerIcon:hover{
+  width: 500px;
+  height: 500px;
+  left: 0px;
+  bottom: 80px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  box-shadow: 30px 30px 20px rgba(0,0,0,0.5);
 }
 
 #beerimage{
@@ -36,9 +51,9 @@ a:hover{
   position: fixed;
 }
 
-.beername{
-
-
+.beerInfo{
+  margin-left: 30px;
+  font-size: 35px;
 }
 
 #beerPng{
@@ -48,11 +63,9 @@ a:hover{
 
 .beerTable{
   margin-bottom: 10px;
-  /*position: fixed;*/
 }
 
 body{
-  /*padding-top: 50px;*/
   font-family: 'Indie Flower', cursive;
   /*font-family: 'Architects Daughter', cursive;*/
   /*font-family: 'Passion One', cursive;*/
@@ -68,8 +81,6 @@ body{
 #breweryBanner{
   bottom: 0px;
   width: 30%;
-  /*float: left;*/
-  /*position: absolute;*/
   background-color: rgba(0,0,0, 0.6);
   border-radius: 10px;
   border: 1px solid white;
@@ -83,13 +94,37 @@ body{
 .breweryIcon{
   float: left;
   margin: 5px;
-  /*border: 4px solid rgba(255,255,255,0.5);*/
-  border-radius: 5px;
-  width: 250px;
+  width: 300px;
   height: 100px;
+  border-radius: 10px;
+  border: 3px solid black;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  border: 3px solid white;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.5);
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdobU1CCJ9DUp2ITNsYS8yWOjJfPZUxJgnKaeK-dweYJXI7Qy");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+.breweryIcon:hover{
+  width: 600px;
+  height: 200px;
+  z-index: 2;
+  margin: 0 auto;
+  float: left;
+  left: 0px;
+  bottom: -40px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  box-shadow: 30px 30px 20px rgba(0,0,0,0.5);
 }
 
 .breweryInfo{
@@ -173,10 +208,7 @@ button.navbar-toggle{
 
 
 .fb-comments{
-  /*display: inline;*/
   float: left;
-  /*right: 0px;*/
-  /*position: fixed;*/
   margin-top: 20px;
   background-color: rgba(0,0,0, 0.6);
   border: 2px solid white;
@@ -228,7 +260,6 @@ h4{
   margin-bottom: 500px;
   text-align: center;
   margin: 0 auto;
-  /*visibility: hidden;*/
 }
 
 .loading{
@@ -243,7 +274,6 @@ h4{
   position: fixed;
   z-index: 3;
   border: 2px solid rgba(0,0,0,0.5);
-  /*color: white;*/
   font-size: 2em;
 }
 .navbar-brand{
@@ -251,8 +281,6 @@ h4{
 }
 
 #nearbyBreweries{
-  /*background-color: rgba(0,0,0,0.5);*/
-  /*border: 1px solid rgba(255,255,255, 0.8);*/
   margin-top: 40px;
 }
 
@@ -312,10 +340,19 @@ p{
 
 .searchSubmit{
   display: inline;
-  /*float: right;*/
-  /*top: 8px;*/
-  /*position: absolute;*/
-  /*margin-left: 180px;*/
+}
+
+#spinner{
+  top: 50%;
+  left: 50%;
+  text-align:center;
+  z-index:2;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  border: solid 2px white;
+  border-radius: 20px;
+  margin-left: 20px;
+  padding: 100px;
 }
 
 .table{
@@ -326,18 +363,11 @@ td{
   font-size: 2em;
 }
 
-/*.td1, .td2, .td3{
-  font-size: 1em;
-}*/
-
 .twitter{
   position: relative;
-  /*display: inline;*/
   float: right;
   margin-top: 20px;
   padding: 10px;
-  /*top: 70px;
-  right: 0;*/
   background-color: rgba(0,0,0, 0.6);
   border: 2px solid white;
   border-radius: 20px;
@@ -369,8 +399,9 @@ tbody{
 
 
 
-
+/*///////////*/
 /*star rating*/
+/*///////////*/
 div.stars {
   width: 150px;
   display: inline-block;
@@ -408,96 +439,11 @@ label.star:before {
 }
 
 
-.breweryIcon{
-  width: 300px;
-  height: 100px;
-  border-radius: 10px;
-  border: 3px solid black;
-  position: relative;
-  left: 0px;
-  bottom: 0px;
-  border: 3px solid white;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  box-shadow: 5px 10px 5px rgba(0,0,0,0.5);
-}
-
-.beerIcon{
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  border: 3px solid black;
-  position: relative;
-  left: 0px;
-  border: 5px solid white;
-  bottom: 0px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  box-shadow: 5px 10px 5px rgba(0,0,0,0.5);
-}
-
-.breweryIcon:hover{
-  width: 600px;
-  height: 200px;
-  z-index: 2;
-  margin: 0 auto;
-  float: left;
-  /*position: absolute;*/
-  left: 0px;
-  bottom: -40px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  box-shadow: 30px 30px 20px rgba(0,0,0,0.5);
-}
-
-.beerIcon:hover{
-  width: 500px;
-  height: 500px;
- /* z-index: 2;*/
-  /*margin: 0 auto;
-  float: left;*/
-  /*position: absolute;*/
-  left: 0px;
-  bottom: 80px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  box-shadow: 30px 30px 20px rgba(0,0,0,0.5);
-}
-
-#spinner
-{
-    /*display: none;*/
-   /* width:100px;
-    height: 100px;*/
-    /*position: fixed;*/
-    top: 50%;
-    left: 50%;
-    text-align:center;
-/*    margin-left: -50px;
-    margin-top: -100px;*/
-    z-index:2;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-    border: solid 2px white;
-    border-radius: 20px;
-    margin-left: 20px;
-    padding: 100px;
-}
 
 
-
-
-
-
-
+/*//////////////
+/IPAD Landscape/
+//////////////*/
 @media  (max-width: 1050px) {
   #breweryBanner{
     width: 150px;
@@ -506,11 +452,9 @@ label.star:before {
     width: 200px;
     height: 80px;
   }
-
   input{
     font-size: 28px;
   }
-
   #dropMenu{
     visibility: visible;
     color: grey;
@@ -521,19 +465,15 @@ label.star:before {
     padding: 30px;
     margin: 0 auto;
   }
-
   #searchBtn{
     font-size: 1em;
   }
-
   .navbar-brand{
     font-size: 2em;
   }
-
   .navLinks{
     visibility: hidden;
   }
-
   #search-bar{
     font-size: 3em;
     width: 20em;
@@ -545,21 +485,12 @@ label.star:before {
   h2{
     font-size: 5em;
   }
-  h3{
+  h3, h4{
     font-size: 4em;
   }
-  h4{
-    font-size: 4em;
-  }
-  /*td{
-    max-width: 100px;
-  }*/
   .btn{
     font-size: .4em;
-    /*width: 10em;
-    height: 5em;*/
   }
-
   body{
     font-size: 10px;
   }
@@ -579,23 +510,18 @@ label.star:before {
     width: 150px;
     height: 150px;
   }
-
   .beerInfo{
     font-size: 30px;
   }
-
   .breweryIcon{
     width: 250px;
   }
-
   .beername{
     font-size: 60px;
   }
-
   #beerimage{
     margin-left: 300px;
   }
-
   #homeBackground{
     width: 130%;
     height: 120%;
@@ -603,47 +529,41 @@ label.star:before {
     top: -40px;
     display: initial;
   }
-
   .fb-comments{
     padding: 20px;
   }
-
   .newBreweryButton{
     font-size: 30px;
     margin-top: 250px;
   }
-
   #nearbyBreweries{
     margin-top: -200px;
   }
-
   li{
     font-size: 3em;
-
   }
-
   #breweryPageLink, #stylesPageLink, #beerspeakPageLink, #searchPageLink{
     font-size: 0.3em;
   }
-
   .searchInfo{
     font-size: 30px;
   }
 }
 
+/*//////////////
+/IPAD Portrait /
+//////////////*/
 @media  (max-width: 800px) {
-     #homeBackground{
+  #homeBackground{
     width: 180%;
     height: 100%;
     left: -110px;
     top: 0px;
     display: initial;
   }
-
   .menu-wrap {
     visibility: visible;
   }
-
   .navbar-brand{
     font-size: 1em;
   }
@@ -659,7 +579,6 @@ label.star:before {
   h4{
     font-size: 2.7em;
   }
-
   #beerimage{
     margin-left: 150px;
   }
@@ -667,12 +586,14 @@ label.star:before {
   .breweryNameBtn{
     font-size: 8px;
   }
-
   .rw-ui-container{
     float: right;
   }
   }
 
+/*///////////////////
+/Galaxy S4 Landscape/
+///////////////////*/
   @media  (max-width: 700px) {
      #homeBackground{
     width: 110%;
@@ -681,30 +602,21 @@ label.star:before {
     top: 0px;
     display: initial;
   }
-
   .breweryDescription{
     font-size: 30px;
   }
-
-  .breweryName{
+  .breweryName, .beername{
     font-size: 40px;
   }
-
   #beerStyles{
     font-size: 45px;
   }
-
-  .beername{
-    font-size: 40px;
-  }
-
   .breweryIcon:hover{
     width: 400px;
     height: 150px;
     z-index: 2;
     margin: 0 auto;
     float: left;
-    /*position: absolute;*/
     left: 0px;
     bottom: -40px;
     -webkit-transition: all 0.5s ease;
@@ -713,14 +625,9 @@ label.star:before {
     transition: all 0.5s ease;
     box-shadow: 30px 30px 20px rgba(0,0,0,0.5);
   }
-
   .beerIcon:hover{
     width: 300px;
     height: 300px;
-   /* z-index: 2;*/
-    /*margin: 0 auto;
-    float: left;*/
-    /*position: absolute;*/
     left: 50px;
     bottom: 80px;
     -webkit-transition: all 0.5s ease;
@@ -728,74 +635,55 @@ label.star:before {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     box-shadow: 30px 30px 20px rgba(0,0,0,0.5);
-
   }
-
   .fb-comments, .twitter{
     float: left;
     width: 500px;
   }
-
   .loading{
     padding: 0px;
   }
-
   .loadingBeerGif{
     width: 100px;
   }
-
   .loadingBeer, #possible{
     font-size: 20px;
-
-    /*margin-bottom: 0px;*/
-    /*position: absolute;*/
   }
-
   .loadingBeer{
     margin-top: -50px;
   }
-
-  .rw-ui-container{
-    /*float: left;*/
-  }
-
   .description{
     font-size: 30px;
   }
-
   .btn{
     font-size: 20px;
   }
-
   #brewType{
     margin-top: -50px;
   }
-
   .newBreweryButton{
     margin-top: 250px;
   }
-
   .navbar-brand{
     font-size: 1em;
   }
-
   #search-bar{
     width: 500px;
   }
-
   .styleInfo{
     font-size: 25px;
   }
-
   #welcomeText{
     font-size: 40px;
   }
-
   td{
     max-width: 300px;
   }
   }
 
+/*///////////////////
+/Galaxy S4 Portrait//
+///////////////////*/
 @media  (max-width: 400px) {
   .breweryTable{
     margin-left: 30px;
@@ -836,10 +724,6 @@ label.star:before {
   .beerIcon:hover{
     width: 300px;
     height: 300px;
-   /* z-index: 2;*/
-    /*margin: 0 auto;
-    float: left;*/
-    /*position: absolute;*/
     left: -20px;
     bottom: 80px;
     -webkit-transition: all 0.5s ease;
@@ -853,11 +737,9 @@ label.star:before {
   .breweryDescription{
     padding: 5px;
   }
-
   .breweryName{
     font-size: 30px;
   }
-
   #breweryBanner{
     width: 200px;
   }
@@ -889,7 +771,6 @@ label.star:before {
   .fb-comments{
     width: 300px;
   }
-
   #dropMenu{
     width: 150px;
   }
@@ -914,36 +795,25 @@ label.star:before {
     margin-right: 0px;
     position: fixed;
   }
-
   #search-bar{
     width: 300px;
     font-size: 18px;
-    /*margin-left: -10px;*/
   }
-
   #searchName{
     font-size: 20px;
     max-width: 250px;
   }
-
   .searchTable, .searchDiv{
     max-width: 250px;
   }
   .searchDiv{
     margin-left: -10px;
   }
-
   .searchInfo, .styleInfo{
     font-size: 25px;
   }
   .rating{
     float: left;
-  }
-
-  .td3, .td2{
-    /*font-size: 50px;*/
-    /*padding: 30px;*/
-    /*margin-left: 80px;*/
   }
   .td3{
     visibility: hidden;
@@ -959,11 +829,3 @@ label.star:before {
     width: 300px;
   }
 }
-
-
-
-
-
-
-
-

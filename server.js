@@ -26,9 +26,6 @@ app.use(function(req, res, next) {
 
 app.use(morgan('dev'));
 
-// app.get('/', function(req, res) {
-//   res.send('Welcome to the home page!');
-// });
 
 apiRouter.use('/styles', function(req, res, next) {
   request('http://api.brewerydb.com/v2/styles?key=' + process.env.KEY , function(error, response, body) {

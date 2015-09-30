@@ -16,6 +16,7 @@ angular.module('routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'sty
 
 vm.message = "main controller";
 
+// Los Angeles Breweries
       vm.breweries = [
   { name: 'Golden Road Brewery', rating: '', city: 'Los Angeles', link: '6RZC0v', twitter: '639862176551845889'},
   { name: 'Angel City Brewery', rating: '', city: 'Los Angeles', link: '0ZIlVA', twitter: '640951744621490177'},
@@ -39,6 +40,7 @@ vm.message = "main controller";
 
 ];
 
+//search
 vm.doSearch = function(){
   $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
     console.log(res.data);
@@ -69,12 +71,6 @@ vm.doSearch = function(){
     vm.styles = res;
   });
 }])
-
-// .controller('styleController', function(){
-
-//   var vm = this;
-//   vm.message = 'style controller works';
-// })
 
 
 .controller('styleController', ['Style', '$routeParams', function(Style, $routeParams){
@@ -158,14 +154,12 @@ vm.doSearch = function(){
       vm.results = res.data;
     });
   }
-  // vm.message = 'Breweries controller works';
 })
 
 
 .controller('beerspeakController', function(Beer){
 
   var vm = this;
-  // vm.message = 'This is the Beer Speak Page';
   Beer.all()
 
     .success(function(data) {

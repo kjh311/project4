@@ -1,10 +1,3 @@
-  <script>$(window).load(function() {
-    // Animate loader off screen
-    $(".se-pre-con").fadeOut("slow");;
-  });
-  </script>
-
-<div class="se-pre-con"></div>
 
 
 <div class="container  text-center">
@@ -14,9 +7,6 @@
     <tr>
       <td><h2 id="beerStyles">Craft Beer Styles:</h2></td>
  </tr>
-
-
-
   </thead>
   <tbody>
     <tr ng-repeat="style in vm.styles  | orderBy:'name'">
@@ -29,6 +19,8 @@
 </table>
 </div>
 
+
+<!-- Loading animation -->
  <div id="spinner">
         <h2 class="loadingBeer">Loading beer goodness...</h2>
         <img  class="loadingBeerGif" src="http://www.gify.net/data/media/331/piwo-ruchomy-obrazek-0062.gif" alt="Loading..."/>
