@@ -21,6 +21,8 @@ UserSchema.pre('save', function(next) {
   });
 });
 
+
+// working on user signin
 UserSchema.methods.comparePassword = function(password) {
   var user = this;
 
