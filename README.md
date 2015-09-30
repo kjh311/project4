@@ -7,8 +7,8 @@ user comments, and ratings.  It will also show any related images
 
 
 Technologies Used:
-- AngularJS
-- BreweryDB API
+- AngularJS, single web page app.
+- BreweryDB API, for breweries, beers, guilds, descriptions, and images.
 - Express
 - Node
 - Rating-Widget.com
@@ -24,7 +24,7 @@ Facebook, Twitter, and rating-widget.com to help with the reviews.
 
 Installing:
 After forking the repo, run 'NPM INSTALL' to install dependencies.
-'Nodemon server.js' in terminal, then 'localhost:3000'.
+'Nodemon server.js' in terminal, then 'localhost:3000' in the browser.
 
 USER STORIES
 https://trello.com/b/nR2GU9Ed/project-4
@@ -44,4 +44,5 @@ FAV their favorite Beers / Breweries.
 
 PROBLEMS
 - Using widgets with Angular.  Half the time they don't load.
+- Loading animation doesn't disapear on Brewery Beer page.
 
