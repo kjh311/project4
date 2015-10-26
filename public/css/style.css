@@ -187,7 +187,7 @@ button.navbar-toggle{
 .description{
   margin: 10px;
   line-height: 1em;
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 
 .description_inputBox{
@@ -471,6 +471,9 @@ label.star:before {
   #breweryBanner{
     width: 150px;
   }
+  .beerspeakFacebook{
+    max-width: 400px;
+  }
   .breweryDescription{
     font-size: 3em;
   }
@@ -597,6 +600,9 @@ label.star:before {
     top: 0px;
     display: initial;
   }
+  .beerspeakFacebook{
+    max-width: 340px;
+  }
   .menu-wrap {
     visibility: visible;
   }
@@ -640,6 +646,9 @@ label.star:before {
     left: -50px;
     top: 0px;
     display: initial;
+  }
+  .beerspeakFacebook{
+    max-width: 500px;
   }
   .breweryDescription{
     font-size: 2.5em;
@@ -739,6 +748,9 @@ label.star:before {
 @media  (max-width: 400px) {
   .breweryTable{
     margin-left: 30px;
+  }
+  .beerspeakFacebook{
+    max-width: 300px;
   }
   h1{
     font-size: 5em;
