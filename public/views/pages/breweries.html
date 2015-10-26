@@ -10,14 +10,16 @@
   <thead>
     <tr>
       <td class="td1">Name</td>
-      <td  class="td2">Average Rating</td>
+      <!-- <td  class="td2">Average Rating</td> -->
       <td class="td3">City</td>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="brewery in main.breweries | orderBy:'name'">
-      <td class="td1 breweryNameBtn"><a href="/#/breweriesshow/{{ brewery.link }}" ><button type="button" class="btn btn-info">{{ brewery.name }}</button></a></td>
-      <td class="td2"><div class="rw-ui-container"></div></td>
+      <td class="td1 breweryNameBtn"><a href="/#/breweriesshow/{{ brewery.link }}" ><button type="button" class="btn btn-info">{{ brewery.name }}</button></a>
+        <br>
+      <div class="rw-ui-container"></div></td>
+      <!-- <td class="td2"></td> -->
       <td class="td3">{{ brewery.city }}</td>
     </tr>
   </tbody>
