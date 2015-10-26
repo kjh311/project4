@@ -15,6 +15,7 @@ a:hover{
 .beerIcon{
   float: right;
   background-color: black;
+  background-image: url('../images/NoImageAvailable.png');
   text-align: center;
   background-size: cover;
   margin: 20px;
