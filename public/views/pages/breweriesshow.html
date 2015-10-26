@@ -35,11 +35,14 @@ setTimeout("show()", 2000);</script>
 
 
 <div class="container welcome">
-    <img class="breweryIcon" ng-src="{{vm.brewery.images.medium}}">
     <h1 class="breweryName">{{vm.brewery.name}}</h1>
-    <a href="/#/brewery/{{ vm.brewery.id }}/beers "><button type="button" class="btn beersButton btn-primary">View our Beers!</button></a>
+    <br>
+    <br>
+    <br>
+    <img class="breweryIcon" ng-src="{{vm.brewery.images.medium}}">
+    <a class="viewOurBeers" href="/#/brewery/{{ vm.brewery.id }}/beers "><button type="button" class="btn beersButton btn-primary">View our Beers!</button></a>
     <!-- <a href="/#/brewerytweets/{{ vm.brewery.id }} "><button type="button" class="btn beersButton btn-primary">News</button></a> -->
-    <a href="{{vm.brewery.website}}" target="_blank"><button type="button" class="btn webButton btn-info">Website</button></a>
+    <a class="websiteLink" href="{{vm.brewery.website}}" target="_blank"><button type="button" class="btn webButton btn-info">Website</button></a>
 
 
     <br />
@@ -50,7 +53,11 @@ setTimeout("show()", 2000);</script>
     <!-- <h5 class="breweryInfo">address</h5>
     <h5 class="breweryInfo">phonenumber</h5> -->
     <div class="rw-ui-container"></div>
+    <h3 class="breweryDescription">{{vm.brewery.description}}</h3>
 
+    <div class="facebookWrapper">
+        <div class="fb-comments" data-href="https://craft-beerzilla.herokuapp.com/#/breweriesshow/{{vm. brewery.id}}" data-colorscheme="dark" width="240px" height="500px" data-numposts="5"></div>
+    </div>
 </div>
 
 <!-- Making sure controllers are connected -->
@@ -59,12 +66,11 @@ setTimeout("show()", 2000);</script>
 </div>
 
 
-<div class="container welcome text-center">
+<!-- <div class="container welcome text-center">
   <h3 class="breweryDescription">{{vm.brewery.description}}</h3>
 </div>
+ -->
 
-
-<div class="fb-comments" data-href="https://craft-beerzilla.herokuapp.com/#/breweriesshow/{{vm.brewery.id}}" data-colorscheme="dark" width="240px" height="500px" data-numposts="5"></div>
 
 
 

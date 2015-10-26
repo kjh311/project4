@@ -4,33 +4,37 @@
   <br>
   <br>
 
-<div class="container text-center searchDiv">
+<div class="wrapper">
 
-    <form  role="search" ng-submit="vm.doSearch()">
-      <div class="form-group">
-        <input id="search-bar" ng-model="vm.query" type="text" class="form-control" placeholder="Search Breweries / Beers / Guilds">
-        </div>
-        <h3><input type="submit" id="searchBtn" class="btn searchSubmit btn-info"></h3>
-    </form>
 
-    <table class="table searchTable">
-      <thead>
-        <tr>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="brews in vm.results">
-          <td>
-            <a href="/#/breweriesshow/{{ brews.id }}" ><button type="button" class="btn btn-info"><h4 id="searchName" class="searchInfo">{{ brews.name }}</h4></button></a>
-            <h4 id="brewType" class="searchInfo">{{brews.type}}</h4>
-            <h3 class="searchInfo">{{brews.description}}</h3>
+  <div class="container text-center searchDiv">
 
-        </tr>
-      </tbody>
-    </table>
+      <form  role="search" ng-submit="vm.doSearch()">
+        <div class="form-group">
+          <input id="search-bar" ng-model="vm.query" type="text" class="form-control" placeholder="Search Breweries / Beers / Guilds">
+          </div>
+          <h3><input type="submit" id="searchBtn" class="btn searchSubmit btn-info"></h3>
+      </form>
+
+      <table class="table searchTable">
+        <thead>
+          <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="brews in vm.results">
+            <td>
+              <a href="/#/breweriesshow/{{ brews.id }}" ><button type="button" class="btn btn-info"><h4 id="searchName" class="searchInfo">{{ brews.name }}</h4></button></a>
+              <h4 id="brewType" class="searchInfo">{{brews.type}}</h4>
+              <h3 class="searchInfo">{{brews.description}}</h3>
+
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
+
 
 </div>
-
-
 
 <ng-include src="'/views/partials/ratingwidget.html'"></ng-include>

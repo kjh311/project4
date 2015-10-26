@@ -53,9 +53,18 @@ a:hover{
   position: fixed;
 }
 
+.beerspeakFacebook{
+  border: 2px solid white;
+  border-radius: 20px;
+  max-width: 560px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(0,0,0, 0.6);
+}
+
 .beerInfo{
   margin-left: 30px;
-  font-size: 35px;
+  font-size: 1em;
 }
 
 .beername{
@@ -75,6 +84,8 @@ body{
   font-family: 'Indie Flower', cursive;
   background-color: black;
   color: white;
+  max-width: 100%;
+  font-size: 16px;
 }
 
 #breweryBanner{
@@ -86,7 +97,7 @@ body{
 }
 
 .breweryDescription{
-  font-size: 40px;
+  font-size: 2.5em;
   padding: 20px;
 }
 
@@ -176,7 +187,7 @@ button.navbar-toggle{
 .description{
   margin: 10px;
   line-height: 1em;
-  font-size: 40px;
+  font-size: 2.5em;
 }
 
 .description_inputBox{
@@ -201,23 +212,27 @@ button.navbar-toggle{
 }
 
 .dropText{
-  font-size: 50px;
+  font-size: 3.125em;
   color: red;
 }
 
+.facebookWrapper{
+  text-align: center;
+  margin-bottom: 50px;
+}
 
 .fb-comments{
-  float: left;
+  /*float: left;*/
   margin-top: 20px;
-  background-color: rgba(0,0,0, 0.6);
-  border: 2px solid white;
-  border-radius: 20px;
+  /*background-color: rgba(0,0,0, 0.6);*/
+ /* border: 2px solid white;
+  border-radius: 20px;*/
   width: 35em;
 }
 
 .fb-like{
   margin: 20px;
-  font-size: 40px;
+  font-size: 2.5em;
 }
 
 h1{
@@ -251,6 +266,10 @@ h4{
   width: 200px;
   box-shadow: 10px 10px 5px rgba(0,0,0, 0.5);
   color: black;
+}
+
+#laBreweriesTable{
+  width: 100%;
 }
 
 .loadingDiv{
@@ -334,7 +353,7 @@ p{
 }
 
 .searchInfo{
-  font-size: 35px;
+  font-size: 0.9em;
 }
 
 .searchSubmit{
@@ -360,6 +379,7 @@ p{
 
 td{
   font-size: 2em;
+  width: 30%;
 }
 
 .twitter{
@@ -378,11 +398,11 @@ td{
 }
 
 .styleInfo{
-  font-size: 30px;
+  font-size: 1em;
 }
 
 .styleInfoName{
-  font-size: 40px;
+  font-size: 2em;
 }
 
 tbody{
@@ -394,6 +414,10 @@ tbody{
   border-radius: 10px;
   border: 2px solid rgba(255,255,255, 0.5);
   margin-top: 40px;
+}
+
+.wrapper{
+  width: 100%;
 }
 
 
@@ -447,12 +471,15 @@ label.star:before {
   #breweryBanner{
     width: 150px;
   }
+  .breweryDescription{
+    font-size: 3em;
+  }
   .breweryIcon{
     width: 200px;
     height: 80px;
   }
   input{
-    font-size: 28px;
+    font-size: .7em;
   }
   #dropMenu{
     visibility: visible;
@@ -491,7 +518,7 @@ label.star:before {
     font-size: .4em;
   }
   body{
-    font-size: 10px;
+    font-size: 1em;
   }
   a{
     font-size: 8em;
@@ -510,13 +537,13 @@ label.star:before {
     height: 150px;
   }
   .beerInfo{
-    font-size: 30px;
+    font-size: 1.8em;
   }
   .breweryIcon{
     width: 250px;
   }
   .beername{
-    font-size: 60px;
+    font-size: 3.75em;
   }
   #beerimage{
     margin-left: 300px;
@@ -532,7 +559,7 @@ label.star:before {
     padding: 20px;
   }
   .newBreweryButton{
-    font-size: 30px;
+    font-size: .08em;
     margin-top: 250px;
   }
   #nearbyBreweries{
@@ -545,7 +572,16 @@ label.star:before {
     font-size: 0.3em;
   }
   .searchInfo{
-    font-size: 30px;
+    font-size: 1.8em;
+  }
+  #searchName{
+    font-size: .6em;
+  }
+  .styleInfo{
+    font-size: 1.75em;
+  }
+  .styleInfoName{
+    font-size: 3em;
   }
 }
 
@@ -553,6 +589,7 @@ label.star:before {
 /IPAD Portrait /
 //////////////*/
 @media  (max-width: 800px) {
+
   #homeBackground{
     width: 180%;
     height: 100%;
@@ -583,10 +620,13 @@ label.star:before {
   }
 
   .breweryNameBtn{
-    font-size: 8px;
+    font-size: 0.7em;
   }
   .rw-ui-container{
     float: right;
+  }
+  td{
+    max-width: 540px;
   }
   }
 
@@ -602,13 +642,16 @@ label.star:before {
     display: initial;
   }
   .breweryDescription{
-    font-size: 30px;
+    font-size: 2.5em;
   }
   .breweryName, .beername{
-    font-size: 40px;
+    font-size: 3em;
+  }
+  .breweryNameBtn{
+    font-size: .2em;
   }
   #beerStyles{
-    font-size: 45px;
+    font-size: 2.8em;
   }
   .breweryIcon:hover{
     width: 400px;
@@ -646,22 +689,23 @@ label.star:before {
     width: 100px;
   }
   .loadingBeer, #possible{
-    font-size: 20px;
+    font-size: 2em;
   }
   .loadingBeer{
     margin-top: -50px;
   }
   .description{
-    font-size: 30px;
+    font-size: 1.85em;
   }
   .btn{
-    font-size: 20px;
+    font-size: 1.25em;
   }
   #brewType{
     margin-top: -50px;
   }
   .newBreweryButton{
     margin-top: 250px;
+    font-size: .05em;
   }
   .navbar-brand{
     font-size: 1em;
@@ -669,14 +713,23 @@ label.star:before {
   #search-bar{
     width: 500px;
   }
+  #searchName{
+    font-size: 1.5em;
+  }
   .styleInfo{
-    font-size: 25px;
+    font-size: 1.5em;
+  }
+  .websiteLink{
+    font-size: 1.5em;
   }
   #welcomeText{
-    font-size: 40px;
+    font-size: 4em;
   }
   td{
     max-width: 300px;
+  }
+  .viewOurBeers{
+    font-size: 1.2em;
   }
   }
 
@@ -737,7 +790,7 @@ label.star:before {
     padding: 5px;
   }
   .breweryName{
-    font-size: 30px;
+    font-size: 3em;
   }
   #breweryBanner{
     width: 200px;
@@ -753,10 +806,10 @@ label.star:before {
     float: left;
   }
   .btn{
-    font-size: 15px;
+    font-size: .2em;
   }
   .description{
-    font-size: 25px;
+    font-size: 1.5em;
   }
   .fb-comments{
     width: 240px;
@@ -774,7 +827,7 @@ label.star:before {
     width: 150px;
   }
   input{
-    font-size: 20px;
+    font-size: 2em;
   }
   .loadingBeerGif{
     width: 180px;
@@ -782,13 +835,13 @@ label.star:before {
     margin-left: -30px;
   }
   #nearbyBreweries{
-    font-size: 20px;
+    font-size: 1.3em;
     margin-top: -70px;
   }
   .newBreweryButton{
     margin-top: 100px;
     position: absolute;
-    font-size: 15px;
+    font-size: .15em;
   }
   .rw-ui-container{
     margin-right: 0px;
@@ -796,10 +849,10 @@ label.star:before {
   }
   #search-bar{
     width: 300px;
-    font-size: 18px;
+    font-size: 1.7em;
   }
   #searchName{
-    font-size: 20px;
+    font-size: .8em;
     max-width: 250px;
   }
   .searchTable, .searchDiv{
@@ -809,7 +862,7 @@ label.star:before {
     margin-left: -10px;
   }
   .searchInfo, .styleInfo{
-    font-size: 25px;
+    font-size: 1.56em;
   }
   .rating{
     float: left;
@@ -818,10 +871,10 @@ label.star:before {
     visibility: hidden;
   }
   .td2{
-    max-width: 200px;
+    max-width: 250px;
   }
   .td1{
-    max-width: 230px;
+    max-width: 250px;
   }
    .fb-comments, .twitter{
     float: left;
