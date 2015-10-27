@@ -86,10 +86,10 @@ vm.doSearch = function(){
 .controller('beershowController', ['Beershow', '$routeParams', function(Beershow, $routeParams){
   var vm = this;
   vm.message = 'Brewery-beer-show controller works';
-document.getElementById('spinner').style.visibility = "visible";
+document.getElementById('spinnerBreweryBeerShow').style.visibility = "visible";
   Beershow.get($routeParams.id).then(function(res) {
     console.log(res)
-    document.getElementById('spinner').style.display = "none";
+    document.getElementById('spinnerBreweryBeerShow').style.display = "none";
     vm.beershow = res.data;
   });
 }])
@@ -150,10 +150,10 @@ document.getElementById('spinner').style.visibility = "visible";
   }
 
   vm.doSearch = function(){
-    document.getElementById('spinner').style.visibility = "visible";
+    document.getElementById('spinnerSearch').style.visibility = "visible";
     $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
       console.log(res.data);
-      document.getElementById('spinner').style.display = "none";
+      document.getElementById('spinnerSearch').style.display = "none";
       vm.results = res.data;
     });
   }

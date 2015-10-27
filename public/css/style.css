@@ -302,6 +302,7 @@ h4{
 
 #love{
   color: red;
+  text-shadow: 2px 2px #000000;
 }
 
 .navbar{
@@ -384,7 +385,7 @@ p{
   display: inline;
 }
 
-#spinner{
+#spinner, #spinnerBreweryBeerShow, #spinnerSearch{
   top: 50%;
   left: 50%;
   text-align:center;
@@ -496,7 +497,7 @@ label.star:before {
   #breweryBanner{
     width: 150px;
   }
-  .beerspeakFacebook{
+  #beerspeakComments{
     max-width: 400px;
   }
   .breweryDescription{
@@ -610,6 +611,10 @@ label.star:before {
   }
   .styleInfoName{
     font-size: 3em;
+  }
+
+  .twitter{
+    max-width: 100%;
   }
 }
 
@@ -747,11 +752,12 @@ label.star:before {
   #search-bar{
     width: 500px;
   }
-  #searchName{
-    font-size: 1.5em;
-  }
+
   .styleInfo{
     font-size: 1.5em;
+  }
+  #searchName{
+    font-size: .1em;
   }
   .websiteLink{
     font-size: 1.5em;
@@ -773,6 +779,9 @@ label.star:before {
 @media  (max-width: 400px) {
   .breweryTable{
     margin-left: 30px;
+  }
+  .breweryNameBtn{
+    font-size: 1em;
   }
   .beerspeakFacebook{
     max-width: 300px;
@@ -820,6 +829,9 @@ label.star:before {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
+  .beersButton, .webButton{
+    font-size: 2em;
+  }
   .breweryNameBtn{
     margin-top: 30px;
   }
@@ -845,6 +857,9 @@ label.star:before {
   .btn{
     font-size: .2em;
   }
+  .beersButton, .webButton{
+    font-size: 1.5em;
+  }
   .description{
     font-size: 1.5em;
   }
@@ -864,7 +879,7 @@ label.star:before {
     width: 150px;
   }
   input{
-    font-size: 2em;
+    font-size: 1em;
   }
   .loadingBeerGif{
     width: 180px;
@@ -888,8 +903,11 @@ label.star:before {
     width: 300px;
     font-size: 1.7em;
   }
+  .rw-ui-container{
+    float: left;
+  }
   #searchName{
-    font-size: .8em;
+    font-size: .5em;
     max-width: 250px;
   }
   .searchTable, .searchDiv{
@@ -905,7 +923,7 @@ label.star:before {
     float: left;
   }
   .td3{
-    visibility: hidden;
+    /*visibility: hidden;*/
   }
   .td2{
     max-width: 250px;
