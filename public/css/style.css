@@ -60,6 +60,7 @@ a:hover{
   padding: 20px;
   margin-top: 20px;
   background-color: rgba(0,0,0, 0.6);
+  float: right;
 }
 
 .beerInfo{
@@ -154,6 +155,15 @@ body{
   font-size: 1em;
 }
 
+#beerspeakComments{
+  float: right;
+}
+
+#breweryComments{
+  /*border: 1px solid white;*/
+  border-radius: 20px;
+}
+
 .btn{
   box-shadow: 10px 5px 5px rgba(0,0,0, 0.5);
   font-size: 2em;
@@ -187,7 +197,7 @@ button.navbar-toggle{
 .description{
   margin: 10px;
   line-height: 1em;
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 
 .description_inputBox{
@@ -222,11 +232,13 @@ button.navbar-toggle{
 }
 
 .fb-comments{
-  /*float: left;*/
+  /*float: right;*/
   margin-top: 20px;
-  /*background-color: rgba(0,0,0, 0.6);*/
- /* border: 2px solid white;
-  border-radius: 20px;*/
+  background-color: rgba(0,0,0, 0.2);
+  /*border: 1px solid white;*/
+  border-radius: 20px;
+  margin-top: 0px;
+  margin-right: 10px;
   width: 35em;
 }
 
@@ -282,6 +294,15 @@ h4{
 
 .loading{
   bottom: 0px;
+}
+
+.loadingBeerGif{
+  opacity: 0.7;
+}
+
+#love{
+  color: red;
+  text-shadow: 2px 2px #000000;
 }
 
 .navbar{
@@ -356,11 +377,15 @@ p{
   font-size: 0.9em;
 }
 
+#searchName{
+  font-size: .5em;
+}
+
 .searchSubmit{
   display: inline;
 }
 
-#spinner{
+#spinner, #spinnerBreweryBeerShow, #spinnerSearch{
   top: 50%;
   left: 50%;
   text-align:center;
@@ -371,6 +396,15 @@ p{
   border-radius: 20px;
   margin-left: 20px;
   padding: 100px;
+  visibility: hidden;
+}
+
+.styleInfo{
+  font-size: 1em;
+}
+
+.styleInfoName{
+  font-size: 2em;
 }
 
 .table{
@@ -384,25 +418,17 @@ td{
 
 .twitter{
   position: relative;
-  float: right;
+  float: left;
   margin-top: 20px;
   padding: 10px;
   background-color: rgba(0,0,0, 0.6);
   border: 2px solid white;
   border-radius: 20px;
-  width: 35em;
+  width: 1150px;
 }
 
 .twitter-timeline{
   font-size: 3em;
-}
-
-.styleInfo{
-  font-size: 1em;
-}
-
-.styleInfoName{
-  font-size: 2em;
 }
 
 tbody{
@@ -470,6 +496,9 @@ label.star:before {
 @media  (max-width: 1050px) {
   #breweryBanner{
     width: 150px;
+  }
+  #beerspeakComments{
+    max-width: 400px;
   }
   .breweryDescription{
     font-size: 3em;
@@ -583,6 +612,10 @@ label.star:before {
   .styleInfoName{
     font-size: 3em;
   }
+
+  .twitter{
+    max-width: 100%;
+  }
 }
 
 /*//////////////
@@ -596,6 +629,9 @@ label.star:before {
     left: -110px;
     top: 0px;
     display: initial;
+  }
+  .beerspeakFacebook{
+    max-width: 340px;
   }
   .menu-wrap {
     visibility: visible;
@@ -640,6 +676,9 @@ label.star:before {
     left: -50px;
     top: 0px;
     display: initial;
+  }
+  .beerspeakFacebook{
+    max-width: 500px;
   }
   .breweryDescription{
     font-size: 2.5em;
@@ -713,11 +752,12 @@ label.star:before {
   #search-bar{
     width: 500px;
   }
-  #searchName{
-    font-size: 1.5em;
-  }
+
   .styleInfo{
     font-size: 1.5em;
+  }
+  #searchName{
+    font-size: .1em;
   }
   .websiteLink{
     font-size: 1.5em;
@@ -739,6 +779,12 @@ label.star:before {
 @media  (max-width: 400px) {
   .breweryTable{
     margin-left: 30px;
+  }
+  .breweryNameBtn{
+    font-size: 1em;
+  }
+  .beerspeakFacebook{
+    max-width: 300px;
   }
   h1{
     font-size: 5em;
@@ -783,6 +829,9 @@ label.star:before {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
+  .beersButton, .webButton{
+    font-size: 2em;
+  }
   .breweryNameBtn{
     margin-top: 30px;
   }
@@ -808,6 +857,9 @@ label.star:before {
   .btn{
     font-size: .2em;
   }
+  .beersButton, .webButton{
+    font-size: 1.5em;
+  }
   .description{
     font-size: 1.5em;
   }
@@ -827,7 +879,7 @@ label.star:before {
     width: 150px;
   }
   input{
-    font-size: 2em;
+    font-size: 1em;
   }
   .loadingBeerGif{
     width: 180px;
@@ -851,8 +903,11 @@ label.star:before {
     width: 300px;
     font-size: 1.7em;
   }
+  .rw-ui-container{
+    float: left;
+  }
   #searchName{
-    font-size: .8em;
+    font-size: .5em;
     max-width: 250px;
   }
   .searchTable, .searchDiv{
@@ -868,7 +923,7 @@ label.star:before {
     float: left;
   }
   .td3{
-    visibility: hidden;
+    /*visibility: hidden;*/
   }
   .td2{
     max-width: 250px;

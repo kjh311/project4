@@ -22,8 +22,8 @@ setTimeout(reloadWidget, 800);
     <tr ng-repeat="beershow in vm.beershow track by $index | orderBy:'name'">
       <td>
         <h2 class="beername">{{beershow.name}}</h2>
-        <div class="rw-ui-container rating"></div>
         <img class="beerIcon" ng-src="{{beershow.labels.medium}}">
+        <div class="rw-ui-container rating"></div>
       </br>
         <h4 class="description">{{beershow.description}}</h4>
       </br>
@@ -37,14 +37,14 @@ setTimeout(reloadWidget, 800);
 </div>
 
 <!-- Loading Screen -->
- <div id="spinner" class="loading">
+ <div id="spinnerBreweryBeerShow" class="loading">
         <h2 class="loadingBeer">Loading beer goodness...</h2>
         <br>
-        <img class="loadingBeerGif" src="http://www.gify.net/data/media/331/piwo-ruchomy-obrazek-0062.gif" alt="Loading..."/>
+        <img class="loadingBeerGif" src="../images/loadingGif.gif" alt="Loading..."/>
         <br>
         <br>
         <br>
-        <h4 id="possible">Possible that no beers exist for this brewery yet</h4>
+        <!-- <h4 id="possible">Possible that no beers exist for this brewery yet</h4> -->
  </div>
 
 
