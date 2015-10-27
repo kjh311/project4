@@ -60,6 +60,7 @@ a:hover{
   padding: 20px;
   margin-top: 20px;
   background-color: rgba(0,0,0, 0.6);
+  float: right;
 }
 
 .beerInfo{
@@ -154,6 +155,15 @@ body{
   font-size: 1em;
 }
 
+#beerspeakComments{
+  float: right;
+}
+
+#breweryComments{
+  /*border: 1px solid white;*/
+  border-radius: 20px;
+}
+
 .btn{
   box-shadow: 10px 5px 5px rgba(0,0,0, 0.5);
   font-size: 2em;
@@ -222,11 +232,13 @@ button.navbar-toggle{
 }
 
 .fb-comments{
-  /*float: left;*/
+  /*float: right;*/
   margin-top: 20px;
-  /*background-color: rgba(0,0,0, 0.6);*/
- /* border: 2px solid white;
-  border-radius: 20px;*/
+  background-color: rgba(0,0,0, 0.2);
+  /*border: 1px solid white;*/
+  border-radius: 20px;
+  margin-top: 0px;
+  margin-right: 10px;
   width: 35em;
 }
 
@@ -286,6 +298,10 @@ h4{
 
 .loadingBeerGif{
   opacity: 0.7;
+}
+
+#love{
+  color: red;
 }
 
 .navbar{
@@ -360,6 +376,10 @@ p{
   font-size: 0.9em;
 }
 
+#searchName{
+  font-size: .5em;
+}
+
 .searchSubmit{
   display: inline;
 }
@@ -397,13 +417,13 @@ td{
 
 .twitter{
   position: relative;
-  float: right;
+  float: left;
   margin-top: 20px;
   padding: 10px;
   background-color: rgba(0,0,0, 0.6);
   border: 2px solid white;
   border-radius: 20px;
-  width: 35em;
+  width: 1150px;
 }
 
 .twitter-timeline{

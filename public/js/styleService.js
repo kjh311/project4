@@ -17,7 +17,7 @@ angular.module('styleService', [])
     document.getElementById('spinner').style.visibility = "visible";
     return $http.get('/api/styles/' + id).then(function(res) {
       console.log('request completed!');
-      document.getElementById('spinner').style.display = "none";
+      document.getElementById('spinner').style.visible = "hidden";
       return res.data;
     });
   }
