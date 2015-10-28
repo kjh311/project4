@@ -44,5 +44,5 @@ FAV their favorite Beers / Breweries.
 
 PROBLEMS
 - Using widgets with Angular.  Half the time they don't load.
-- Loading animation doesn't disapear on Brewery Beer page.
+
 
