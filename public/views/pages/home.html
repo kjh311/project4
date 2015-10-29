@@ -1,7 +1,5 @@
 <ng-include src="'/views/partials/widgetreload.html'"></ng-include>
 
-<!-- for facebook widget -->
-
 
 
 <div class="container welcome text-center">
@@ -9,15 +7,25 @@
     <h3>Search for your favorite breweries and beer and get reviews!</h3>
 </div>
 
+<!-- for facebook widget -->
+<div class="fb-like" data-href="https://craft-beerzilla.herokuapp.com/#/" data-width="200px" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
+
 
 <br>
 <br>
 <footer>
+  <a href="http://www.brewerydb.com/" target="blank">
   <div>
     <img id="breweryBanner" src="../images/Powered-By-BreweryDB.png">
   </div>
+  </a>
   <h4 id="love">Made with Love by Kevin Huelsmann</h4>
 </footer>
 
 
 
+
+
+<script>
+FB.XFBML.parse()
+</script>

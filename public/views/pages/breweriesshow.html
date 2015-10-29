@@ -7,7 +7,7 @@
 
 <!-- Attempting to get Twitter Feed for each brewery -->
 <script>function show() {
-    var brewery = $('.breweryName').html();
+var brewery = $('.breweryName').html();
     console.log(brewery);
 
   if($('.twitter').css('display') == 'none'){
@@ -56,18 +56,6 @@ setTimeout("show()", 2000);</script>
         <div class="fb-comments" id="breweryComments" data-href="https://craft-beerzilla.herokuapp.com/#/breweriesshow/{{vm. brewery.id}}" data-colorscheme="dark" width="240px" height="500px" data-numposts="5"></div>
     </div>
 </div>
-
-<!-- Making sure controllers are connected -->
-<div class="message">
-    <!-- {{vm.message}} -->
-</div>
-
-
-<!-- <div class="container welcome text-center">
-  <h3 class="breweryDescription">{{vm.brewery.description}}</h3>
-</div>
- -->
-
 
 
 

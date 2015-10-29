@@ -36,7 +36,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=993388580723688";
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=993388580723688";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -65,9 +65,7 @@
       <li><a id="breweryPageLink" href="/#/breweries"><i class="fa fa-shield"></i> L.A. Breweries</a></li>
       <li><a id="stylesPageLink" href="/#/styles"><i class="fa fa-beer"></i> Styles</a></li>
       <li><a id="beerspeakPageLink" href="/#/beerspeak"><i class="fa fa-commenting"></i> Beer Speak</a></li>
-
     </ul>
-
 </nav>
 
 
@@ -85,6 +83,7 @@
  <div>
   <img id="homeBackground" src="images/backgroundPic.jpg">
  </div>
+
 
 <div id="content-views">
   <div ng-view></div>
