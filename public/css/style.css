@@ -285,6 +285,18 @@ h4{
   width: 100%;
 }
 
+.letter{
+  border: 1px solid white;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  padding: 2px;
+  font-size: 1em;
+}
+
+#letters{
+  margin-top: 15px;
+}
+
 .loadingDiv{
   width: 200px;
   padding: 50px;
@@ -406,6 +418,12 @@ p{
 
 .styleInfoName{
   font-size: 2em;
+}
+
+#styleTable{
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  border: solid white 2px;
 }
 
 .table{
@@ -554,7 +572,8 @@ label.star:before {
     font-size: 8em;
   }
   .rw-ui-container, .td2{
-    max-width: 150px;
+    z-index: -3;
+    margin-top: -500px;
   }
   .td3{
     max-width: 40px;
@@ -878,6 +897,8 @@ label.star:before {
   }
   #dropMenu{
     width: 150px;
+    height: 30px;
+    border-radius: 3px;
   }
   input{
     font-size: 1em;
