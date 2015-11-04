@@ -235,7 +235,7 @@ button.navbar-toggle{
   /*float: right;*/
   margin-top: 20px;
   background-color: rgba(0,0,0, 0.2);
-  /*border: 1px solid white;*/
+  border: 1px solid white;
   border-radius: 20px;
   margin-top: 0px;
   margin-right: 10px;
@@ -441,6 +441,7 @@ td{
   border: 2px solid white;
   border-radius: 20px;
   width: 1150px;
+  border: solid 3px white;
 }
 
 .twitter-timeline{
