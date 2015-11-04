@@ -336,26 +336,23 @@ h4{
   margin-top: 40px;
 }
 
-.ng-enter, .ng-leave {
+/*.ng-enter, .ng-leave {
   width: 100%;
   position: absolute;
 }
 
 .ng-enter{
-  -webkit-animation:zoomInDown .7s both ease-in;
-  -moz-animation:zoomInDown .7s both ease-in;
-  animation:zoomInDown .7s both ease-in;
+  -webkit-animation:left .7s both ease-in;
+  -moz-animation:left .7s both ease-in;
+  animation:left .7s both ease-in;
 }
 
 .ng-leave{
   -webkit-animation:zoomOutDown 0.5s both ease-in;
   -moz-animation:zoomOutDown 0.5s both ease-in;
   animation:zoomOutDown 0.5s both ease-in;
-}
+}*/
 
-#off_canvas_drop{
-  visibility: hidden;
-}
 
 p{
   color: white;
