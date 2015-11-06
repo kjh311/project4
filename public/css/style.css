@@ -217,8 +217,10 @@ button.navbar-toggle{
   position: fixed;
   right: 10px;
   top: 10px;
-  z-index: 3;
+  z-index: 104;
   visibility: hidden;
+  height: 30px;
+  width: 200px;
 }
 
 .dropText{
@@ -352,7 +354,7 @@ h4{
   width: 100%;
   background-color: rgba(255,255,255, 0.9);
   position: fixed;
-  z-index: 3;
+  z-index: 103;
   border: 2px solid rgba(0,0,0,0.5);
   font-size: 2em;
 }
@@ -364,22 +366,56 @@ h4{
   margin-top: 40px;
 }
 
-/*.ng-enter, .ng-leave {
+.ng-enter, .ng-leave {
   width: 100%;
   position: absolute;
 }
 
 .ng-enter{
-  -webkit-animation:left .7s both ease-in;
-  -moz-animation:left .7s both ease-in;
-  animation:left .7s both ease-in;
+  opacity: 0;
+   -webkit-animation: 0.5s fade-in;
+  -moz-animation: 0.5s fade-in;
+  -o-animation: 0.5s fade-in;
+  animation: 0.5s fade-in;
+  z-index: 100;
 }
 
 .ng-leave{
-  -webkit-animation:zoomOutDown 0.5s both ease-in;
-  -moz-animation:zoomOutDown 0.5s both ease-in;
-  animation:zoomOutDown 0.5s both ease-in;
-}*/
+  -webkit-animation: 0.5s fade-out;
+  -moz-animation: 0.5s fade-out;
+  -o-animation: 0.5s fade-out;
+  animation: 0.5s fade-out;
+  z-index:99;
+}
+#styleTable.ng-enter, #styleTable.ng-leave, .navbar{
+opacity: 1;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@-webkit-keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@-moz-keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@-webkit-keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
 
 
 p{
