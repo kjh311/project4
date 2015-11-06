@@ -1,4 +1,4 @@
-angular.module( 'routerApp', ['routerRoutes', 'ngAnimate', 'breweryService', 'styleService', 'beershowService', 'duScroll'])
+angular.module( 'routerApp', ['duScroll', 'routerRoutes', 'ngAnimate', 'breweryService', 'styleService', 'beershowService'])
 
 .config(['$httpProvider', function($httpProvider) {
       $httpProvider.defaults.useXDomain = true;
