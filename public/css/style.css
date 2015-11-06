@@ -217,7 +217,7 @@ button.navbar-toggle{
   position: fixed;
   right: 10px;
   top: 10px;
-  z-index: 3;
+  z-index: 104;
   visibility: hidden;
   height: 30px;
   width: 200px;
