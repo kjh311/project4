@@ -235,7 +235,7 @@ button.navbar-toggle{
   /*float: right;*/
   margin-top: 20px;
   background-color: rgba(0,0,0, 0.2);
-  /*border: 1px solid white;*/
+  border: 1px solid white;
   border-radius: 20px;
   margin-top: 0px;
   margin-right: 10px;
@@ -285,12 +285,40 @@ h4{
   width: 100%;
 }
 
+#letterBox1{
+  position: fixed;
+  z-index: 4;
+  margin-left: -100px;
+  margin-top: 23px;
+}
+
+#letterBox2{
+  position: fixed;
+  z-index: 4;
+  right: 10px;
+  margin-top: 23px;
+}
+
 .letter{
   border: 1px solid white;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
   padding: 2px;
   font-size: 1em;
+}
+
+.letters{
+  float: left;
+  /*display: block;*/
+  /*border: solid 1px white;*/
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  /*font-size: 1.9em;*/
+  /*margin-top: -3px;*/
+  /*background-color: black;*/
+  margin-top: 15px;
 }
 
 #letters{
@@ -421,6 +449,9 @@ p{
   background-color: rgba(0,0,0,0.5);
   border-radius: 20px;
   border: solid white 2px;
+  position: absolute;
+  margin-left: 20px;
+  width: 97%;
 }
 
 .table{
@@ -441,6 +472,7 @@ td{
   border: 2px solid white;
   border-radius: 20px;
   width: 1150px;
+  border: solid 3px white;
 }
 
 .twitter-timeline{
@@ -449,6 +481,10 @@ td{
 
 tbody{
   padding: 20px;
+}
+
+ul{
+    list-style-type: none;
 }
 
 .welcome{
