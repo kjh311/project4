@@ -219,6 +219,8 @@ button.navbar-toggle{
   top: 10px;
   z-index: 3;
   visibility: hidden;
+  height: 30px;
+  width: 200px;
 }
 
 .dropText{
@@ -352,7 +354,7 @@ h4{
   width: 100%;
   background-color: rgba(255,255,255, 0.9);
   position: fixed;
-  z-index: 3;
+  z-index: 103;
   border: 2px solid rgba(0,0,0,0.5);
   font-size: 2em;
 }
@@ -370,6 +372,7 @@ h4{
 }
 
 .ng-enter{
+  opacity: 0;
    -webkit-animation: 0.5s fade-in;
   -moz-animation: 0.5s fade-in;
   -o-animation: 0.5s fade-in;
@@ -384,6 +387,10 @@ h4{
   animation: 0.5s fade-out;
   z-index:99;
 }
+#styleTable.ng-enter, #styleTable.ng-leave, .navbar{
+opacity: 1;
+}
+
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
