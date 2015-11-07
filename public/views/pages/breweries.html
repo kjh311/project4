@@ -4,7 +4,7 @@
 <div id="laBreweriesTable" class="container">
 
 
-<h2 id="nearbyBreweries">Los Angeles Breweries:  <a href="/#/breweries/newbrewery" title=""><button type="button" class="btn btn-danger newBreweryButton">Add new brewery</button></a></h2>
+<h2 id="nearbyBreweries">Los Angeles Breweries:  <a href="http://www.brewerydb.com/add/brewery" target="blank" title=""><button type="button" class="btn btn-danger newBreweryButton">Add new brewery</button></a></h2>
 
 <table class="table breweryTable table-bordered">
   <thead>
@@ -16,7 +16,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="brewery in main.breweries | orderBy:'name'">
-      <td class="td1 breweryNameBtn"><a href="/#/breweriesshow/{{ brewery.link }}" ><button type="button" class="btn btn-info">{{ brewery.name }}</button></a>
+      <td class="td1 breweryNameBtn"><a href="/breweriesshow/{{ brewery.link }}" ><button type="button" class="btn btn-info">{{ brewery.name }}</button></a>
         <br>
       <div class="rw-ui-container"></div></td>
       <!-- <td class="td2"></td> -->

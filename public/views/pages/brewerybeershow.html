@@ -45,6 +45,10 @@ setTimeout(reloadWidget, 800);
         <br>
         <!-- <h4 id="possible">Possible that no beers exist for this brewery yet</h4> -->
  </div>
+ <div class="container twitter newBeer text-center" ng-controller="breweriesController">
+   <h2>Didn't find the beer you were looking for?</h2>
+   <a href="http://www.brewerydb.com/add/beer" target="blank" title=""><button type="button" class="btn btn-danger newBeerButton">Add Beer to Brewery</button></a>
+ </div>
 
 
 <ng-include src="'/views/partials/ratingwidget.html'"></ng-include>
