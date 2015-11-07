@@ -366,6 +366,15 @@ h4{
   margin-top: 40px;
 }
 
+.newBeerButton{
+  font-size: 2em;
+  margin: 20px;
+}
+
+.newBeer{
+  text-align: center;
+}
+
 .ng-enter, .ng-leave {
   width: 100%;
   position: absolute;
