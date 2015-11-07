@@ -8,15 +8,7 @@ $( document ).ready(function() {
     $('body').scrollTop(0);
   });
 
-  $('#searchPageLink').click(function() {
-    $('body').scrollTop(0);
-  });
-
-  $('#breweryPageLink').click(function() {
-    $('body').scrollTop(0);
-  });
-
-  $('#stylesPageLink').click(function() {
+  $('.scrollToTop').click(function() {
     $('body').scrollTop(0);
   });
 });
