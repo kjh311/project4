@@ -477,6 +477,16 @@ p{
   font-size: 1em;
 }
 
+.styleImg{
+  /*width: 600px;*/
+  height: 500px;
+  max-width: 95%;
+  max-height: 70%;
+  margin: 30px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
 .styleInfoName{
   font-size: 2em;
 }
