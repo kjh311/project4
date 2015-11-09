@@ -6,6 +6,13 @@ a:hover{
   color: red;
 }
 
+.article{
+
+  /*border: 2px solid white;
+  border-radius: 20px;*/
+  color: red;
+}
+
 .beersButton, .webButton{
   float: right;
   margin: 15px;
@@ -543,6 +550,12 @@ tbody{
 
 ul{
     list-style-type: none;
+}
+
+iframe{
+  border: 2px solid white;
+  /*border-radius: 20px;*/
+  margin: 30px;
 }
 
 .welcome{
