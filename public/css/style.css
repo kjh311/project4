@@ -556,6 +556,8 @@ iframe{
   border: 2px solid white;
   /*border-radius: 20px;*/
   margin: 30px;
+  background-color: black;
+  background-image: url('../images/loading.gif');
 }
 
 .welcome{
@@ -589,6 +591,7 @@ label.star {
   transition: all .2s;
   /*background-color: rgba(255,255,255, 0.5);*/
 }
+
 
 input.star:checked ~ label.star:before {
   content: '\f005';
@@ -643,6 +646,7 @@ label.star:before {
     padding: 30px;
     margin: 0 auto;
   }
+
   #searchBtn{
     font-size: 1em;
   }
@@ -740,6 +744,23 @@ label.star:before {
   .twitter{
     max-width: 100%;
   }
+  .letters{
+  font-size: .15em;
+  }
+  #styleTable{
+    max-width: 90%;
+    margin-left: 40px;
+  }
+  #letterBox1{
+    margin-left: -70px;
+  }
+  .styleImg, .vid{
+    height: 500px;
+  }
+  .hor{
+    height: 400px;
+  }
+
 }
 
 /*//////////////
@@ -754,6 +775,9 @@ label.star:before {
     top: 0px;
     display: initial;
   }
+  .letters{
+  font-size: .5em;
+}
   .beerspeakFacebook{
     max-width: 340px;
   }
@@ -787,6 +811,27 @@ label.star:before {
   }
   td{
     max-width: 540px;
+  }
+  .letters{
+  font-size: .2em;
+  }
+  #styleTable{
+    max-width: 83%;
+    margin-left: 66px;
+  }
+  #letterBox1{
+    margin-left: -60px;
+  }
+  #letterBox2{
+    margin-right: 5px;
+  }
+  .styleImg, .vid{
+    height: 600px;
+  }
+  .hor, .vid{
+    height: 325px;
+    margin-left: 20px;
+    max-width: 95%;
   }
   }
 
@@ -895,6 +940,29 @@ label.star:before {
   .viewOurBeers{
     font-size: 1.2em;
   }
+  .letters{
+  font-size: .05em;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  }
+  #styleTable{
+    max-width: 85%;
+    margin-left: 50px;
+  }
+  #letterBox1{
+    margin-left: -40px;
+  }
+  #letterBox2{
+    margin-right: 0px;
+  }
+  .styleImg, .vid{
+    height: 300px;
+  }
+  .hor, .vid{
+    height: 225px;
+    margin-left: 0px;
+    max-width: 100%;
+  }
   }
 
 /*///////////////////
@@ -916,9 +984,7 @@ label.star:before {
   h2{
     font-size: 4em;
   }
-  h3{
-    font-size: 3em;
-  }
+
   h4{
     font-size: 2em;
   }
@@ -1000,9 +1066,11 @@ label.star:before {
     width: 300px;
   }
   #dropMenu{
-    width: 150px;
+    width: 120px;
     height: 30px;
     border-radius: 3px;
+    margin-right: 80px;
+    /*position: absolute;*/
   }
   input{
     font-size: 1em;
@@ -1037,7 +1105,7 @@ label.star:before {
     max-width: 250px;
   }
   .searchTable, .searchDiv{
-    max-width: 250px;
+    max-width: 200px;
   }
   .searchDiv{
     margin-left: -10px;
@@ -1060,5 +1128,38 @@ label.star:before {
    .fb-comments, .twitter{
     float: left;
     width: 300px;
+  }
+  h3{
+    font-size: 3em;
+  }
+  .letters{
+  font-size: .12em;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  }
+  #styleTable{
+    max-width: 100%;
+    margin-left: 5px;
+  }
+  #letterBox1{
+    margin-left: -50px;
+    display: none;
+  }
+  #letterBox2{
+    margin-right: 80px;
+    display: none;
+  }
+  .styleImg, .vid{
+    height: 350px;
+    max-width: 100%;
+    margin-left: 5px;
+  }
+  .hor, .vid{
+    height: 225px;
+    margin-left: 0px;
+    max-width: 100%;
+  }
+  .navbar{
+    max-width: 350px;
   }
 }
