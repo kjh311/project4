@@ -88,12 +88,19 @@ a:hover{
   /*margin-bottom: 500px;*/
 }
 
+.beerStylesBox{
+  background-color: rgba(0,0,0,0.5);
+  border: 2px solid white;
+  border-radius: 20px;
+  max-width: 95%;
+}
+
 body{
   font-family: 'Indie Flower', cursive;
   background-color: black;
   color: white;
   max-width: 100%;
-  font-size: 16px;
+  font-size: 150%;
 }
 
 #breweryBanner{
@@ -242,9 +249,8 @@ button.navbar-toggle{
 
 .fb-comments{
   /*float: right;*/
-  margin-top: 20px;
-  background-color: rgba(0,0,0, 0.2);
-  border: 1px solid white;
+  margin-top: -20px;
+
   border-radius: 20px;
   margin-top: 0px;
   margin-right: 10px;
@@ -308,6 +314,10 @@ h4{
   margin-top: 23px;
 }
 
+.letterBox3{
+  display: none;
+}
+
 .letter{
   border: 1px solid white;
   border-top: 2px solid white;
@@ -324,6 +334,7 @@ h4{
   padding-right: 15px;
   padding-top: 0px;
   padding-bottom: 0px;
+  text-decoration: underline;
   /*font-size: 3em;*/
   /*margin-top: -3px;*/
   /*background-color: black;*/
@@ -354,6 +365,10 @@ h4{
 #love{
   color: red;
   text-shadow: 2px 2px #000000;
+  border: 1px solid white;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
 }
 
 .navbar{
@@ -557,8 +572,8 @@ iframe{
   /*border-radius: 20px;*/
   margin: 30px;
   background-color: black;
-  background-image: url('../images/loading.gif');
-}
+/*  background-image: url('../images/loading.gif');
+*/}
 
 .welcome{
   background-color: rgba(0,0,0, 0.4);
@@ -802,7 +817,6 @@ label.star:before {
   #beerimage{
     margin-left: 150px;
   }
-
   .breweryNameBtn{
     font-size: 0.7em;
   }
@@ -816,14 +830,22 @@ label.star:before {
   font-size: .2em;
   }
   #styleTable{
-    max-width: 83%;
-    margin-left: 66px;
+    max-width: 95%;
+    margin-left: 20px;
   }
-  #letterBox1{
-    margin-left: -60px;
+  #letterBox1, #letterBox2{
+    display: none;
   }
-  #letterBox2{
-    margin-right: 5px;
+  .letterBox3{
+  display: initial;
+  text-align: center;
+  }
+  .ipadLetters{
+  text-decoration: underline;
+  font-size: 4em;
+  color: lightblue;
+  margin-left: 35px;
+  line-height: 80px;
   }
   .styleImg, .vid{
     height: 600px;
@@ -833,6 +855,7 @@ label.star:before {
     margin-left: 20px;
     max-width: 95%;
   }
+
   }
 
 /*///////////////////
@@ -845,6 +868,9 @@ label.star:before {
     left: -50px;
     top: 0px;
     display: initial;
+  }
+  body{
+    font-size: 75%;
   }
   .beerspeakFacebook{
     max-width: 500px;
@@ -946,8 +972,8 @@ label.star:before {
   padding-top: 2px;
   }
   #styleTable{
-    max-width: 85%;
-    margin-left: 50px;
+    max-width: 100%;
+    margin-left: 10px;
   }
   #letterBox1{
     margin-left: -40px;
@@ -963,6 +989,27 @@ label.star:before {
     margin-left: 0px;
     max-width: 100%;
   }
+  .beerStylesBox{
+    max-width: 83%;
+    margin-left: 66px;
+  }
+  .ipadLetters{
+    line-height: 35px;
+    font-size: 3em;
+  }
+  .twitter-timeline{
+    margin-left: 0px;
+  }
+  .twitter{
+    margin-left: 20px;
+  }
+  .fb-comments{
+    border: 0px solid white;
+    background-color: rgba(0,0,0,0.5);
+    margin-right: 80px;
+    margin-bottom: 20px;
+  }
+
   }
 
 /*///////////////////
@@ -987,6 +1034,9 @@ label.star:before {
 
   h4{
     font-size: 2em;
+  }
+  body{
+    font-size: 90%;
   }
   #homeBackground{
     width: 230%;
@@ -1069,8 +1119,9 @@ label.star:before {
     width: 120px;
     height: 30px;
     border-radius: 3px;
-    margin-right: 80px;
-    /*position: absolute;*/
+    margin-left: 200px;
+    margin-top: -20px;
+    position: relative;
   }
   input{
     font-size: 1em;
@@ -1161,5 +1212,17 @@ label.star:before {
   }
   .navbar{
     max-width: 350px;
+  }
+  #beerspeakComments{
+    margin-right: 20px;
+    background-color: rgba(0,0,0,0.0);
+  }
+  .twitter{
+    margin-left: 0px;
+  }
+  select{
+    position: absolute;
+    margin-left: 300px;
+
   }
 }
