@@ -404,7 +404,7 @@ h4{
   position: absolute;
 }
 
-.ng-enter{
+/*.ng-enter{
   opacity: 0;
    -webkit-animation: 0.5s fade-in;
   -moz-animation: 0.5s fade-in;
@@ -419,7 +419,7 @@ h4{
   -o-animation: 0.5s fade-out;
   animation: 0.5s fade-out;
   z-index:99;
-}
+}*/
 #styleTable.ng-enter, #styleTable.ng-leave, .navbar{
 opacity: 1;
 }
@@ -1119,9 +1119,9 @@ label.star:before {
     width: 120px;
     height: 30px;
     border-radius: 3px;
-    margin-left: 200px;
-    margin-top: -20px;
-    position: relative;
+    margin-left: 180px;
+    margin-top: 0px;
+    /*position: relative;*/
   }
   input{
     font-size: 1em;
@@ -1223,6 +1223,17 @@ label.star:before {
   select{
     position: absolute;
     margin-left: 300px;
-
   }
+
+  .rw-mobile-action-area, .rw-ui-button{
+    display: none;
+  }
+  .facebookWrapper{
+    margin-left: -40px;
+    margin-bottom: 20px;
+  }
+  #breweryComments{
+        background-color: rgba(0,0,0,0.0);
+  }
+
 }
