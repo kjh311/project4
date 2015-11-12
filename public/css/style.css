@@ -1119,9 +1119,9 @@ label.star:before {
     width: 120px;
     height: 30px;
     border-radius: 3px;
-    margin-left: 200px;
-    margin-top: -20px;
-    position: relative;
+    margin-left: 180px;
+    margin-top: 0px;
+    /*position: relative;*/
   }
   input{
     font-size: 1em;
