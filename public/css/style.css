@@ -392,7 +392,7 @@ h4{
 .newBeerButton{
   font-size: 1.5em;
   margin: 20px;
-  margin-right: 40%;
+  margin-right: 20%;
 }
 
 .newBeer{
@@ -466,6 +466,10 @@ p{
 .rw-ui-container{
   margin: 20px;
 }
+
+.rw-ui-mobile-stars, .rw-mobile-action-area, .rw-ui-button{
+    display: none;
+  }
 
 #search-bar{
   width: 30em;
@@ -1009,7 +1013,22 @@ label.star:before {
     margin-right: 80px;
     margin-bottom: 20px;
   }
+  .newBeerButton{
+    font-size: .6em;
+  }
+  .newBeer{
+    margin-left: 60px;
+  }
+  span{
+    margin-left: -40px;
+    margin-top: -40px;
+    position: relative;
+  }
+  #beerspeakComments{
+    margin-left: 30%;
+    position: relative;
 
+  }
   }
 
 /*///////////////////
@@ -1234,6 +1253,14 @@ label.star:before {
   }
   #breweryComments{
         background-color: rgba(0,0,0,0.0);
+  }
+  .newBeer{
+    margin-left: 20px;
+  }
+  span{
+    margin-left: 0px;
+    margin-top: -40px;
+    position: relative;
   }
 
 }
