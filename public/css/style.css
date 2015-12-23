@@ -240,6 +240,11 @@ h4{
   top: 0px;
   left: 0px;
 }
+iframe{
+  border: 2px solid white;
+  margin: 30px;
+  background-color: black;
+}
 .input{
   width: 200px;
   box-shadow: 10px 10px 5px rgba(0,0,0, 0.5);
@@ -473,11 +478,6 @@ tbody{
 }
 ul{
   list-style-type: none;
-}
-iframe{
-  border: 2px solid white;
-  margin: 30px;
-  background-color: black;
 }
 .welcome{
   background-color: rgba(0,0,0, 0.4);
