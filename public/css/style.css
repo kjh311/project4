@@ -110,7 +110,7 @@ body{
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   box-shadow: 5px 10px 5px rgba(0,0,0,0.5);
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdobU1CCJ9DUp2ITNsYS8yWOjJfPZUxJgnKaeK-dweYJXI7Qy");
+  background-image: url('../images/NoImageAvailable.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -179,12 +179,12 @@ button.navbar-toggle{
 .description_inputBox{
   height: 100px;
   width: 200px;
-  box-shadow: 10px 10px 5px rgba(0,0,0, 0.5);
+  box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
   color: black;
 }
 .dropdown{
   width: 200px;
-  box-shadow: 10px 10px 5px rgba(0,0,0, 0.5);
+  box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
   color: gray;
 }
 #dropMenu{
@@ -389,7 +389,7 @@ p{
   margin: 20px;
 }
 .rw-ui-mobile-stars, .rw-mobile-action-area, .rw-ui-button{
-    display: none;
+  display: none;
 }
 #search-bar{
   width: 30em;
@@ -472,7 +472,7 @@ tbody{
   padding: 20px;
 }
 ul{
-    list-style-type: none;
+  list-style-type: none;
 }
 iframe{
   border: 2px solid white;
@@ -707,21 +707,21 @@ label.star:before {
     font-size: 2.7em;
   }
   .ipadLetters{
-  text-decoration: underline;
-  font-size: 4em;
-  color: lightblue;
-  margin-left: 35px;
-  line-height: 80px;
+    text-decoration: underline;
+    font-size: 4em;
+    color: lightblue;
+    margin-left: 35px;
+    line-height: 80px;
   }
   .letters{
-  font-size: .5em;
+    font-size: .5em;
   }
   #letterBox1, #letterBox2{
     display: none;
   }
   .letterBox3{
-  display: initial;
-  text-align: center;
+    display: initial;
+    text-align: center;
   }
   .menu-wrap {
     visibility: visible;
