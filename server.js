@@ -6,7 +6,7 @@ var bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     // User = require('./app/models/user'),
     request = require('request'),
-    port = process.env.PORT || 3000,
+    port = process.env.PORT || 8080,
     path = require('path'),
     apiRouter = express.Router();
 
@@ -28,13 +28,13 @@ app.use(morgan('dev'));
 
 
 apiRouter.use('/styles', function(req, res, next) {
-  request('http://api.brewerydb.com/v2/styles?key=' + process.env.KEY , function(error, response, body) {
+  request('https://sandbox-api.brewerydb.com/v2/style/styles?key=' + process.env.KEY , function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
 
 apiRouter.get('/styles/:id', function(req, res, next) {
-  request('http://api.brewerydb.com/v2/style/' + req.params.id + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
+  request('https://sandbox-api.brewerydb.com/v2/style/' + req.params.id + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
@@ -42,21 +42,21 @@ apiRouter.get('/styles/:id', function(req, res, next) {
 apiRouter.get('/search', function(req, res, next) {
   var q = req.url.substr(req.url.indexOf('?'));
 
-  request('http://api.brewerydb.com/v2/search' + q, function(error, response, body) {
+  request('https://sandbox-api.brewerydb.com/v2/search' + q, function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
 
 
 apiRouter.get('/breweries/:id', function(req, res, next) {
-  request('http://api.brewerydb.com/v2/brewery/' + req.params.id + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
+  request('https://sandbox-api.brewerydb.com/v2/style/brewery/' + req.params.id + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });
 
 apiRouter.post('/breweries/', function(req, res, next) {
   request.post({
-    url:  'http://api.brewerydb.com/v2/brewery?key=' + process.env.KEY,
+    url:  'https://sandbox-api.brewerydb.com/v2/style/brewery?key=' + process.env.KEY,
     form: req.body
   }, function(error, response, body){
     if (error)
@@ -69,7 +69,7 @@ apiRouter.post('/breweries/', function(req, res, next) {
 });
 
 apiRouter.get('/breweries/:id/beers', function(req, res, next) {
-  request('http://api.brewerydb.com/v2/brewery/' + req.params.id + '/beers' + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
+  request('https://sandbox-api.brewerydb.com/v2/style/brewery/' + req.params.id + '/beers' + '?key=' + process.env.KEY + '&format=json', function(error, response, body) {
     res.json(JSON.parse(body).data);
   });
 });

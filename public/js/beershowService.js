@@ -6,19 +6,19 @@ angular.module('beershowService', [])
 
 
   beershowFactory.get = function(id) {
-    return $http.get('/api/breweries/' + id + '/beers');
+    return $http.get('/breweries/' + id + '/beers');
   };
 
   beershowFactory.create = function(breweryData) {
-    return $http.post('http://api.brewerydb.com/v2/beer' + '?key=' + beerKey);
+    return $http.post('https://sandbox-api.brewerydb.com/v2/style/beer' + '?key=' + beerKey);
   };
 
   beershowFactory.update = function(id, breweryData) {
-    return $http.put('http://api.brewerydb.com/v2/brewery/:breweryId' + '?key=' + beerKey);
+    return $http.put('https://sandbox-api.brewerydb.com/v2/style/brewery/:breweryId' + '?key=' + beerKey);
   };
 
   beershowFactory.delete = function(id) {
-    return $http.delete('http://api.brewerydb.com/v2/brewery/:breweryId' + '?key=' + beerKey);
+    return $http.delete('https://sandbox-api.brewerydb.com/v2/style/brewery/:breweryId' + '?key=' + beerKey);
   };
 
   return beershowFactory;

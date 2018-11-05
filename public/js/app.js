@@ -42,7 +42,7 @@ vm.message = "main controller";
 
 //search
 vm.doSearch = function(){
-  $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
+  $http.get('/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
     console.log(res.data);
     vm.breweries = res;
     $location.path('/searchresults');
@@ -151,7 +151,7 @@ document.getElementById('spinnerBreweryBeerShow').style.visibility = "visible";
 
   vm.doSearch = function(){
     document.getElementById('spinnerSearch').style.visibility = "visible";
-    $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
+    $http.get('/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
       console.log(res.data);
       document.getElementById('spinnerSearch').style.display = "none";
       vm.results = res.data;

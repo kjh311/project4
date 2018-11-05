@@ -5,19 +5,19 @@ angular.module('breweryService', [])
   var breweryFactory = {};
 
   breweryFactory.get = function(id) {
-    return $http.get('/api/breweries/' + id);
+    return $http.get('/breweries/' + id);
   };
 
   breweryFactory.create = function(breweryData) {
-    return $http.post('/api/breweries', breweryData);
+    return $http.post('/breweries', breweryData);
   };
 
   breweryFactory.update = function(id, breweryData) {
-    return $http.put('http://api.brewerydb.com/v2/brewery/:breweryId' + '?key=' + beerKey);
+    return $http.put('https://sandbox-api.brewerydb.com/v2/style/brewery/:breweryId' + '?key=' + beerKey);
   };
 
   breweryFactory.delete = function(id) {
-    return $http.delete('http://api.brewerydb.com/v2/brewery/:breweryId' + '?key=' + beerKey);
+    return $http.delete('https://sandbox-api.brewerydb.com/v2/style/brewery/:breweryId' + '?key=' + beerKey);
   };
 
   return breweryFactory;
