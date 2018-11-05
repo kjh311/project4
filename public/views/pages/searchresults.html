@@ -1,0 +1,57 @@
+<ng-include src="'/views/partials/widgetreload.html'"></ng-include>
+
+
+  <br>
+  <br>
+<!-- <div class="row">
+<div class="wrapper"> -->
+
+
+
+  <div class="search-results container-fluid text-center searchDiv row">
+<!-- <div class="col-md-12"> -->
+
+      <form  role="search" ng-submit="vm.doSearch()">
+        <div class="form-group">
+          <input id="search-bar" ng-model="vm.query" type="text" class="form-control" placeholder="Search for a Brewery" autofocus>
+          <h3><input type="submit" id="searchBtn" class="btn searchSubmit btn-info"></h3>
+
+
+
+          </div>
+      </form>
+  <h2 id="nearby-Breweries">  <a href="http://www.brewerydb.com/add/brewery" target="blank" title=""><button type="button" class="btn btn-danger newBrewery-Button">Add new brewery</button></a></h2>
+
+      <table class="table searchTable">
+        <thead>
+          <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="brews in vm.results">
+            <td id="search-td">
+              <a href="/#/breweriesshow/{{ brews.id }}" ><button type="button" class="btn search-button-brewery btn-info"><h4 id="searchName" class="searchInfo">{{ brews.name }}</h4></button></a>
+              <h4 id="brewType" class="searchInfo">{{brews.type}}</h4>
+              <h3 class="searchInfo">{{brews.description}}</h3>
+
+          </tr>
+        </tbody>
+      </table>
+
+  <!-- </div> -->
+
+
+
+  <!-- Loading animation -->
+
+         <div id="spinnerSearch">
+        <h2 class="loadingBeer">Loading beer goodness...</h2>
+        <img  class="loadingBeerGif" src="../images/loadingGif.gif" alt="Loading..."/>
+ <!-- </div>
+</div> -->
+</div>
+
+
+<!-- </div> -->
+
+<ng-include src="'/views/partials/ratingwidget.html'"></ng-include>

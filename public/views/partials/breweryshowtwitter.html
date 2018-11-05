@@ -1,0 +1,37 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>$( document ).ready(function() {
+  function reloadWidget(){
+  RW.render(null, true);
+  FB.XFBML.parse()
+  // twttr.widgets.load()
+
+}
+setTimeout(reloadWidget, 400);
+// setTimeout(reloadWidget, 800);
+
+
+
+function loadTwitter(){
+    var brewery = $('.breweryName').html();
+    // alert(brewery);
+    // alert(data-widget-id);
+    // var twitter = $('.twitter-timeline');
+    // $('.twitter-timeline').attr('data-widget-id','640951744621490177');
+
+
+    // $('.twitter-timeline').attr(data-widget-id,640951744621490177);
+    if(brewery === "Angel City Brewing"){
+      // alert('yeah!');
+      // $( "input[name*='data-widget-id']" ).val( "640951744621490177" );
+      // $('input[type="text"]').attr('data-widget-id', '');
+      // $("input[data-widget-id=640951744621490177]"  ).attr('639862176551845889');
+      // var input = $('.twitter-timeline').attr('data-widget-id');
+      // alert(input);
+      // $('.twitter-timeline').attr('data-widget-id','639862176551845889');
+
+    }
+
+}
+setTimeout(loadTwitter, 1000);
+
+});</script>

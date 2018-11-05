@@ -1,0 +1,14 @@
+{
+  "name": "craftbeerzilla",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.9.3",
+    "dotenv": "^1.2.0",
+    "ejs": "^2.3.4",
+    "express": "~4.9.1",
+    "mongoose": "~3.8.19",
+    "morgan": "~1.5.0",
+    "request": "^2.61.0"
+  }
+}

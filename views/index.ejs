@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0">
+  <title>Craft Beer-zilla</title>
+
+  <base href="/">
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+ <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" media="screen" href="css/style.css">
+<link rel="icon" type="image/png" href="..images/beerIcon.png"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js"  ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/0.7.3/angular-scroll.js"></script>
+<script src="js/app.js"></script>
+<script src="js/app.routes.js"></script>
+<script src="js/script.js"></script>
+<script src="js/beerService.js"></script>
+<script src="js/styleService.js"></script>
+<script src="js/beershowService.js"></script>
+</script>
+</head>
+
+
+<body class="container" ng-app="routerApp" ng-controller="mainController as main">
+
+<!-- load facebook widget -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=993388580723688";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/#/">Craft Beer-zilla </a>
+    <a href="/" title=""><img class=" nav navbar-nav navbar-left" id="beerimage" src="../images/beer.png" ></a>
+  </div>
+
+  <div class="collapse navbar-collapse navbar-ex1-collapse navLinks">
+
+
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a class="scrollToTop" id="searchPageLink" href="/searchresults/#top" ><i class="fa fa-search"></i> Search </a>
+      </li>
+      <!-- <li><a class="scrollToTop" id="breweryPageLink" href="/breweries"><i class="fa fa-shield"></i> L.A. Breweries</a></li> -->
+      <li><a class="scrollToTop" id="stylesPageLink" href="/styles"><i class="fa fa-beer"></i> Styles</a></li>
+      <li><a class="scrollToTop" id="beerspeakPageLink" href="/beerspeak"><i class="fa fa-commenting"></i> Beer Speak</a></li>
+    </ul>
+</nav>
+
+
+  <select id="dropMenu" class="droplist dropdown_user" name="Menu" onChange="window.location.href=this.value">
+    <option class="dropText scrollToTop" selected disabled>Menu</option>
+    <option class="dropText scrollToTop" value="/searchresults">Search</option>
+    <!-- <option class="dropText scrollToTop" value="/breweries">L.A. Breweries</option> -->
+    <option class="dropText scrollToTop" value="/styles">Beer Styles</option>
+    <option id="beerspeakLink scrollToTop" onclick="myFunction()" class="dropText" value="/beerspeak">Beer Speak</option>
+  </select>
+
+
+ <div>
+  <img id="homeBackground" src="images/backgroundPic.jpg">
+ </div>
+
+
+<div id="content-views">
+  <div ng-view></div>
+</div>
+
+
+<script>
+  var beerKey = '<%= process.env.KEY %>';
+</script>
+</body>
+</html>

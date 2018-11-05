@@ -1,0 +1,54 @@
+
+<!-- Trying to make widgets load every time -->
+<script>$( document ).ready(function() {
+  function reloadWidget(){
+  RW.render(null, true);
+  FB.XFBML.parse()
+}
+setTimeout(reloadWidget, 400);
+setTimeout(reloadWidget, 800);
+});</script>
+<br>
+
+
+<div class="container beershow-table">
+<table class="table table-bordered beerTable">
+  <thead>
+    <tr>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="beershow in vm.beershow track by $index | orderBy:'name'">
+      <td>
+        <h2 class="beername">{{beershow.name}}</h2>
+        <img class="beerIcon" ng-src="{{beershow.labels.medium}}">
+        <div class="rw-ui-container rating"></div>
+      </br>
+        <h4 class="description">{{beershow.description}}</h4>
+      </br>
+        <h4 class="beerInfo">{{beershow.style.name}}</h4>
+        <h3 class="beerInfo">{{beershow.available.description}}</h3>
+        <h4 class="beerInfo">ABV: {{beershow.abv}}</h4>
+        </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- Loading Screen -->
+ <div id="spinnerBreweryBeerShow" class="loading">
+        <h2 class="loadingBeer">Loading beer goodness...</h2>
+        <br>
+        <img class="loadingBeerGif" src="../images/loadingGif.gif" alt="Loading..."/>
+        <br>
+        <br>
+        <br>
+        <!-- <h4 id="possible">Possible that no beers exist for this brewery yet</h4> -->
+ </div>
+ <div class="container  newBeer text-center" ng-controller="breweriesController">
+   <h2 id="didnt-find-the-beer">Didn't find the beer you were looking for?</h2>
+   <a href="http://www.brewerydb.com/add/beer" target="blank" title=""><button type="button" class="btn btn-danger newBeerButton">Add Beer to Brewery</button></a>
+ </div>
+
+
+<ng-include src="'/views/partials/ratingwidget.html'"></ng-include>

@@ -1,0 +1,30 @@
+
+<br>
+<div class="container text-center" ng-controller="NewBreweryController as newBrewery">
+
+
+<form class="form-horizontal" role="form" ng-submit="newBrewery.createBrewery()">
+    <div class="form-group">
+      <h2>New Brewery</h2>
+    </div>
+
+    <h4>Name(required)
+        <input ng-model="newBrewery.name" class="input" placeholder="Brewery name"></h4>
+    <br>
+    <h4>Description:
+        <input ng-model="newBrewery.description" class="description_inputBox" placeholder="Description"></h4>
+    <br>
+    <h4>Website:
+        <input ng-model="newBrewery.website" class="input" placeholder="Website"></h4>
+    <br>
+    <h4>Year Established:
+        <input ng-model="newBrewery.established" class="input" placeholder="Year Established"></h4>
+    <br>
+
+    <div class="form-group">
+      <div class="col-sm-10 col-sm-offset-2">
+        <a href="/#/breweries" title=""><button type="submit" class="btn btn-primary">Submit Brewery for Review</button></a>
+      </div>
+    </div>
+</form>
+</div>
